@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Evidence — M. Baizid Alam · AI Infrastructure, Governance, SWIFT</title>
+<meta name="description" content="The case file: NINA's architecture, independent technical due diligence, competency analysis, career record, and what hiring M. Baizid Alam actually buys — AI cost engineering, governed autonomy, local-first deployment, SWIFT / ISO 20022 consulting.">
+<link rel="canonical" href="https://aibony.github.io/evidence.html">
+<meta property="og:title" content="Evidence — M. Baizid Alam">
+<meta property="og:description" content="Architecture, independent due diligence, competency analysis, and business value. The case file behind the claims.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://aibony.github.io/evidence.html">
+<meta property="og:image" content="https://aibony.github.io/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://aibony.github.io/og.jpg">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{ --bg:#070D18; --line:#1E2E4B; --ink:#E3EDFB; --dim:#9FB2D0; --faint:#617597;
+         --cyan:#53DDE9; --cyan-soft:#8FE9F1; --amber:#F2B354; }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{ background:var(--bg); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; line-height:1.7; }
+  body::before{ content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+    background-image:
+      linear-gradient(to right, rgba(83,221,233,.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(83,221,233,.04) 1px, transparent 1px);
+    background-size:48px 48px;
+    -webkit-mask-image:radial-gradient(ellipse 120% 60% at 50% 0%, #000 0%, transparent 75%); }
+  a{ color:var(--cyan); text-decoration:none; }
+  a:hover{ color:var(--cyan-soft); }
+  .wrap{ max-width:900px; margin:0 auto; padding:0 24px; position:relative; z-index:1; }
+
+  nav{ position:sticky; top:0; z-index:10; background:rgba(7,13,24,.88); backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line); }
+  nav .in{ max-width:1060px; margin:0 auto; padding:14px 24px; display:flex; justify-content:space-between;
+    align-items:center; gap:16px; flex-wrap:wrap; }
+  .brand{ font-family:'JetBrains Mono'; font-weight:700; font-size:13px; letter-spacing:.14em; color:var(--cyan); }
+  .navlinks{ display:flex; gap:20px; flex-wrap:wrap; }
+  .navlinks a{ font-family:'JetBrains Mono'; font-size:11.5px; letter-spacing:.1em; color:var(--dim); }
+  .navlinks a.hire{ color:var(--amber); border:1px solid rgba(242,179,84,.4); padding:5px 12px;
+    border-radius:5px; background:rgba(242,179,84,.07); }
+
+  header{ padding:66px 0 30px; }
+  .kicker{ display:inline-block; font-family:'JetBrains Mono'; font-weight:700; font-size:12px; color:var(--amber);
+    background:rgba(242,179,84,.08); border:1px solid rgba(242,179,84,.4); padding:6px 14px;
+    border-radius:5px; letter-spacing:.09em; margin-bottom:24px; }
+  h1{ font-family:'Space Grotesk'; font-weight:700; font-size:clamp(34px,5vw,50px); line-height:1.06;
+    letter-spacing:-.015em; margin-bottom:16px;
+    background:linear-gradient(105deg,#FFF 25%, var(--cyan-soft) 78%, var(--cyan) 105%);
+    -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .standfirst{ font-family:'Space Grotesk'; font-weight:300; font-size:clamp(17px,2.1vw,20px);
+    color:#C2D2EA; line-height:1.5; }
+  .byline{ margin-top:22px; padding-top:16px; border-top:1px solid var(--line);
+    font-family:'JetBrains Mono'; font-size:11px; letter-spacing:.12em; color:var(--faint); }
+
+  h2{ font-family:'Space Grotesk'; font-weight:500; font-size:clamp(21px,2.8vw,27px); color:var(--ink);
+    margin:52px 0 16px; display:flex; align-items:center; gap:13px; }
+  h2 .n{ font-family:'JetBrains Mono'; font-weight:700; font-size:12.5px; color:var(--amber);
+    background:rgba(242,179,84,.08); border:1px solid rgba(242,179,84,.38);
+    padding:5px 10px; border-radius:4px; letter-spacing:.06em; flex-shrink:0; }
+  h3.sub{ font-family:'Space Grotesk'; font-weight:500; font-size:18px; color:var(--cyan-soft); margin:26px 0 10px; }
+  p{ color:var(--dim); font-size:16.5px; margin-bottom:18px; }
+  p b, strong{ color:var(--ink); font-weight:600; }
+  ul{ list-style:none; margin:0 0 20px; }
+  li{ color:var(--dim); font-size:16.5px; padding-left:22px; position:relative; margin-bottom:10px; }
+  li::before{ content:'—'; position:absolute; left:0; color:var(--cyan); }
+  li b{ color:var(--ink); }
+
+  .chips{ display:flex; gap:10px; flex-wrap:wrap; margin:0 0 22px; }
+  .chip{ font-family:'JetBrains Mono'; font-size:11.5px; letter-spacing:.08em; color:var(--cyan);
+    border:1px solid rgba(83,221,233,.35); background:rgba(83,221,233,.06); padding:6px 13px; border-radius:99px; }
+  .chip.a{ color:var(--amber); border-color:rgba(242,179,84,.35); background:rgba(242,179,84,.06); }
+
+  .schema{ border:1px solid var(--line); border-radius:12px; padding:20px 18px 12px;
+    background:linear-gradient(180deg, rgba(16,27,49,.55), rgba(12,21,38,.3)); margin:24px 0 28px; overflow-x:auto; }
+  .schema .lbl{ font-family:'JetBrains Mono'; font-size:11px; letter-spacing:.16em; color:var(--cyan); margin-bottom:12px; }
+  .schema svg{ width:100%; min-width:640px; display:block; }
+
+  table{ width:100%; border-collapse:collapse; margin:22px 0 26px; border:1px solid var(--line);
+    border-radius:8px; overflow:hidden; font-size:14.5px; }
+  th{ font-family:'JetBrains Mono'; font-size:10.5px; letter-spacing:.1em; color:var(--cyan); text-align:left;
+    padding:12px 14px; background:rgba(16,27,49,.85); font-weight:500; border-bottom:1px solid var(--line); }
+  td{ color:var(--dim); padding:12px 14px; border-bottom:1px solid rgba(30,46,75,.6); vertical-align:top; line-height:1.55; }
+  tr:last-child td{ border-bottom:none; }
+  td:first-child{ color:var(--ink); font-weight:500; }
+  tr:nth-child(even) td{ background:rgba(16,27,49,.3); }
+
+  .box{ border:1px solid var(--line); border-radius:10px; padding:20px 24px; margin:26px 0;
+    background:linear-gradient(180deg, rgba(16,27,49,.62), rgba(12,21,38,.34)); }
+  .box .eyebrow{ font-family:'JetBrains Mono'; font-size:11px; letter-spacing:.16em; color:var(--cyan); margin-bottom:11px; }
+  .box p:last-child{ margin-bottom:0; }
+  .box.amberline{ border-left:3px solid var(--amber); }
+  .quote{ border:1px solid var(--line); border-left:3px solid var(--cyan); border-radius:0 8px 8px 0;
+    background:linear-gradient(180deg, rgba(16,27,49,.6), rgba(12,21,38,.34)); padding:18px 22px; margin:22px 0; }
+  .quote p{ color:#C9D8EE; font-style:italic; margin-bottom:8px; }
+  .quote .src{ font-family:'JetBrains Mono'; font-size:10.5px; letter-spacing:.13em; color:var(--faint); }
+
+  .grid2{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px; margin:22px 0 26px; }
+  .card{ border:1px solid var(--line); border-radius:10px; padding:20px 22px; position:relative; overflow:hidden;
+    background:linear-gradient(180deg, rgba(16,27,49,.75), rgba(12,21,38,.4)); }
+  .card::before{ content:''; position:absolute; top:0; left:0; right:0; height:1px;
+    background:linear-gradient(to right, var(--cyan), transparent 70%); opacity:.7; }
+  .card .idx{ font-family:'JetBrains Mono'; font-size:10px; letter-spacing:.15em; color:var(--amber); margin-bottom:8px; }
+  .card h4{ font-family:'Space Grotesk'; font-weight:500; font-size:17px; margin-bottom:8px; color:var(--ink); }
+  .card p{ font-size:14px; margin:0; line-height:1.55; }
+
+  .tl{ position:relative; padding-left:28px; margin:22px 0 26px; }
+  .tl::before{ content:''; position:absolute; left:6px; top:6px; bottom:6px; width:1px;
+    background:linear-gradient(to bottom, var(--cyan), rgba(83,221,233,.12)); }
+  .tl-item{ position:relative; margin-bottom:22px; }
+  .tl-item::before{ content:''; position:absolute; left:-25px; top:7px; width:9px; height:9px; border-radius:50%;
+    background:var(--bg); border:1px solid var(--cyan); box-shadow:0 0 8px rgba(83,221,233,.55); }
+  .tl-item.am::before{ border-color:var(--amber); box-shadow:0 0 8px rgba(242,179,84,.55); }
+  .tl-item h4{ font-family:'Space Grotesk'; font-weight:500; font-size:16.5px; color:var(--ink); }
+  .tl-item .meta{ font-family:'JetBrains Mono'; font-size:10.5px; letter-spacing:.1em; color:var(--cyan); margin:3px 0 7px; }
+  .tl-item p{ font-size:14.5px; margin:0; }
+
+  .dl{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; margin:22px 0; }
+  .dlc{ border:1px solid var(--line); border-radius:10px; padding:18px 20px;
+    background:linear-gradient(180deg, rgba(16,27,49,.8), rgba(12,21,38,.5)); }
+  .dlc .k{ font-family:'JetBrains Mono'; font-size:10px; letter-spacing:.16em; color:var(--faint); margin-bottom:8px; }
+  .dlc a{ font-family:'JetBrains Mono'; font-size:13px; text-decoration:underline; text-underline-offset:2px; }
+  .dlc a.am{ color:var(--amber); }
+  .dlc .d{ font-size:13px; color:var(--dim); margin-top:7px; line-height:1.5; }
+
+  .endlinks{ border-top:1px solid var(--line); margin-top:52px; padding-top:28px; }
+  .endlinks h3{ font-family:'JetBrains Mono'; font-size:11px; letter-spacing:.18em; color:var(--faint); margin-bottom:16px; }
+  .lgrid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:12px; }
+  .lg{ border:1px solid var(--line); border-radius:8px; padding:13px 16px; background:rgba(16,27,49,.6); }
+  .lg .k{ font-family:'JetBrains Mono'; font-size:9.5px; letter-spacing:.16em; color:var(--faint); margin-bottom:5px; }
+  .lg .v{ font-family:'JetBrains Mono'; font-size:12.5px; word-break:break-word; }
+  .lg .v a{ text-decoration:underline; text-underline-offset:2px; }
+  .lg .v a.am{ color:var(--amber); }
+  footer{ border-top:1px solid var(--line); margin-top:42px; padding:24px 0 46px;
+    font-family:'JetBrains Mono'; font-size:11px; letter-spacing:.12em; color:var(--faint);
+    display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; }
+  .dot{ display:inline-block; width:7px; height:7px; border-radius:50%; background:var(--cyan);
+    box-shadow:0 0 10px var(--cyan); margin-right:9px; vertical-align:middle; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="in">
+    <div class="brand">:20: M-BAIZID-ALAM</div>
+    <div class="navlinks">
+      <a href="index.html">← HUB</a>
+      <a href="profile.html">PROFILE</a>
+      <a href="index.html#proof">PROOF</a>
+      <a href="portfolio.pdf">PDF</a>
+      <a class="hire" href="https://www.upwork.com/freelancers/~01a168174960b876b3?mp_source=share" target="_blank" rel="noopener">HIRE ME</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+<header>
+  <div class="kicker">:53A: EVIDENCE — THE CASE FILE</div>
+  <h1>Evidence</h1>
+  <p class="standfirst">Architecture, independent due diligence, competency analysis, career record, and what hiring me actually buys. Every claim here is either measured, externally reviewed, or scoped down to what I can defend.</p>
+  <div class="byline">M. BAIZID ALAM · DHAKA, BANGLADESH · 2026</div>
+</header>
+
+<h2><span class="n">01</span>The system</h2>
+<div class="chips">
+  <span class="chip">LOCAL-FIRST · MULTI-AGENT</span>
+  <span class="chip a">2 GB VRAM CEILING</span>
+  <span class="chip">GOVERNED TRANSACTIONS</span>
+  <span class="chip a">UNDER ACTIVE DEVELOPMENT</span>
+</div>
+<p><b>NINA</b> is a personal, local-first autonomous AI infrastructure: a multi-agent orchestration system I designed, built and operate independently, built to run continuously on consumer hardware under strict resource constraints. Commands enter over Telegram, pass through a sanitisation gateway, and reach build and audit engines behind a governance layer. Inference is tiered and cost-aware, preferring local and low-cost paths before anything paid. Every change is a governed transaction rather than a blind edit.</p>
+
+<div class="schema">
+  <div class="lbl">COMMAND PATH — OPERATOR → GOVERNANCE → ENGINES</div>
+  <svg viewBox="0 0 720 330" xmlns="http://www.w3.org/2000/svg" role="img"
+       aria-label="NINA architecture: human operator over Telegram to gateway, through governance gatekeeper, to build and audit engines; governance layer of constitutional laws, compliance scoring, file registries and semantic memory; persistent state store, tiered inference from local to paid fallback, resilience guards, and an agent mesh coordinated by an async OODA loop, evolving toward an AI operating system.">
+    <defs><marker id="ar" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6" fill="none" stroke="#53DDE9" stroke-width="1.4"/></marker></defs>
+    <rect x="6" y="20" width="118" height="54" rx="6" fill="rgba(83,221,233,.07)" stroke="#53DDE9" stroke-width="1.1"/>
+    <text x="65" y="42" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#E3EDFB" font-weight="700">OPERATOR</text>
+    <text x="65" y="60" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#8FE9F1">over Telegram</text>
+    <rect x="158" y="20" width="130" height="54" rx="6" fill="rgba(16,27,49,.85)" stroke="#2A3F66" stroke-width="1.1"/>
+    <text x="223" y="42" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#E3EDFB" font-weight="700">GATEWAY</text>
+    <text x="223" y="60" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#9FB2D0">sanitisation · routing</text>
+    <rect x="322" y="8" width="150" height="80" rx="6" fill="rgba(242,179,84,.07)" stroke="#F2B354" stroke-width="1.2"/>
+    <text x="397" y="30" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#F2B354" font-weight="700">GOVERNANCE</text>
+    <text x="397" y="46" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#F2B354" font-weight="700">GATEKEEPER</text>
+    <text x="397" y="66" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.6" fill="#9FB2D0">every change =</text>
+    <text x="397" y="79" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.6" fill="#9FB2D0">a governed transaction</text>
+    <rect x="560" y="6" width="154" height="38" rx="6" fill="rgba(83,221,233,.07)" stroke="#53DDE9" stroke-width="1.1"/>
+    <text x="637" y="29" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#E3EDFB" font-weight="700">BUILD ENGINE</text>
+    <rect x="560" y="52" width="154" height="38" rx="6" fill="rgba(83,221,233,.07)" stroke="#53DDE9" stroke-width="1.1"/>
+    <text x="637" y="75" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#E3EDFB" font-weight="700">AUDIT ENGINE</text>
+    <line x1="124" y1="46" x2="154" y2="46" stroke="#53DDE9" stroke-width="1.3" marker-end="url(#ar)"/>
+    <line x1="288" y1="46" x2="318" y2="46" stroke="#53DDE9" stroke-width="1.3" marker-end="url(#ar)"/>
+    <line x1="472" y1="32" x2="556" y2="26" stroke="#53DDE9" stroke-width="1.3" marker-end="url(#ar)"/>
+    <line x1="472" y1="62" x2="556" y2="70" stroke="#53DDE9" stroke-width="1.3" marker-end="url(#ar)"/>
+    <rect x="6" y="100" width="708" height="24" rx="5" fill="rgba(16,27,49,.75)" stroke="#2A3F66"/>
+    <text x="360" y="116" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9.4" fill="#8FE9F1">GOVERNANCE LAYER · constitutional laws — compliance scoring — file registries — semantic memory</text>
+    <rect x="6" y="136" width="168" height="92" rx="6" fill="rgba(16,27,49,.6)" stroke="#2A3F66"/>
+    <text x="90" y="155" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9.6" fill="#53DDE9" font-weight="700">PERSISTENT STATE</text>
+    <text x="90" y="176" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.6" fill="#9FB2D0">shared memory,</text>
+    <text x="90" y="190" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.6" fill="#9FB2D0">swappable executors —</text>
+    <text x="90" y="204" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.6" fill="#9FB2D0">knowledge survives any</text>
+    <text x="90" y="218" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.6" fill="#9FB2D0">component replacement</text>
+    <rect x="186" y="136" width="340" height="92" rx="6" fill="rgba(83,221,233,.04)" stroke="#53DDE9" stroke-opacity=".55"/>
+    <text x="356" y="153" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.6" fill="#53DDE9" font-weight="700">TIERED INFERENCE — COST-AWARE · CONTINUOUSLY RE-EVALUATED</text>
+    <rect x="196" y="164" width="100" height="54" rx="5" fill="rgba(16,27,49,.85)" stroke="#2A3F66"/>
+    <text x="246" y="183" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9.2" fill="#E3EDFB" font-weight="700">TIER 0</text>
+    <text x="246" y="197" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#9FB2D0">local models</text>
+    <rect x="308" y="164" width="100" height="54" rx="5" fill="rgba(16,27,49,.85)" stroke="#2A3F66"/>
+    <text x="358" y="183" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9.2" fill="#E3EDFB" font-weight="700">TIER 1</text>
+    <text x="358" y="197" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#9FB2D0">low-cost external</text>
+    <rect x="420" y="164" width="96" height="54" rx="5" fill="rgba(16,27,49,.85)" stroke="#2A3F66"/>
+    <text x="468" y="183" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9.2" fill="#E3EDFB" font-weight="700">TIER 2</text>
+    <text x="468" y="197" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#9FB2D0">paid fallback</text>
+    <line x1="296" y1="190" x2="304" y2="190" stroke="#53DDE9" stroke-width="1.2" marker-end="url(#ar)"/>
+    <line x1="408" y1="190" x2="416" y2="190" stroke="#53DDE9" stroke-width="1.2" marker-end="url(#ar)"/>
+    <rect x="538" y="136" width="176" height="92" rx="6" fill="rgba(16,27,49,.6)" stroke="#2A3F66"/>
+    <text x="626" y="155" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9.6" fill="#53DDE9" font-weight="700">RESILIENCE</text>
+    <text x="626" y="176" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.6" fill="#9FB2D0">failure detection</text>
+    <text x="626" y="190" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.6" fill="#9FB2D0">&amp; recovery ·</text>
+    <text x="626" y="204" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.6" fill="#9FB2D0">thermal &amp; resource guard ·</text>
+    <text x="626" y="218" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.6" fill="#9FB2D0">auto-restart supervision</text>
+    <rect x="6" y="240" width="708" height="40" rx="5" fill="rgba(16,27,49,.75)" stroke="#2A3F66"/>
+    <text x="360" y="256" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9.4" fill="#E3EDFB">AGENT MESH · coding — research — search — GitHub automation — tool execution</text>
+    <text x="360" y="271" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.8" fill="#8FE9F1">coordinated via an async OODA loop (Observe → Orient → Decide → Act) under single-source-of-truth audit</text>
+    <text x="360" y="308" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9.6" fill="#F2B354" font-weight="700">EVOLVING → STRATEGIC OPERATING SYSTEM · audited — deterministic — hardware &amp; token autonomous</text>
+  </svg>
+</div>
+
+<div class="box amberline">
+  <div class="eyebrow">SCOPED HONESTLY</div>
+  <p>NINA is not a product, not for sale, and not production-grade. She is a personal capability project under active development. What she proves is one thing, and proves it well: that I can research, design, build and govern working AI systems with my own hands. <a href="profile.html">The long-form story is here</a>; the dated development log is in the <a href="https://github.com/aibony/aibony" target="_blank" rel="noopener">updates repository</a>.</p>
+</div>
+
+<h2><span class="n">02</span>Independent technical due diligence</h2>
+<p>An independent technical review of the repository found a local-first, continuously-running autonomous AI system built and maintained by a single owner-operator, using a workflow that combines human-directed architecture with AI-assisted implementation — with sustained, high-frequency engineering activity over an extended period and a large, actively maintained backlog of fully specified work.</p>
+<p>The review named <b>governance-as-code</b> as the system's defining trait: a defined precedence among competing engineering priorities embedded directly into operating rules, with safety and data protection treated as non-negotiable constraints. Distinct execution components carry different trust and permission levels, and sensitive information is handled through a dedicated component under stricter isolation.</p>
+
+<table>
+  <thead><tr><th>Architectural concern</th><th>Typical cloud-AI approach</th><th>This system's approach</th></tr></thead>
+  <tbody>
+    <tr><td>Compute location</td><td>Centralised, cloud-first</td><td>Local-first with cloud fallback</td></tr>
+    <tr><td>Resource selection</td><td>Static, configured once</td><td>Dynamic, continuously re-evaluated</td></tr>
+    <tr><td>Failure handling</td><td>Basic retry logic</td><td>Layered software and physical safeguards</td></tr>
+    <tr><td>Permission model</td><td>Often uniform access</td><td>Differentiated trust levels by component</td></tr>
+    <tr><td>Change governance</td><td>Automated tests, sometimes human review</td><td>Embedded priority policy plus explicit boundaries</td></tr>
+  </tbody>
+</table>
+
+<div class="quote">
+  <p>"Some foundational subsystems were still under active development at time of review. The system should be described as actively maturing, not fully production-hardened."</p>
+  <div class="src">— TECHNICAL DUE DILIGENCE REPORT · REPRODUCED HERE DELIBERATELY: I SELL HONEST ENGINEERING, INCLUDING ABOUT MY OWN WORK</div>
+</div>
+
+<h2><span class="n">03</span>Competencies</h2>
+<div class="grid2">
+  <div class="card"><div class="idx">MODULE 01 — TRADE FINANCE</div><h4>SWIFT Administration</h4><p>SWIFT operator since 2009, administrator since 2024. Alliance Access/Web administration and migration, CBPR+ ISO 20022 (coordinator and internal trainer), CSP compliance, sanctions screening, FATCA/IDES, RMA &amp; GPI, ASYCUDA, EDF, correspondent banking.</p></div>
+  <div class="card"><div class="idx">MODULE 02 — RISK / COMPLIANCE</div><h4>Regulatory Risk &amp; ISO 27001</h4><p>Lead Auditor, ISO/IEC 27001:2022 (ISMS). AIBB and JAIBB, Institute of Bankers Bangladesh. Basel III, ICRRS credit risk grading, AML/KYC, CTR/STR reporting, board-level regulatory and security memoranda.</p></div>
+  <div class="card"><div class="idx">MODULE 03 — BANKING BREADTH</div><h4>Complete Domain Coverage</h4><p>Sixteen years across cash and general banking, credit (proposals, feasibility, recovery), foreign trade import operations, and head-office trade finance — teller counter to Board memo.</p></div>
+  <div class="card"><div class="idx">MODULE 04 — AI INFRASTRUCTURE</div><h4>Agentic Systems Design</h4><p>Multi-agent orchestration, LLM integration, context compression, agent-driven code synthesis, structured delegation to AI agents — practised hands-on through NINA under strict hardware limits.</p></div>
+  <div class="card"><div class="idx">MODULE 05 — COST ENGINEERING</div><h4>Multi-Source AI Orchestration</h4><p>Deliberate design toward minimising ongoing inference cost through tiered resource selection — local and low-cost paths before paid services — with multiple inference sources behind a common abstraction and automated selection logic.</p></div>
+  <div class="card"><div class="idx">MODULE 06 — GOVERNANCE</div><h4>Autonomous System Governance</h4><p>Governance-as-code: defined precedence among competing priorities embedded in operating rules, differentiated trust levels per component, strict isolation of sensitive data, bounded automated actions.</p></div>
+  <div class="card"><div class="idx">MODULE 07 — RELIABILITY</div><h4>Resilience Engineering</h4><p>Automated failure detection and recovery, hardware-protective safeguards including continuous thermal and resource guarding, layered software-plus-physical resilience for sustained autonomous operation.</p></div>
+  <div class="card"><div class="idx">MODULE 08 — DEVOPS</div><h4>Systems Orchestration</h4><p>Linux services, cron pipelines, Git/GitHub Actions, virtual runtimes, secure cloud-to-local relays, continuous background operation with automated recovery.</p></div>
+</div>
+
+<h2><span class="n">04</span>Engineering competency analysis</h2>
+<p>A separate independent analysis mapped the repository evidence to transferable professional value, concluding on a profile centred on distributed-systems thinking, AI infrastructure cost engineering, autonomous-system governance design, and structuring complex work for delegation.</p>
+<table>
+  <thead><tr><th>Competency</th><th>Evidence category</th><th>Transferable value</th></tr></thead>
+  <tbody>
+    <tr><td>Multi-source AI orchestration</td><td>Coordinated use of multiple inference sources with automated selection</td><td>Organisations managing several AI vendors</td></tr>
+    <tr><td>AI cost engineering</td><td>Deliberate design toward minimising inference cost via tiering</td><td>Quantifiable cost-reduction framing</td></tr>
+    <tr><td>Reliability engineering</td><td>Automated failure detection/recovery, hardware-protective safeguards</td><td>SRE discipline in a novel domain</td></tr>
+    <tr><td>Security-conscious design</td><td>Explicit isolation of sensitive data handling</td><td>Security-first thinking for regulated industries</td></tr>
+    <tr><td>Autonomous governance</td><td>Defined precedence rules, differentiated trust levels</td><td>Maps to enterprise AI governance demand</td></tr>
+    <tr><td>Work specification at scale</td><td>Fully specified engineering tasks with explicit scope</td><td>Planning and technical communication</td></tr>
+    <tr><td>Technical debt management</td><td>Ongoing consolidation separate from feature work</td><td>Longevity-oriented engineering discipline</td></tr>
+  </tbody>
+</table>
+<div class="box">
+  <div class="eyebrow">THE PATTERN THE REVIEW NAMED: "CONSTRAINED AUTONOMY"</div>
+  <p>Four patterns recur throughout: gating new capability behind safety and hygiene checks; a single source of truth per component; bounded automated actions; and attached verification per subsystem. Every backlog item is written like a detailed contractor brief — defined scope, required context, explicit boundaries, verifiable completion criteria — a skill the review associates with technical leadership.</p>
+</div>
+<div class="quote">
+  <p>"Clients and employers would not be buying NINA itself but the mind capable of repeatedly designing systems like NINA: a personality that treats AI as infrastructure governed by explicit rules, builds for resilience and auditability, and prefers deep, structured thinking over surface-level experimentation."</p>
+  <div class="src">— ENGINEERING-PSYCHOLOGY PROFILE OF THE CODEBASE, 2026</div>
+</div>
+<div class="quote">
+  <p>"Very few people combine SWIFT and ISO 27001 familiarity with autonomous AI architecture and local-first systems design in one profile. That intersection is a genuine moat."</p>
+  <div class="src">— INDEPENDENT DEEP-PROFILE ASSESSMENT, 2026</div>
+</div>
+
+<h2><span class="n">05</span>Career record</h2>
+<div class="tl">
+  <div class="tl-item am"><h4>Assistant General Manager — SWIFT In-Charge &amp; Operation Manager</h4>
+    <div class="meta">TRADE FINANCE DIVISION, HEAD OFFICE · DEC 2024 – PRESENT · SOLE SWIFT ADMIN</div>
+    <p>Sole SWIFT administrator for the entire bank network: Alliance Access and swift.com administration, CSP execution, version and hardware migration, CBPR+ ISO 20022 implementation and internal training, FATCA/IDES, Board and central-bank reporting, FI/correspondent banking, Bangladesh Bank liaison.</p></div>
+  <div class="tl-item"><h4>Senior Principal Officer — Trade Finance Division</h4>
+    <div class="meta">HEAD OFFICE · SEP – NOV 2024 · FIRST SWIFT ADMIN CUSTODY</div>
+    <p>Patch discipline for Alliance Access/Web with zero disruption, RMA and GPI, token management, sanctions screening, ASYCUDA and EDF.</p></div>
+  <div class="tl-item"><h4>Senior Principal Officer — Credit</h4>
+    <div class="meta">MAIN BRANCH · NOV 2022 – AUG 2024 · SECOND MAN, CREDIT DEPT</div>
+    <p>Complex credit proposals, feasibility and working-capital assessment, Basel III and ICRRS analysis, recovery and write-off implementation, audit compliance.</p></div>
+  <div class="tl-item"><h4>Executive Manager — Credit, Circle-4</h4>
+    <div class="meta">HEAD OFFICE · APR – OCT 2022</div>
+    <p>Head Office credit committee and Board memoranda; validation of branch-submitted data; working-capital decision support.</p></div>
+  <div class="tl-item"><h4>Manager — Foreign Trade (Import) In-Charge</h4>
+    <div class="meta">MAIN BRANCH · JUL 2018 – MAR 2022 · STATE-INSTITUTION LC DESK</div>
+    <p>Import LC operations for Bangladesh Bank, BPDB, DGDP, CMSD and GTCL — the branch's highest-value desk: bonds, credit reports, foreign supplier negotiation, document scrutiny and discrepancy handling.</p></div>
+  <div class="tl-item"><h4>Deputy Manager — Unit Head, Non Back-to-Back LC Unit</h4>
+    <div class="meta">TRADE FINANCE DIVISION, HEAD OFFICE · AUG 2012 – JUL 2018</div>
+    <p>Six years leading a specialised LC unit: proposals, Board and Credit Committee memoranda, correspondent banking, SWIFT RMA.</p></div>
+  <div class="tl-item"><h4>Assistant Manager</h4>
+    <div class="meta">ASADGONJ BRANCH, CHITTAGONG · OCT 2009 – AUG 2012 · THE APPRENTICESHIP</div>
+    <p>SWIFT Alliance Messenger, DC/LC operations, general banking, clearing, remittances, cash; temporary GB In-Charge and Cash In-Charge; deputations across Commercial Credit, Recovery and ICT Division.</p></div>
+</div>
+<h3 class="sub">Education</h3>
+<ul>
+  <li><b>MBA in Marketing</b> — North South University, CGPA 3.80/4.00, merit-based financial aid.</li>
+  <li><b>B.Sc. Mechanical Engineering</b> — Islamic University of Technology, CGPA 4.26/5.00, full OIC scholarship.</li>
+  <li><b>Notre Dame College, Dhaka</b> — Higher Secondary, 86.3% · <b>Ideal School &amp; College, Motijheel</b> — Secondary, 86.0%.</li>
+  <li><b>In progress:</b> CISSP. <b>Member:</b> Institution of Engineers, Bangladesh.</li>
+</ul>
+
+<h2><span class="n">06</span>What hiring me buys</h2>
+<p>NINA is the proof of concept, not the product. The product is a repeatable capability: <b>I research, build, and repeat</b> — I don't just build AI features; I engineer autonomous, governed systems that organisations can trust. An independent business-value review mapped the evidence to problems organisations actually pay to solve.</p>
+<table>
+  <thead><tr><th>Business problem</th><th>Evidence it can be solved</th><th>Value proposition</th></tr></thead>
+  <tbody>
+    <tr><td>Unpredictable, rising LLM API costs</td><td>Tiered resource selection designed to minimise inference cost</td><td>"I reduce AI operating cost"</td></tr>
+    <tr><td>Over-dependence on one AI vendor</td><td>Provider-independent architecture, local-first fallback</td><td>Reduced lock-in risk</td></tr>
+    <tr><td>Ungoverned AI systems</td><td>Defined precedence rules, differentiated trust levels</td><td>"I engineer deterministic, governed AI"</td></tr>
+    <tr><td>Sensitive data exposure</td><td>Explicit isolation of sensitive data handling</td><td>Built for regulated industries</td></tr>
+    <tr><td>Slow AI-feature delivery</td><td>Structured, delegable work specification; sustained cadence</td><td>Delivery without headcount growth</td></tr>
+    <tr><td>Fragility in 24/7 AI services</td><td>Layered software and hardware resilience</td><td>Uptime engineering for continuous services</td></tr>
+  </tbody>
+</table>
+<h3 class="sub">"I reduce AI operating cost."</h3>
+<p>The transferable claim is the methodology — tiering resources and selecting dynamically — applicable to any organisation watching its inference bill grow.</p>
+<h3 class="sub">"I build local-first, resource-independent AI infrastructure."</h3>
+<p>Directly relevant to edge deployments and data-residency-constrained clients who cannot ship their data into someone else's cloud.</p>
+<h3 class="sub">"I engineer deterministic, governed AI systems."</h3>
+<p>Concrete, describable evidence of governance capability — increasingly demanded by enterprises and regulators alike.</p>
+<h3 class="sub">"I accelerate delivery through structured technical delegation."</h3>
+<p>A transferable management capability for organisations delegating execution to distributed or automated resources: sustained cadence without headcount growth.</p>
+<div class="chips" style="margin-top:22px;">
+  <span class="chip a">AI COST-OPTIMISATION AUDITS</span>
+  <span class="chip">AI GOVERNANCE FRAMEWORK DESIGN</span>
+  <span class="chip a">LOCAL-FIRST / EDGE AI DEPLOYMENT</span>
+  <span class="chip">STRUCTURED DELEGATION DESIGN</span>
+  <span class="chip a">SWIFT / ISO 20022 CONSULTING</span>
+</div>
+
+<h2><span class="n">07</span>Take the file with you</h2>
+<div class="dl">
+  <div class="dlc"><div class="k">DESIGNED EDITION</div><a class="am" href="portfolio.pdf">portfolio.pdf</a><div class="d">Ten-page dossier — this content, art-directed, for attaching to proposals.</div></div>
+  <div class="dlc"><div class="k">CV · PRINTABLE</div><a href="cv.pdf">cv.pdf</a><div class="d">Two pages, light theme, prints cleanly on any office printer.</div></div>
+  <div class="dlc"><div class="k">CV · DARK EDITION</div><a href="ocv.pdf">ocv.pdf</a><div class="d">Same content, dark theme, for screens and digital sharing.</div></div>
+  <div class="dlc"><div class="k">MACHINE-READABLE</div><a href="profile.md">profile.md</a><div class="d">Plain-text profile for crawlers, agents and LLMs. Also: <a href="llms.txt">llms.txt</a>.</div></div>
+</div>
+
+<div class="endlinks">
+  <h3>:23E: CANONICAL LINKS — PERMANENT, CONTENT UPDATED IN PLACE</h3>
+  <div class="lgrid">
+    <div class="lg"><div class="k">HIRE · UPWORK</div><div class="v"><a class="am" href="https://www.upwork.com/freelancers/~01a168174960b876b3?mp_source=share" target="_blank" rel="noopener">upwork.com/freelancers/~01a168174960b876b3</a></div></div>
+    <div class="lg"><div class="k">HIRE · FIVERR</div><div class="v"><a class="am" href="https://www.fiverr.com/s/NN7o0la" target="_blank" rel="noopener">fiverr.com/s/NN7o0la</a></div></div>
+    <div class="lg"><div class="k">HUB</div><div class="v"><a href="index.html">aibony.github.io</a></div></div>
+    <div class="lg"><div class="k">LONG-FORM PROFILE</div><div class="v"><a href="profile.html">aibony.github.io/profile.html</a></div></div>
+    <div class="lg"><div class="k">THIS PAGE</div><div class="v"><a href="evidence.html">aibony.github.io/evidence.html</a></div></div>
+    <div class="lg"><div class="k">NINA UPDATES</div><div class="v"><a href="https://github.com/aibony/aibony" target="_blank" rel="noopener">github.com/aibony/aibony</a></div></div>
+    <div class="lg"><div class="k">SYSTEM DEMO</div><div class="v"><a href="https://youtu.be/3cRpDgVsuMU" target="_blank" rel="noopener">youtu.be/3cRpDgVsuMU</a></div></div>
+    <div class="lg"><div class="k">LINKEDIN</div><div class="v"><a href="https://www.linkedin.com/in/mba2009" target="_blank" rel="noopener">linkedin.com/in/mba2009</a></div></div>
+    <div class="lg"><div class="k">EMAIL</div><div class="v"><a href="mailto:baizid.alam@gmail.com">baizid.alam@gmail.com</a></div></div>
+    <div class="lg"><div class="k">CALL · WHATSAPP</div><div class="v"><a href="https://wa.me/8801713487996">+88 0171 348 7996</a></div></div>
+  </div>
+</div>
+
+<footer>
+  <span><span class="dot"></span>RESEARCH → BUILD → REPEAT</span>
+  <span>© M. BAIZID ALAM · DHAKA</span>
+</footer>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Evidence — Architecture, Due Diligence, Competencies and Business Value",
+  "author": { "@type": "Person", "name": "M. Baizid Alam", "url": "https://aibony.github.io/" },
+  "mainEntityOfPage": "https://aibony.github.io/evidence.html",
+  "image": "https://aibony.github.io/og.jpg",
+  "inLanguage": "en",
+  "about": ["AI infrastructure","AI governance","SWIFT administration","ISO 20022","ISO/IEC 27001","multi-agent systems","local-first AI","trade finance"]
+}
+</script>
+</body>
+</html>

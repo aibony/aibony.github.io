@@ -7,8 +7,9 @@
 > governance, local-first/edge AI deployment, and SWIFT / ISO 20022 / trade finance.
 
 ## Core documents
-- [Long-form profile](https://aibony.github.io/dossier.html): How a mechanical engineer and 16-year banking executive came to build his own autonomous AI infrastructure.
-- [Profile, machine-readable](https://aibony.github.io/dossier.md): The same profile as plain markdown.
+- [Long-form profile](https://aibony.github.io/profile.html): How a mechanical engineer and 16-year banking executive came to build his own autonomous AI infrastructure. Contains the "mechanised DevOps" thesis.
+- [Evidence / case file](https://aibony.github.io/evidence.html): Architecture diagram, independent technical due diligence, competency analysis, career record, and business-value mapping.
+- [Profile, machine-readable](https://aibony.github.io/profile.md): The same profile as plain markdown.
 - [Portfolio dossier (PDF)](https://aibony.github.io/portfolio.pdf): 10-page designed dossier with independent reviews and business-value analysis.
 - [CV, printable (PDF)](https://aibony.github.io/cv.pdf): Two-page CV, light theme.
 - [CV, dark edition (PDF)](https://aibony.github.io/ocv.pdf): Same CV, dark theme.

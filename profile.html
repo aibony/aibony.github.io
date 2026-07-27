@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Human Behind the Machine — M. Baizid Alam</title>
+<meta name="description" content="How a mechanical engineer and 16-year banking executive — SWIFT administrator, ISO 27001 Lead Auditor — came to build his own autonomous AI infrastructure on a 2 GB laptop. The long-form profile of M. Baizid Alam (aibony), Dhaka, Bangladesh.">
+<link rel="canonical" href="https://aibony.github.io/profile.html">
+<meta property="og:title" content="The Human Behind the Machine — M. Baizid Alam">
+<meta property="og:description" content="A mechanical engineer walked into a bank and found a bigger machine. Sixteen years later he mechanised his own DevOps.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://aibony.github.io/profile.html">
+<meta property="og:image" content="https://aibony.github.io/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://aibony.github.io/og.jpg">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{ --bg:#070D18; --line:#1E2E4B; --ink:#E3EDFB; --dim:#9FB2D0; --faint:#617597;
+         --cyan:#53DDE9; --cyan-soft:#8FE9F1; --amber:#F2B354; }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{ background:var(--bg); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; line-height:1.72; }
+  body::before{ content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+    background-image:
+      linear-gradient(to right, rgba(83,221,233,.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(83,221,233,.04) 1px, transparent 1px);
+    background-size:48px 48px;
+    -webkit-mask-image:radial-gradient(ellipse 120% 60% at 50% 0%, #000 0%, transparent 75%); }
+  a{ color:var(--cyan); text-decoration:none; }
+  a:hover{ color:var(--cyan-soft); }
+  .wrap{ max-width:760px; margin:0 auto; padding:0 24px; position:relative; z-index:1; }
+
+  nav{ position:sticky; top:0; z-index:10; background:rgba(7,13,24,.88); backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line); }
+  nav .in{ max-width:1060px; margin:0 auto; padding:14px 24px; display:flex; justify-content:space-between;
+    align-items:center; gap:16px; flex-wrap:wrap; }
+  .brand{ font-family:'JetBrains Mono'; font-weight:700; font-size:13px; letter-spacing:.14em; color:var(--cyan); }
+  .navlinks{ display:flex; gap:20px; flex-wrap:wrap; }
+  .navlinks a{ font-family:'JetBrains Mono'; font-size:11.5px; letter-spacing:.1em; color:var(--dim); }
+  .navlinks a.hire{ color:var(--amber); border:1px solid rgba(242,179,84,.4); padding:5px 12px;
+    border-radius:5px; background:rgba(242,179,84,.07); }
+
+  header{ padding:70px 0 34px; }
+  .kicker{ display:inline-block; font-family:'JetBrains Mono'; font-weight:700; font-size:12px; color:var(--amber);
+    background:rgba(242,179,84,.08); border:1px solid rgba(242,179,84,.4); padding:6px 14px;
+    border-radius:5px; letter-spacing:.09em; margin-bottom:26px; }
+  h1{ font-family:'Space Grotesk'; font-weight:700; font-size:clamp(36px,5.4vw,54px); line-height:1.06;
+    letter-spacing:-.015em; margin-bottom:18px;
+    background:linear-gradient(105deg,#FFF 25%, var(--cyan-soft) 78%, var(--cyan) 105%);
+    -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .standfirst{ font-family:'Space Grotesk'; font-weight:300; font-size:clamp(17px,2.2vw,21px);
+    color:#C2D2EA; line-height:1.5; }
+  .byline{ margin-top:24px; padding-top:18px; border-top:1px solid var(--line);
+    font-family:'JetBrains Mono'; font-size:11px; letter-spacing:.12em; color:var(--faint); }
+
+  h2{ font-family:'Space Grotesk'; font-weight:500; font-size:clamp(22px,3vw,28px); color:var(--ink);
+    margin:52px 0 18px; display:flex; align-items:center; gap:14px; }
+  h2 .n{ font-family:'JetBrains Mono'; font-weight:700; font-size:13px; color:var(--amber);
+    background:rgba(242,179,84,.08); border:1px solid rgba(242,179,84,.38);
+    padding:5px 10px; border-radius:4px; letter-spacing:.06em; flex-shrink:0; }
+  p{ color:var(--dim); font-size:17px; margin-bottom:20px; }
+  p b, strong{ color:var(--ink); font-weight:600; }
+  em{ color:#C2D2EA; }
+  ul{ list-style:none; margin:0 0 22px; }
+  li{ color:var(--dim); font-size:17px; padding-left:22px; position:relative; margin-bottom:12px; }
+  li::before{ content:'—'; position:absolute; left:0; color:var(--cyan); }
+  li b{ color:var(--ink); }
+
+  .pull{ border-left:3px solid var(--amber); padding:6px 0 6px 24px; margin:34px 0; }
+  .pull p{ font-family:'Space Grotesk'; font-weight:300; font-size:clamp(20px,2.8vw,26px);
+    line-height:1.42; color:#D6E3F5; margin:0; }
+  .pull p b{ color:var(--cyan); font-weight:500; }
+
+  .box{ border:1px solid var(--line); border-radius:10px; padding:22px 26px; margin:30px 0;
+    background:linear-gradient(180deg, rgba(16,27,49,.62), rgba(12,21,38,.34)); }
+  .box .eyebrow{ font-family:'JetBrains Mono'; font-size:11px; letter-spacing:.16em; color:var(--cyan);
+    margin-bottom:12px; }
+  .box p:last-child{ margin-bottom:0; }
+  .box.amberline{ border-left:3px solid var(--amber); }
+
+  .facts{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:14px; margin:30px 0; }
+  .fact{ border:1px solid var(--line); border-radius:10px; padding:16px 18px;
+    background:linear-gradient(180deg, rgba(16,27,49,.75), rgba(12,21,38,.4)); }
+  .fact .v{ font-family:'Space Grotesk'; font-weight:700; font-size:26px; color:var(--cyan-soft); line-height:1.1; }
+  .fact .k{ font-family:'JetBrains Mono'; font-size:10px; letter-spacing:.14em; color:var(--faint); margin-top:7px; }
+
+  .endlinks{ border-top:1px solid var(--line); margin-top:56px; padding-top:30px; }
+  .endlinks h3{ font-family:'JetBrains Mono'; font-size:11px; letter-spacing:.18em; color:var(--faint); margin-bottom:18px; }
+  .lgrid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:12px; }
+  .lg{ border:1px solid var(--line); border-radius:8px; padding:13px 16px; background:rgba(16,27,49,.6); }
+  .lg .k{ font-family:'JetBrains Mono'; font-size:9.5px; letter-spacing:.16em; color:var(--faint); margin-bottom:5px; }
+  .lg .v{ font-family:'JetBrains Mono'; font-size:12.5px; word-break:break-word; }
+  .lg .v a{ text-decoration:underline; text-underline-offset:2px; }
+  .lg .v a.am{ color:var(--amber); }
+  footer{ border-top:1px solid var(--line); margin-top:44px; padding:24px 0 46px;
+    font-family:'JetBrains Mono'; font-size:11px; letter-spacing:.12em; color:var(--faint);
+    display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; }
+  .dot{ display:inline-block; width:7px; height:7px; border-radius:50%; background:var(--cyan);
+    box-shadow:0 0 10px var(--cyan); margin-right:9px; vertical-align:middle; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="in">
+    <div class="brand">:20: M-BAIZID-ALAM</div>
+    <div class="navlinks">
+      <a href="index.html">← HUB</a>
+      <a href="evidence.html">EVIDENCE</a>
+      <a href="portfolio.pdf">PDF</a>
+      <a href="index.html#proof">PROOF</a>
+      <a class="hire" href="https://www.upwork.com/freelancers/~01a168174960b876b3?mp_source=share" target="_blank" rel="noopener">HIRE ME</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+<header>
+  <div class="kicker">:79: LONG-FORM PROFILE</div>
+  <h1>The Human Behind the Machine</h1>
+  <p class="standfirst">A mechanical engineer walked into a bank and found a bigger machine. Sixteen years later, he mechanised his own DevOps.</p>
+  <div class="byline">M. BAIZID ALAM · DHAKA, BANGLADESH · WRITTEN 2026</div>
+</header>
+
+<h2><span class="n">01</span>The machine came first</h2>
+<p>Long before I worked in a bank, I was the person who opened things to see how they worked. Computers mostly — disassembled and put back together without training or manuals, on the assumption that anything built by a person could be understood by one. Nothing about that was strategic. It was just the shape of my attention.</p>
+<p>That attention took me through Ideal School &amp; College, then Notre Dame College, then the Islamic University of Technology on a full OIC scholarship, where I read for a B.Sc. in Mechanical Engineering. There I learned the formal version of what I had been doing informally: <b>a machine is a system of parts under constraint.</b> Understand the constraints and you can predict the behaviour. Change the constraints and you change what the machine can be.</p>
+<p>Then I did something that looked, to everyone including me, like leaving engineering behind. I took an MBA at North South University and joined a bank.</p>
+
+<h2><span class="n">02</span>Then a larger machine</h2>
+<p>I entered BASIC Bank PLC in October 2009 as an Assistant Manager at a branch in Chittagong. I expected a job. What I found was a bigger machine.</p>
+<p>A bank is not a building or a balance sheet. It is a mechanism: inputs, tolerances, interlocks, failure modes, and rules that either hold under load or don't. Over sixteen years I was posted through most of its subsystems, and each one taught me something the one before it couldn't.</p>
+<ul>
+  <li><b>The branch</b> taught me where operational risk actually hides — not in policy documents, but in everyday transactions performed under pressure by tired people.</li>
+  <li><b>Credit</b> taught me how a bank decides whom to trust, and what it costs when that judgment is wrong.</li>
+  <li><b>Trade finance</b> taught me how documents move value across borders, and why a single discrepancy can stop a national procurement.</li>
+  <li><b>Head office</b> taught me what a Board actually reads, and how information must be shaped to survive the journey upward.</li>
+  <li><b>SWIFT</b> taught me custody — the difference between operating a system and being responsible for it.</li>
+</ul>
+<p>I operated SWIFT from 2009. I became its administrator in 2024, and today I am the sole SWIFT administrator for the entire bank network, alongside ISO/IEC 27001:2022 Lead Auditor certification and the CBPR+ ISO 20022 migration, which I also train internally. Somewhere in those sixteen years the engineer never left. He simply had a much more interesting machine to study.</p>
+
+<h2><span class="n">03</span>The constraint</h2>
+<p>In 2024 I started building an AI system of my own. Not as a career move — I had a demanding executive job — but because the question wouldn't leave me alone: how much of my own operational work could be made autonomous, and governed well enough that I would trust it?</p>
+<p>The conditions were not favourable. One consumer laptop with 2 GB of video memory. No institutional backing; a grant application had already been rejected. No team. No budget for cloud compute, and no willingness to put my thinking inside someone else's infrastructure. The work happened in evenings and in the early hours, after full days of a job that does not get easier.</p>
+<div class="pull"><p><b>I treated every one of those limits as a design input rather than an excuse.</b> That is not resilience talking. It is engineering: constraints are what make a design specific.</p></div>
+<p>What emerged is NINA — a local-first, multi-agent AI infrastructure that runs on that same hardware. Commands enter over Telegram, pass through a sanitisation gateway, and reach build and audit engines that sit behind a governance layer: constitutional rules, compliance scoring, file registries, semantic memory. Inference is tiered, preferring local and low-cost paths before anything paid. Every change is a governed transaction rather than a blind edit.</p>
+
+<div class="box">
+  <div class="eyebrow">A NOTE ON FUEL</div>
+  <p>Two things power work like this, and they are not the same thing.</p>
+  <p>The first is <b>dopamine</b> — the build loop. Idea, dispatch, result, in seconds rather than the weeks institutional work takes. That loop is productive and mildly addictive, and it is the honest explanation for how nearly seven thousand commits landed in a single thirty-day window.</p>
+  <p>The second is <b>adrenaline</b> — the 2&nbsp;a.m. sessions, the pressure of doing this alongside a full executive job, the sense that a window is open and will not stay open. Adrenaline finishes things. It also degrades judgment, and it does not renew.</p>
+  <p>I mention both because an engineer should know what his own system runs on. Building rewards dopamine; every few minutes something works. The phase after building — writing to people, waiting, being told no — pays out slowly and rewards patience instead. Knowing which fuel you are burning, and which one the current phase actually requires, is part of running yourself well. It is the same discipline I built into NINA: measure the system you are operating, including when that system is you.</p>
+</div>
+
+<h2><span class="n">04</span>What I actually did</h2>
+<p>It took me embarrassingly long to see the obvious description of my own work.</p>
+<p>I am a mechanical engineer. Mechanical engineers mechanise things — they take a process performed by hand and build a mechanism that performs it reliably, repeatably, within tolerance, with failure modes understood in advance.</p>
+<div class="pull"><p>I did not learn to code my way into AI. <b>I mechanised DevOps.</b> The substrate changed from steel to pipelines, agents and runtimes. The discipline did not change at all.</p></div>
+<p>That is why NINA is built the way it is. It is not a chatbot with ambitions; it is a mechanism. It has interlocks, because mechanisms that can act need places where they must stop. It has an audit engine, because a machine you cannot inspect is a machine you cannot trust. It has thermal and resource guards, because every real mechanism operates inside physical limits — a fact software people can forget and mechanical engineers cannot.</p>
+
+<h2><span class="n">05</span>What it proves — and what it doesn't</h2>
+<div class="facts">
+  <div class="fact"><div class="v">9,600+</div><div class="k">COMMITS</div></div>
+  <div class="fact"><div class="v">515</div><div class="k">MODULES</div></div>
+  <div class="fact"><div class="v">~70K</div><div class="k">LINES OF CODE</div></div>
+  <div class="fact"><div class="v">2 GB</div><div class="k">VRAM CEILING</div></div>
+</div>
+<p>Those numbers are computed from the repository, not written by hand. But the number that matters most is a different one: <b>I hand-wrote almost none of that code.</b></p>
+<p>I specified it. I governed it. I dispatched it to agents, reviewed what came back, rejected what drifted, and enforced the architectural rules when no one else was there to enforce them. Which is, once you look at it plainly, the same thing I have done for sixteen years in a bank: write instructions precise enough that someone else can execute them without ambiguity, and an auditor can verify them afterwards. I ran a specialised LC unit that way. I run an agent mesh the same way.</p>
+<div class="box amberline">
+  <div class="eyebrow">WHAT THIS IS NOT</div>
+  <p>NINA is not a product, not for sale, and not production-grade. She is a personal capability project under active development, and as I write this she is mid-refactor with services deliberately halted for a system-wide deduplication pass. I state that plainly because honest scoping is the first skill of anyone who sells governance. What she proves is one thing, and proves it well: that I can research, design, build and govern working AI systems with my own hands.</p>
+</div>
+
+<h2><span class="n">06</span>What the machines say</h2>
+<p>I asked three frontier models, in separate sessions, to assess the system and its maker — with explicit instructions to name no tools and disclose no internals. Their answers are published on the <a href="index.html#proof">hub</a>, unedited.</p>
+<p>I do not offer them as proof of quality. A model's praise is generated on request and is worth exactly what you paid for it. I publish them because independent sessions, given the same constrained question, converged on the same structural observations: that the architecture enforces one canonical source of truth per domain; that the classification rests on implemented capability rather than branding; and that the combination of constrained resources with uncompromised ambition, held to architectural discipline by a single person with no team to enforce it, is uncommon.</p>
+<p>The measured numbers live in the <a href="https://github.com/aibony/aibony" target="_blank" rel="noopener">updates log</a>, where they can be checked. Opinions belong in one place and instrument readings in another. Keeping them apart is most of what integrity means in this work.</p>
+
+<h2><span class="n">07</span>Where this goes</h2>
+<p>I am not selling NINA and I am not claiming to be something I am not. What I have is a combination that is genuinely hard to assemble: custody-grade compliance experience — SWIFT administration, ISO 27001 audit, ISO 20022 migration, sanctions screening, sixteen years inside a regulated institution — sitting in the same person as demonstrated ability to design, build and govern autonomous AI systems on hardware that has no right to run them.</p>
+<p>Most organisations have people who understand one side. The translation between them is where projects fail, budgets vanish, and governance becomes a document nobody enforces. That translation is what I do.</p>
+<div class="pull"><p>My own bank employs an entire IT department. None of them built this. <b>A trade finance AGM built it alone, in the evenings, on a 2 GB laptop.</b> That is not a boast — it is the measurement.</p></div>
+<p>I take on AI infrastructure design, governance frameworks for autonomous systems, local-first deployment for organisations that cannot or will not send their data elsewhere, and SWIFT / ISO 20022 / trade finance consulting from someone who administers these systems today rather than having read about them.</p>
+<p>Research, build, repeat. That is the loop. NINA is the evidence that it works under real constraints — and the next system built with it can be yours.</p>
+
+<div class="endlinks">
+  <h3>:23E: CANONICAL LINKS — PERMANENT, CONTENT UPDATED IN PLACE</h3>
+  <div class="lgrid">
+    <div class="lg"><div class="k">HIRE · UPWORK</div><div class="v"><a class="am" href="https://www.upwork.com/freelancers/~01a168174960b876b3?mp_source=share" target="_blank" rel="noopener">upwork.com/freelancers/~01a168174960b876b3</a></div></div>
+    <div class="lg"><div class="k">HIRE · FIVERR</div><div class="v"><a class="am" href="https://www.fiverr.com/s/NN7o0la" target="_blank" rel="noopener">fiverr.com/s/NN7o0la</a></div></div>
+    <div class="lg"><div class="k">HUB</div><div class="v"><a href="index.html">aibony.github.io</a></div></div>
+    <div class="lg"><div class="k">CV · PRINTABLE</div><div class="v"><a href="cv.pdf">aibony.github.io/cv.pdf</a></div></div>
+    <div class="lg"><div class="k">CV · DARK EDITION</div><div class="v"><a href="ocv.pdf">aibony.github.io/ocv.pdf</a></div></div>
+    <div class="lg"><div class="k">EVIDENCE / CASE FILE</div><div class="v"><a href="evidence.html">aibony.github.io/evidence.html</a></div></div>
+    <div class="lg"><div class="k">PORTFOLIO DOSSIER</div><div class="v"><a href="portfolio.pdf">aibony.github.io/portfolio.pdf</a></div></div>
+    <div class="lg"><div class="k">NINA UPDATES</div><div class="v"><a href="https://github.com/aibony/aibony" target="_blank" rel="noopener">github.com/aibony/aibony</a></div></div>
+    <div class="lg"><div class="k">SYSTEM DEMO</div><div class="v"><a href="https://youtu.be/3cRpDgVsuMU" target="_blank" rel="noopener">youtu.be/3cRpDgVsuMU</a></div></div>
+    <div class="lg"><div class="k">LINKEDIN</div><div class="v"><a href="https://www.linkedin.com/in/mba2009" target="_blank" rel="noopener">linkedin.com/in/mba2009</a></div></div>
+    <div class="lg"><div class="k">EMAIL</div><div class="v"><a href="mailto:baizid.alam@gmail.com">baizid.alam@gmail.com</a></div></div>
+    <div class="lg"><div class="k">CALL · WHATSAPP</div><div class="v"><a href="https://wa.me/8801713487996">+88 0171 348 7996</a></div></div>
+    <div class="lg"><div class="k">MACHINE-READABLE</div><div class="v"><a href="profile.md">profile.md</a> · <a href="llms.txt">llms.txt</a></div></div>
+  </div>
+</div>
+
+<footer>
+  <span><span class="dot"></span>RESEARCH → BUILD → REPEAT</span>
+  <span>© M. BAIZID ALAM · DHAKA</span>
+</footer>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Human Behind the Machine",
+  "author": { "@type": "Person", "name": "M. Baizid Alam", "url": "https://aibony.github.io/" },
+  "publisher": { "@type": "Person", "name": "M. Baizid Alam" },
+  "mainEntityOfPage": "https://aibony.github.io/profile.html",
+  "image": "https://aibony.github.io/og.jpg",
+  "inLanguage": "en",
+  "about": ["AI infrastructure", "SWIFT", "ISO 20022", "ISO/IEC 27001", "multi-agent systems", "trade finance"]
+}
+</script>
+</body>
+</html>
