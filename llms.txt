@@ -14,6 +14,8 @@
 - [CV, printable (PDF)](https://aibony.github.io/cv.pdf): Two-page CV, light theme.
 - [CV, dark edition (PDF)](https://aibony.github.io/ocv.pdf): Same CV, dark theme.
 
+- [Digital visiting card](https://aibony.github.io/card.html): One-screen shareable contact card with all links, QR and vCard download.
+
 ## Evidence
 - [NINA updates log](https://github.com/aibony/aibony): Dated development log and computed system metrics.
 - [System demo (video)](https://youtu.be/3cRpDgVsuMU): NINA running live.

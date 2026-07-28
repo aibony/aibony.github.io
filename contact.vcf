@@ -1,0 +1,15 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Alam;M. Baizid;;;
+FN:M. Baizid Alam
+ORG:BASIC Bank PLC;Trade Finance Division
+TITLE:AGM & Deputy Head, Trade Finance Division
+ROLE:SWIFT Administrator · ISO/IEC 27001:2022 Lead Auditor · AI Infrastructure
+TEL;TYPE=CELL,VOICE:+8801713487996
+EMAIL;TYPE=INTERNET,PREF:baizid.alam@gmail.com
+URL:https://aibony.github.io/
+URL;TYPE=LinkedIn:https://www.linkedin.com/in/mba2009
+URL;TYPE=GitHub:https://github.com/aibony/aibony
+ADR;TYPE=WORK:;;Dhaka;;;;Bangladesh
+NOTE:Mechanical engineer (IUT) · MBA summa cum laude (NSU). Full-stack banker: cash, general banking, credit, trade finance, compliance. SWIFT admin, ISO 20022 trainer, ISO/IEC 27001:2022 Lead Auditor. Builder of NINA — a local-first autonomous AI infrastructure. Portfolio: https://aibony.github.io/
+END:VCARD
