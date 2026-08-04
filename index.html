@@ -122,13 +122,18 @@
     border:1px solid rgba(83,221,233,.35); background:rgba(83,221,233,.06); padding:6px 13px; border-radius:99px; }
   .chip.a{ color:var(--amber); border-color:rgba(242,179,84,.35); background:rgba(242,179,84,.06); }
 
-  .livestats{ display:flex; gap:22px; flex-wrap:wrap; margin:0 0 22px; padding:14px 18px; border:1px solid var(--line);
-    border-radius:10px; font-family:'JetBrains Mono'; }
+  .livestats{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px 20px; margin:0 0 22px;
+    padding:16px 18px; border:1px solid var(--line); border-radius:10px; font-family:'JetBrains Mono';
+    background:linear-gradient(180deg, rgba(16,27,49,.5), rgba(12,21,38,.28)); }
+  @media(min-width:560px){ .livestats{ grid-template-columns:repeat(3,minmax(0,1fr)); } }
+  @media(min-width:760px){ .livestats{ grid-template-columns:repeat(4,minmax(0,1fr)); } }
+  @media(min-width:1020px){ .livestats{ grid-template-columns:repeat(6,minmax(0,1fr)); } }
+
   .livestats .ls-loading{ font-size:12px; color:var(--faint); }
-  .ls-item{ display:flex; flex-direction:column; gap:2px; }
+  .ls-item{ display:flex; flex-direction:column; gap:2px; min-width:0; }
   .ls-item b{ font-size:19px; color:var(--cyan); font-weight:600; font-variant-numeric:tabular-nums; }
   .ls-item span{ font-size:10px; letter-spacing:.06em; color:var(--faint); text-transform:uppercase; }
-  .ls-asof{ margin-left:auto; align-self:center; font-size:10px; color:var(--faint); }
+  .ls-asof{ grid-column:1/-1; font-size:10px; color:var(--faint); border-top:1px solid var(--line); padding-top:10px; }
 
   .honest{ border:1px solid var(--line); border-left:3px solid var(--amber); border-radius:0 8px 8px 0;
     background:linear-gradient(180deg, rgba(16,27,49,.6), rgba(12,21,38,.35)); padding:18px 22px; margin:22px 0; max-width:820px; }
@@ -557,14 +562,24 @@
       const r = await fetch('stats.json', {cache:'no-store'});
       const d = await r.json();
       const scale = d.repo_scale || {};
+      const gate = d.gate || {};
+      const gov = d.governance || {};
       const items = [
         {v: d.commits, l: 'commits'},
+        {v: d.merged_prs, l: 'merged PRs'},
+        {v: gov.governed_elements, l: 'governed elements'},
+        {v: gov.classified_entities, l: 'classified entities'},
+        {v: gov.capabilities, l: 'capabilities'},
+        {v: gov.dependency_edges, l: 'dependency edges'},
         {v: scale.python_modules, l: 'python modules'},
-        {v: scale.lines_of_code, l: 'lines of code'},
         {v: scale.test_files, l: 'test files'},
+        {v: scale.adrs, l: 'decision records'},
+        {v: gov.kernel_directives, l: 'kernel directives'},
+        {v: gate.status ? gate.status + ' ' + gate.reliability_score + '/100' : null, l: 'governance gate'},
+        {v: scale.repo_size_mb ? scale.repo_size_mb + ' MB' : null, l: 'repo size · 2 GB VRAM'},
       ].filter(i => i.v != null);
       if (!items.length) throw new Error('no data');
-      el.innerHTML = items.map(i => `<div class="ls-item"><b>${i.v.toLocaleString()}</b><span>${i.l}</span></div>`).join('')
+      el.innerHTML = items.map(i => `<div class="ls-item"><b>${typeof i.v === 'number' ? i.v.toLocaleString() : i.v}</b><span>${i.l}</span></div>`).join('')
         + `<span class="ls-asof">as of ${d.date || '?'} · <a href="graph_data.json" style="color:inherit">raw</a></span>`;
     } catch (err) {
       el.innerHTML = '<span class="ls-loading">live stats unavailable</span>';

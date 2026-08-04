@@ -113,35 +113,45 @@
       "date": "2026-08-03"
     },
     {
-      "commits": 128,
+      "commits": 130,
       "date": "2026-08-04"
     },
     {
-      "commits": 12,
+      "commits": 15,
       "date": "2026-08-05"
     }
   ],
-  "commits": 11117,
+  "commits": 11122,
   "date": "2026-08-04",
   "gate": {
-    "checked_at": "2026-08-04T19:31:01.039351+00:00",
-    "duration_s": 47.12,
+    "checked_at": "2026-08-04T20:06:39.476902+00:00",
+    "duration_s": 61.66,
     "evidence_count": 3,
     "reliability_score": 100.0,
     "status": "PASS"
   },
-  "generated_at": "2026-08-04T20:00:01.182627+00:00",
-  "merged_prs": 2580,
+  "generated_at": "2026-08-04T20:13:49.782540+00:00",
+  "governance": {
+    "capabilities": 546,
+    "classified_entities": 2577,
+    "collisions": 71,
+    "collisions_actionable": 8,
+    "dependency_edges": 853,
+    "governed_elements": 38436,
+    "kernel_directives": 205,
+    "ops_holders": 62
+  },
+  "merged_prs": 2582,
   "pipelines": {
     "normal_build": {
       "resume_after": "2026-07-20T04:30:27.485657+00:00",
       "status": "paused"
     },
     "overhaul": {
-      "done": 931,
-      "failed": 1053,
+      "done": 935,
+      "failed": 1054,
       "ready": 0,
-      "running": 22,
+      "running": 17,
       "status": "active"
     },
     "overhaul_enrichment": {
@@ -153,13 +163,20 @@
     }
   },
   "repo_health": {
-    "open_branches": 2,
+    "open_branches": 5,
     "open_prs": 0
   },
   "repo_scale": {
-    "lines_of_code": 111367,
+    "adrs": 30,
+    "json_registries": 1651,
+    "lines_of_code": 111590,
+    "markdown_docs": 467,
+    "non_python_files": 2311,
     "python_modules": 955,
-    "test_files": 534
+    "repo_size_mb": 67.6,
+    "shell_scripts": 61,
+    "test_files": 534,
+    "tracked_files": 3266
   },
   "sync_tooling": [
     {
@@ -178,12 +195,12 @@
       "role": "merge / branch cleanup"
     },
     {
-      "available": false,
+      "available": true,
       "name": "commandcode",
       "role": "shell / system ops"
     },
     {
-      "available": false,
+      "available": true,
       "name": "opencode",
       "role": "policy read surface"
     }
