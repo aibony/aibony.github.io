@@ -1,0 +1,2966 @@
+{
+  "generated": "2026-08-04",
+  "ascii_summary": "NINA \u2014 SOVEREIGN COGNITIVE OPERATING ECOSYSTEM\n\n  OPERATOR -> GATEWAY -> GOVERNANCE GATE -> BUILD ENGINE / AUDIT ENGINE\n\n  PLANES (7): kernel | gateway | operator | execution | observation | memory | governance\n  PRISM (3, cross-cutting): PRISM-COMPRESS | PRISM-VERIFY | PRISM-OBSERVE\n\n  38478 tracked elements  \u00b7  71 collisions (8 actionable)\n  overhaul 20/56 complete (35.7%)",
+  "schema_version": 2,
+  "nodes": [
+    {
+      "id": "plane:kernel",
+      "label": "kernel",
+      "kind": "plane",
+      "responsibility": "trusted orchestration and cognitive contracts"
+    },
+    {
+      "id": "holder:cogops",
+      "label": "cogops",
+      "kind": "holder",
+      "plane": "kernel",
+      "funcs": 25,
+      "top_funcs": [
+        "kernel_load",
+        "kernel_get_module",
+        "kernel_status",
+        "symbol_lookup",
+        "symbol_context_str",
+        "dependency_impact",
+        "reflexion_read",
+        "reflexion_trigger"
+      ],
+      "purpose": "tools/cogops.py",
+      "params": {
+        "kernel_load": [],
+        "kernel_get_module": [
+          "name"
+        ],
+        "kernel_status": [],
+        "symbol_lookup": [
+          "query",
+          "max_results"
+        ],
+        "symbol_context_str": [
+          "query",
+          "max_results"
+        ],
+        "dependency_impact": [
+          "file_path"
+        ],
+        "reflexion_read": [
+          "limit"
+        ],
+        "reflexion_trigger": [
+          "task_id",
+          "outcome",
+          "notes"
+        ]
+      }
+    },
+    {
+      "id": "sub:cogops:cognitive_kernel",
+      "label": "cognitive_kernel",
+      "kind": "subdomain",
+      "plane": "kernel",
+      "parent": "holder:cogops"
+    },
+    {
+      "id": "sub:cogops:symbol_map",
+      "label": "symbol_map",
+      "kind": "subdomain",
+      "plane": "kernel",
+      "parent": "holder:cogops"
+    },
+    {
+      "id": "sub:cogops:dependency_graph",
+      "label": "dependency_graph",
+      "kind": "subdomain",
+      "plane": "kernel",
+      "parent": "holder:cogops"
+    },
+    {
+      "id": "sub:cogops:reflexion",
+      "label": "reflexion",
+      "kind": "subdomain",
+      "plane": "kernel",
+      "parent": "holder:cogops"
+    },
+    {
+      "id": "sub:cogops:reasoning",
+      "label": "reasoning",
+      "kind": "subdomain",
+      "plane": "kernel",
+      "parent": "holder:cogops"
+    },
+    {
+      "id": "sub:cogops:think_mode",
+      "label": "think_mode",
+      "kind": "subdomain",
+      "plane": "kernel",
+      "parent": "holder:cogops"
+    },
+    {
+      "id": "sub:cogops:research_daemon",
+      "label": "research_daemon",
+      "kind": "subdomain",
+      "plane": "kernel",
+      "parent": "holder:cogops"
+    },
+    {
+      "id": "holder:tokenops",
+      "label": "tokenops",
+      "kind": "holder",
+      "plane": "kernel",
+      "funcs": 7,
+      "top_funcs": [
+        "provider_supply_pressure",
+        "_Token_load",
+        "_Token_save",
+        "record_spend",
+        "get_report",
+        "budget_check",
+        "test_tokenops_budget_check_fix"
+      ],
+      "purpose": "Token spend tracker \u2014 per-agent savings metrics.",
+      "params": {
+        "provider_supply_pressure": [
+          "provider_states"
+        ],
+        "_Token_load": [],
+        "_Token_save": [
+          "data"
+        ],
+        "record_spend": [
+          "agent",
+          "input_t",
+          "output_t",
+          "compressed_input_t"
+        ],
+        "get_report": [],
+        "budget_check": [
+          "agent",
+          "input_t",
+          "output_t"
+        ],
+        "test_tokenops_budget_check_fix": []
+      }
+    },
+    {
+      "id": "sub:tokenops:budget",
+      "label": "budget",
+      "kind": "subdomain",
+      "plane": "kernel",
+      "parent": "holder:tokenops"
+    },
+    {
+      "id": "sub:tokenops:compression",
+      "label": "compression",
+      "kind": "subdomain",
+      "plane": "kernel",
+      "parent": "holder:tokenops"
+    },
+    {
+      "id": "sub:tokenops:cost",
+      "label": "cost",
+      "kind": "subdomain",
+      "plane": "kernel",
+      "parent": "holder:tokenops"
+    },
+    {
+      "id": "plane:gateway",
+      "label": "gateway",
+      "kind": "plane",
+      "responsibility": "all governed ingress, egress, routing, and protocols"
+    },
+    {
+      "id": "holder:ninagate",
+      "label": "ninagate",
+      "kind": "holder",
+      "plane": "gateway",
+      "funcs": 20,
+      "top_funcs": [
+        "_write_access",
+        "_authorize",
+        "_validate_payload",
+        "_content",
+        "_run_completion",
+        "_chat_sse",
+        "lifespan",
+        "graceful_shutdown_middleware"
+      ],
+      "purpose": "NinaGate: NINA's self-contained inference continuity service.",
+      "params": {
+        "_write_access": [
+          "event"
+        ],
+        "_authorize": [
+          "request"
+        ],
+        "_validate_payload": [
+          "payload"
+        ],
+        "_content": [
+          "result"
+        ],
+        "_run_completion": [
+          "payload",
+          "request"
+        ],
+        "_chat_sse": [
+          "result",
+          "request_id"
+        ],
+        "lifespan": [
+          "_"
+        ],
+        "graceful_shutdown_middleware": [
+          "request",
+          "call_next"
+        ]
+      }
+    },
+    {
+      "id": "sub:ninagate:hybrid_router",
+      "label": "hybrid_router",
+      "kind": "subdomain",
+      "plane": "gateway",
+      "parent": "holder:ninagate"
+    },
+    {
+      "id": "sub:ninagate:quota_control",
+      "label": "quota_control",
+      "kind": "subdomain",
+      "plane": "gateway",
+      "parent": "holder:ninagate"
+    },
+    {
+      "id": "holder:telegramops",
+      "label": "telegramops",
+      "kind": "holder",
+      "plane": "gateway",
+      "funcs": 11,
+      "top_funcs": [
+        "__dir__",
+        "send_telegram",
+        "start_beep",
+        "stop_beep",
+        "send_build_engine_alert",
+        "send_research_needed",
+        "send_quota_exhausted",
+        "send_message"
+      ],
+      "purpose": "",
+      "params": {
+        "__dir__": [],
+        "send_telegram": [
+          "message"
+        ],
+        "start_beep": [],
+        "stop_beep": [],
+        "send_build_engine_alert": [
+          "sid",
+          "title",
+          "state"
+        ],
+        "send_research_needed": [
+          "sid",
+          "query"
+        ],
+        "send_quota_exhausted": [
+          "key_count"
+        ],
+        "send_message": [
+          "message"
+        ]
+      }
+    },
+    {
+      "id": "sub:telegramops:commands",
+      "label": "commands",
+      "kind": "subdomain",
+      "plane": "gateway",
+      "parent": "holder:telegramops"
+    },
+    {
+      "id": "sub:telegramops:notifications",
+      "label": "notifications",
+      "kind": "subdomain",
+      "plane": "gateway",
+      "parent": "holder:telegramops"
+    },
+    {
+      "id": "holder:ninaclientops",
+      "label": "ninaclientops",
+      "kind": "holder",
+      "plane": "gateway",
+      "funcs": 26,
+      "top_funcs": [
+        "_get",
+        "_post",
+        "_stats",
+        "_save",
+        "health",
+        "_pinned_models",
+        "_cache_key",
+        "test_cache_key_injection"
+      ],
+      "purpose": "ninaclientops \u2014 NINA's unified intelligence client. Symbiosis hub.",
+      "params": {
+        "_get": [
+          "url",
+          "timeout"
+        ],
+        "_post": [
+          "url",
+          "payload",
+          "timeout"
+        ],
+        "_stats": [],
+        "_save": [
+          "s"
+        ],
+        "health": [],
+        "_pinned_models": [],
+        "_cache_key": [
+          "prefix"
+        ],
+        "test_cache_key_injection": []
+      }
+    },
+    {
+      "id": "sub:ninaclientops:chat",
+      "label": "chat",
+      "kind": "subdomain",
+      "plane": "gateway",
+      "parent": "holder:ninaclientops"
+    },
+    {
+      "id": "sub:ninaclientops:think",
+      "label": "think",
+      "kind": "subdomain",
+      "plane": "gateway",
+      "parent": "holder:ninaclientops"
+    },
+    {
+      "id": "sub:ninaclientops:research",
+      "label": "research",
+      "kind": "subdomain",
+      "plane": "gateway",
+      "parent": "holder:ninaclientops"
+    },
+    {
+      "id": "sub:ninaclientops:context",
+      "label": "context",
+      "kind": "subdomain",
+      "plane": "gateway",
+      "parent": "holder:ninaclientops"
+    },
+    {
+      "id": "holder:ninamcp",
+      "label": "ninamcp",
+      "kind": "holder",
+      "plane": "gateway",
+      "funcs": 0,
+      "top_funcs": [],
+      "purpose": "Shim: Compatibility entrypoint for the canonical NinaMCP stdio server.",
+      "params": {}
+    },
+    {
+      "id": "sub:ninamcp:mcp_relay",
+      "label": "mcp_relay",
+      "kind": "subdomain",
+      "plane": "gateway",
+      "parent": "holder:ninamcp"
+    },
+    {
+      "id": "holder:mcpops",
+      "label": "mcpops",
+      "kind": "holder",
+      "plane": "gateway",
+      "funcs": 55,
+      "top_funcs": [
+        "scrub_repo_path",
+        "_load_goals",
+        "_load_memory",
+        "_load_agent_loop",
+        "nina_ask",
+        "nina_status",
+        "nina_goals_list",
+        "nina_memory_search"
+      ],
+      "purpose": "mcpops \u2014 canonical MCP domain for NINA.",
+      "params": {
+        "scrub_repo_path": [],
+        "_load_goals": [],
+        "_load_memory": [],
+        "_load_agent_loop": [],
+        "nina_ask": [
+          "goal",
+          "context",
+          "timeout_seconds"
+        ],
+        "nina_status": [],
+        "nina_goals_list": [
+          "state"
+        ],
+        "nina_memory_search": [
+          "query",
+          "top_k"
+        ]
+      }
+    },
+    {
+      "id": "sub:mcpops:model_context_protocol",
+      "label": "model_context_protocol",
+      "kind": "subdomain",
+      "plane": "gateway",
+      "parent": "holder:mcpops"
+    },
+    {
+      "id": "plane:operator",
+      "label": "operator",
+      "kind": "plane",
+      "responsibility": "reconciliation and human/mechanical control"
+    },
+    {
+      "id": "holder:orchestrateops",
+      "label": "orchestrateops",
+      "kind": "holder",
+      "plane": "operator",
+      "funcs": 92,
+      "top_funcs": [
+        "update_backlog_status",
+        "mark_error_register_fixed",
+        "append_feedback_log",
+        "observe_and_orient",
+        "decide_and_promote",
+        "dispatch_ready_tasks",
+        "poll_and_merge",
+        "handle_approval"
+      ],
+      "purpose": "[AUDIT NOTE: nds-boundary - Checked against NDS/ADRs. No actionable gap found for __dir__ since file",
+      "params": {
+        "update_backlog_status": [
+          "task_id",
+          "new_status"
+        ],
+        "mark_error_register_fixed": [
+          "task_id"
+        ],
+        "append_feedback_log": [
+          "health",
+          "top_priority",
+          "ranked_count",
+          "action",
+          "promoted",
+          "dispatched"
+        ],
+        "observe_and_orient": [],
+        "decide_and_promote": [
+          "ranked_tasks"
+        ],
+        "dispatch_ready_tasks": [],
+        "poll_and_merge": [],
+        "handle_approval": [
+          "task_id"
+        ]
+      }
+    },
+    {
+      "id": "sub:orchestrateops:boot",
+      "label": "boot",
+      "kind": "subdomain",
+      "plane": "operator",
+      "parent": "holder:orchestrateops"
+    },
+    {
+      "id": "sub:orchestrateops:orchestration",
+      "label": "orchestration",
+      "kind": "subdomain",
+      "plane": "operator",
+      "parent": "holder:orchestrateops"
+    },
+    {
+      "id": "sub:orchestrateops:intervention",
+      "label": "intervention",
+      "kind": "subdomain",
+      "plane": "operator",
+      "parent": "holder:orchestrateops"
+    },
+    {
+      "id": "holder:syncops",
+      "label": "syncops",
+      "kind": "holder",
+      "plane": "operator",
+      "funcs": 6,
+      "top_funcs": [
+        "__dir__",
+        "_git",
+        "status",
+        "dedup_routing_history",
+        "run",
+        "main"
+      ],
+      "purpose": "",
+      "params": {
+        "__dir__": [],
+        "_git": [],
+        "status": [],
+        "dedup_routing_history": [
+          "path"
+        ],
+        "run": [
+          "mode",
+          "extra_args",
+          "dry_run"
+        ],
+        "main": [
+          "argv"
+        ]
+      }
+    },
+    {
+      "id": "sub:syncops:status",
+      "label": "status",
+      "kind": "subdomain",
+      "plane": "operator",
+      "parent": "holder:syncops"
+    },
+    {
+      "id": "sub:syncops:routing_history_dedup",
+      "label": "routing_history_dedup",
+      "kind": "subdomain",
+      "plane": "operator",
+      "parent": "holder:syncops"
+    },
+    {
+      "id": "sub:syncops:ooda_reconciliation",
+      "label": "ooda_reconciliation",
+      "kind": "subdomain",
+      "plane": "operator",
+      "parent": "holder:syncops"
+    },
+    {
+      "id": "holder:gitops",
+      "label": "gitops",
+      "kind": "holder",
+      "plane": "operator",
+      "funcs": 36,
+      "top_funcs": [
+        "_gitops_boundary",
+        "is_noise_only",
+        "_safe",
+        "get_repo_status",
+        "Git_diff",
+        "stage",
+        "auto_commit",
+        "_Git_git"
+      ],
+      "purpose": "gitops.py \u2014 All git/PR/GitHub operations for the NINA build_engine pipeline.",
+      "params": {
+        "_gitops_boundary": [],
+        "is_noise_only": [
+          "changed_files"
+        ],
+        "_safe": [
+          "path"
+        ],
+        "get_repo_status": [],
+        "Git_diff": [],
+        "stage": [
+          "path"
+        ],
+        "auto_commit": [],
+        "_Git_git": []
+      }
+    },
+    {
+      "id": "sub:gitops:merge",
+      "label": "merge",
+      "kind": "subdomain",
+      "plane": "operator",
+      "parent": "holder:gitops"
+    },
+    {
+      "id": "sub:gitops:pr_validation",
+      "label": "pr_validation",
+      "kind": "subdomain",
+      "plane": "operator",
+      "parent": "holder:gitops"
+    },
+    {
+      "id": "holder:rescue",
+      "label": "rescue",
+      "kind": "holder",
+      "plane": "operator",
+      "funcs": 0,
+      "top_funcs": [],
+      "purpose": "",
+      "params": {}
+    },
+    {
+      "id": "sub:rescue:incident_recovery",
+      "label": "incident_recovery",
+      "kind": "subdomain",
+      "plane": "operator",
+      "parent": "holder:rescue"
+    },
+    {
+      "id": "holder:ideaops",
+      "label": "ideaops",
+      "kind": "holder",
+      "plane": "operator",
+      "funcs": 13,
+      "top_funcs": [
+        "_load",
+        "_save",
+        "_fingerprint",
+        "_enrich",
+        "_dedup_check",
+        "capture",
+        "_build_build_engine_prompt",
+        "review"
+      ],
+      "purpose": "",
+      "params": {
+        "_load": [],
+        "_save": [
+          "ideas"
+        ],
+        "_fingerprint": [
+          "text"
+        ],
+        "_enrich": [
+          "idea_text"
+        ],
+        "_dedup_check": [
+          "idea_text",
+          "existing"
+        ],
+        "capture": [
+          "idea_text",
+          "tags"
+        ],
+        "_build_build_engine_prompt": [
+          "idea_text",
+          "enrichment"
+        ],
+        "review": [
+          "date_str"
+        ]
+      }
+    },
+    {
+      "id": "sub:ideaops:capture",
+      "label": "capture",
+      "kind": "subdomain",
+      "plane": "operator",
+      "parent": "holder:ideaops"
+    },
+    {
+      "id": "sub:ideaops:dedup",
+      "label": "dedup",
+      "kind": "subdomain",
+      "plane": "operator",
+      "parent": "holder:ideaops"
+    },
+    {
+      "id": "sub:ideaops:enrichment",
+      "label": "enrichment",
+      "kind": "subdomain",
+      "plane": "operator",
+      "parent": "holder:ideaops"
+    },
+    {
+      "id": "sub:ideaops:build_engine_dispatch",
+      "label": "build_engine_dispatch",
+      "kind": "subdomain",
+      "plane": "operator",
+      "parent": "holder:ideaops"
+    },
+    {
+      "id": "sub:ideaops:frontier_log",
+      "label": "frontier_log",
+      "kind": "subdomain",
+      "plane": "operator",
+      "parent": "holder:ideaops"
+    },
+    {
+      "id": "holder:contextops",
+      "label": "contextops",
+      "kind": "holder",
+      "plane": "operator",
+      "funcs": 25,
+      "top_funcs": [
+        "prune_content",
+        "run_prune",
+        "run_git",
+        "read_health",
+        "read_open_errors",
+        "read_ready_tasks",
+        "get_service_status",
+        "check_cron_health"
+      ],
+      "purpose": "NINA Context Operations (contextops).",
+      "params": {
+        "prune_content": [
+          "text",
+          "ext"
+        ],
+        "run_prune": [
+          "file_path"
+        ],
+        "run_git": [
+          "cmd"
+        ],
+        "read_health": [],
+        "read_open_errors": [],
+        "read_ready_tasks": [],
+        "get_service_status": [
+          "name"
+        ],
+        "check_cron_health": []
+      }
+    },
+    {
+      "id": "sub:contextops:claude_code",
+      "label": "claude_code",
+      "kind": "subdomain",
+      "plane": "operator",
+      "parent": "holder:contextops"
+    },
+    {
+      "id": "sub:contextops:codex",
+      "label": "codex",
+      "kind": "subdomain",
+      "plane": "operator",
+      "parent": "holder:contextops"
+    },
+    {
+      "id": "sub:contextops:command_code",
+      "label": "command_code",
+      "kind": "subdomain",
+      "plane": "operator",
+      "parent": "holder:contextops"
+    },
+    {
+      "id": "sub:contextops:opencode",
+      "label": "opencode",
+      "kind": "subdomain",
+      "plane": "operator",
+      "parent": "holder:contextops"
+    },
+    {
+      "id": "holder:nexus",
+      "label": "nexus",
+      "kind": "holder",
+      "plane": "operator",
+      "funcs": 4,
+      "top_funcs": [
+        "_tokenize",
+        "run_sbfl",
+        "nexus_evolve",
+        "ouroboros_tick"
+      ],
+      "purpose": "DSN: tools/nexusops.py",
+      "params": {
+        "_tokenize": [
+          "line"
+        ],
+        "run_sbfl": [
+          "coverage_data",
+          "passing_inputs",
+          "failing_inputs"
+        ],
+        "nexus_evolve": [],
+        "ouroboros_tick": []
+      }
+    },
+    {
+      "id": "sub:nexus:evolution",
+      "label": "evolution",
+      "kind": "subdomain",
+      "plane": "operator",
+      "parent": "holder:nexus"
+    },
+    {
+      "id": "sub:nexus:self_heal",
+      "label": "self_heal",
+      "kind": "subdomain",
+      "plane": "operator",
+      "parent": "holder:nexus"
+    },
+    {
+      "id": "holder:autops",
+      "label": "autops",
+      "kind": "holder",
+      "plane": "operator",
+      "funcs": 11,
+      "top_funcs": [
+        "record",
+        "read",
+        "stamp_ownership",
+        "auto_spec",
+        "check_overdue_tasks",
+        "reconcile_backlog",
+        "audit_and_heal_system_gaps",
+        "run_autonomous_pipeline_cycle"
+      ],
+      "purpose": "autops \u2014 Failure-proof automation layer for NINA.",
+      "params": {
+        "record": [
+          "component",
+          "action",
+          "detail"
+        ],
+        "read": [
+          "hours"
+        ],
+        "stamp_ownership": [],
+        "auto_spec": [],
+        "check_overdue_tasks": [],
+        "reconcile_backlog": [],
+        "audit_and_heal_system_gaps": [],
+        "run_autonomous_pipeline_cycle": []
+      }
+    },
+    {
+      "id": "sub:autops:failure_automation",
+      "label": "failure_automation",
+      "kind": "subdomain",
+      "plane": "operator",
+      "parent": "holder:autops"
+    },
+    {
+      "id": "holder:dispatchops",
+      "label": "dispatchops",
+      "kind": "holder",
+      "plane": "operator",
+      "funcs": 5,
+      "top_funcs": [
+        "heal",
+        "check_nds",
+        "dispatch_gain",
+        "_report",
+        "main"
+      ],
+      "purpose": "commandcodeops \u2014 Self-healing health timer for CommandCode.",
+      "params": {
+        "heal": [],
+        "check_nds": [],
+        "dispatch_gain": [],
+        "_report": [
+          "health",
+          "nds",
+          "dispatch"
+        ],
+        "main": []
+      }
+    },
+    {
+      "id": "sub:dispatchops:self_heal",
+      "label": "self_heal",
+      "kind": "subdomain",
+      "plane": "operator",
+      "parent": "holder:dispatchops"
+    },
+    {
+      "id": "holder:tierops",
+      "label": "tierops",
+      "kind": "holder",
+      "plane": "operator",
+      "funcs": 8,
+      "top_funcs": [
+        "_load_registry",
+        "_save_registry",
+        "_log",
+        "_parse_check",
+        "_check_condition",
+        "_dispatch_gap",
+        "run_reconcile",
+        "explicit_dispatch"
+      ],
+      "purpose": "",
+      "params": {
+        "_load_registry": [],
+        "_save_registry": [
+          "data"
+        ],
+        "_log": [
+          "event"
+        ],
+        "_parse_check": [
+          "check"
+        ],
+        "_check_condition": [
+          "check"
+        ],
+        "_dispatch_gap": [
+          "gap_id",
+          "gap"
+        ],
+        "run_reconcile": [],
+        "explicit_dispatch": [
+          "gap_id"
+        ]
+      }
+    },
+    {
+      "id": "sub:tierops:tier_reconciliation",
+      "label": "tier_reconciliation",
+      "kind": "subdomain",
+      "plane": "operator",
+      "parent": "holder:tierops"
+    },
+    {
+      "id": "holder:vaultops",
+      "label": "vaultops",
+      "kind": "holder",
+      "plane": "operator",
+      "funcs": 9,
+      "top_funcs": [
+        "_vault_lock",
+        "register_provider",
+        "use_key",
+        "distribute",
+        "Vault_audit",
+        "rotate",
+        "_Vault_load",
+        "_Vault_save"
+      ],
+      "purpose": "vaultops \u2014 Single source of truth for all API keys and secrets.",
+      "params": {
+        "_vault_lock": [],
+        "register_provider": [
+          "name",
+          "key",
+          "targets"
+        ],
+        "use_key": [
+          "group"
+        ],
+        "distribute": [
+          "provider"
+        ],
+        "Vault_audit": [],
+        "rotate": [
+          "provider",
+          "new_key"
+        ],
+        "_Vault_load": [],
+        "_Vault_save": [
+          "data"
+        ]
+      }
+    },
+    {
+      "id": "sub:vaultops:secrets",
+      "label": "secrets",
+      "kind": "subdomain",
+      "plane": "operator",
+      "parent": "holder:vaultops"
+    },
+    {
+      "id": "holder:context_tierops",
+      "label": "context_tierops",
+      "kind": "holder",
+      "plane": "operator",
+      "funcs": 11,
+      "top_funcs": [
+        "Contexttier_load",
+        "_Contexttier_write",
+        "get_tier",
+        "Contexttier_push",
+        "prioritize",
+        "Contexttier_get_summary",
+        "Contexttier_compress",
+        "component_tier"
+      ],
+      "purpose": "context_tierops \u2014 Maslow-hierarchy tiered context for NINA agents.",
+      "params": {
+        "Contexttier_load": [],
+        "_Contexttier_write": [
+          "data"
+        ],
+        "get_tier": [
+          "tier"
+        ],
+        "Contexttier_push": [
+          "tier",
+          "key",
+          "value"
+        ],
+        "prioritize": [
+          "goal",
+          "task_id",
+          "current_file"
+        ],
+        "Contexttier_get_summary": [],
+        "Contexttier_compress": [
+          "max_tokens"
+        ],
+        "component_tier": [
+          "name"
+        ]
+      }
+    },
+    {
+      "id": "sub:context_tierops:context_compression",
+      "label": "context_compression",
+      "kind": "subdomain",
+      "plane": "operator",
+      "parent": "holder:context_tierops"
+    },
+    {
+      "id": "holder:ndsheaderops",
+      "label": "ndsheaderops",
+      "kind": "holder",
+      "plane": "operator",
+      "funcs": 7,
+      "top_funcs": [
+        "scan_file",
+        "extract_header",
+        "generate_header",
+        "apply_header",
+        "audit_missing_headers",
+        "suggest_reason",
+        "main"
+      ],
+      "purpose": "",
+      "params": {
+        "scan_file": [
+          "path"
+        ],
+        "extract_header": [
+          "path"
+        ],
+        "generate_header": [
+          "filename",
+          "reason",
+          "domain",
+          "role"
+        ],
+        "apply_header": [
+          "filename",
+          "reason",
+          "domain",
+          "role"
+        ],
+        "audit_missing_headers": [],
+        "suggest_reason": [
+          "filename"
+        ],
+        "main": []
+      }
+    },
+    {
+      "id": "sub:ndsheaderops:nds_headers",
+      "label": "nds_headers",
+      "kind": "subdomain",
+      "plane": "operator",
+      "parent": "holder:ndsheaderops"
+    },
+    {
+      "id": "holder:fastindexops",
+      "label": "fastindexops",
+      "kind": "holder",
+      "plane": "operator",
+      "funcs": 9,
+      "top_funcs": [
+        "_walk",
+        "build",
+        "update",
+        "hook",
+        "watch",
+        "Fastindex_query",
+        "Fastindex_stats",
+        "_Fastindex_load"
+      ],
+      "purpose": "fastindexops \u2014 Voidtools-style persistent file index for Linux.",
+      "params": {
+        "_walk": [],
+        "build": [],
+        "update": [],
+        "hook": [
+          "repo_root"
+        ],
+        "watch": [
+          "repo_root"
+        ],
+        "Fastindex_query": [
+          "pattern",
+          "suffix",
+          "min_size",
+          "max_size"
+        ],
+        "Fastindex_stats": [],
+        "_Fastindex_load": []
+      }
+    },
+    {
+      "id": "sub:fastindexops:file_index",
+      "label": "file_index",
+      "kind": "subdomain",
+      "plane": "operator",
+      "parent": "holder:fastindexops"
+    },
+    {
+      "id": "holder:analogyops",
+      "label": "analogyops",
+      "kind": "holder",
+      "plane": "operator",
+      "funcs": 10,
+      "top_funcs": [
+        "research",
+        "register_analogy",
+        "map_gaps",
+        "discover",
+        "apply",
+        "Analogy_get_summary",
+        "_Analogy_load",
+        "_Analogy_save"
+      ],
+      "purpose": "analogyops \u2014 Analogy-aware discovery engine for NINA.",
+      "params": {
+        "research": [
+          "query",
+          "max_results"
+        ],
+        "register_analogy": [
+          "name",
+          "source",
+          "concept",
+          "mapping"
+        ],
+        "map_gaps": [
+          "name"
+        ],
+        "discover": [],
+        "apply": [
+          "analogy_name",
+          "gap_index"
+        ],
+        "Analogy_get_summary": [],
+        "_Analogy_load": [],
+        "_Analogy_save": [
+          "data"
+        ]
+      }
+    },
+    {
+      "id": "sub:analogyops:analogy_discovery",
+      "label": "analogy_discovery",
+      "kind": "subdomain",
+      "plane": "operator",
+      "parent": "holder:analogyops"
+    },
+    {
+      "id": "plane:execution",
+      "label": "execution",
+      "kind": "plane",
+      "responsibility": "bounded workers and asynchronous task execution"
+    },
+    {
+      "id": "sub:dispatchops:task_control",
+      "label": "task_control",
+      "kind": "subdomain",
+      "plane": "execution",
+      "parent": "holder:dispatchops"
+    },
+    {
+      "id": "sub:dispatchops:pipeline_daemon",
+      "label": "pipeline_daemon",
+      "kind": "subdomain",
+      "plane": "execution",
+      "parent": "holder:dispatchops"
+    },
+    {
+      "id": "holder:execops",
+      "label": "execops",
+      "kind": "holder",
+      "plane": "execution",
+      "funcs": 124,
+      "top_funcs": [
+        "_c",
+        "run_cmd",
+        "_safe_run",
+        "safe_run_cmd",
+        "_path_resolve",
+        "_load_geminiignore",
+        "_is_ignored",
+        "_is_ignored_path"
+      ],
+      "purpose": "",
+      "params": {
+        "_c": [
+          "code",
+          "text"
+        ],
+        "run_cmd": [
+          "cmd",
+          "cwd",
+          "timeout"
+        ],
+        "_safe_run": [
+          "cmd",
+          "timeout"
+        ],
+        "safe_run_cmd": [
+          "cmd",
+          "timeout"
+        ],
+        "_path_resolve": [
+          "rel_path"
+        ],
+        "_load_geminiignore": [],
+        "_is_ignored": [
+          "path_str"
+        ],
+        "_is_ignored_path": [
+          "path"
+        ]
+      }
+    },
+    {
+      "id": "sub:execops:agent_cli",
+      "label": "agent_cli",
+      "kind": "subdomain",
+      "plane": "execution",
+      "parent": "holder:execops"
+    },
+    {
+      "id": "sub:execops:process_control",
+      "label": "process_control",
+      "kind": "subdomain",
+      "plane": "execution",
+      "parent": "holder:execops"
+    },
+    {
+      "id": "plane:observation",
+      "label": "observation",
+      "kind": "plane",
+      "responsibility": "health, telemetry, audit, and runtime visibility"
+    },
+    {
+      "id": "holder:warden",
+      "label": "warden",
+      "kind": "holder",
+      "plane": "observation",
+      "funcs": 0,
+      "top_funcs": [],
+      "purpose": "",
+      "params": {}
+    },
+    {
+      "id": "sub:warden:runtime_watch",
+      "label": "runtime_watch",
+      "kind": "subdomain",
+      "plane": "observation",
+      "parent": "holder:warden"
+    },
+    {
+      "id": "holder:auditops",
+      "label": "auditops",
+      "kind": "holder",
+      "plane": "observation",
+      "funcs": 80,
+      "top_funcs": [
+        "append_audit_event",
+        "audit_oss_wiring",
+        "audit_spec_integrity",
+        "audit_orphan_modules",
+        "audit_dead_endpoints",
+        "audit_shim_chains",
+        "audit_nds_purpose_uniqueness",
+        "audit_nds_name_collisions"
+      ],
+      "purpose": "DSN: tools/auditops.py",
+      "params": {
+        "append_audit_event": [],
+        "audit_oss_wiring": [],
+        "audit_spec_integrity": [],
+        "audit_orphan_modules": [],
+        "audit_dead_endpoints": [],
+        "audit_shim_chains": [],
+        "audit_nds_purpose_uniqueness": [],
+        "audit_nds_name_collisions": []
+      }
+    },
+    {
+      "id": "sub:auditops:audit",
+      "label": "audit",
+      "kind": "subdomain",
+      "plane": "observation",
+      "parent": "holder:auditops"
+    },
+    {
+      "id": "sub:auditops:dead_code",
+      "label": "dead_code",
+      "kind": "subdomain",
+      "plane": "observation",
+      "parent": "holder:auditops"
+    },
+    {
+      "id": "sub:auditops:wiring",
+      "label": "wiring",
+      "kind": "subdomain",
+      "plane": "observation",
+      "parent": "holder:auditops"
+    },
+    {
+      "id": "holder:testops",
+      "label": "testops",
+      "kind": "holder",
+      "plane": "observation",
+      "funcs": 2,
+      "top_funcs": [
+        "main",
+        "test_testops_patch"
+      ],
+      "purpose": "",
+      "params": {
+        "main": [],
+        "test_testops_patch": []
+      }
+    },
+    {
+      "id": "sub:testops:gate",
+      "label": "gate",
+      "kind": "subdomain",
+      "plane": "observation",
+      "parent": "holder:testops"
+    },
+    {
+      "id": "sub:testops:fast",
+      "label": "fast",
+      "kind": "subdomain",
+      "plane": "observation",
+      "parent": "holder:testops"
+    },
+    {
+      "id": "sub:testops:full",
+      "label": "full",
+      "kind": "subdomain",
+      "plane": "observation",
+      "parent": "holder:testops"
+    },
+    {
+      "id": "holder:healthops",
+      "label": "healthops",
+      "kind": "holder",
+      "plane": "observation",
+      "funcs": 23,
+      "top_funcs": [
+        "register_probe",
+        "run_health_aggregator",
+        "_probe_cpu_info",
+        "get_gpu_info",
+        "_thermal_state",
+        "get_ram_info",
+        "get_ollama_status",
+        "check_services"
+      ],
+      "purpose": "tools/healthops.py",
+      "params": {
+        "register_probe": [
+          "name",
+          "fn"
+        ],
+        "run_health_aggregator": [],
+        "_probe_cpu_info": [],
+        "get_gpu_info": [],
+        "_thermal_state": [
+          "temp_c"
+        ],
+        "get_ram_info": [],
+        "get_ollama_status": [],
+        "check_services": [
+          "names"
+        ]
+      }
+    },
+    {
+      "id": "sub:healthops:health_probe",
+      "label": "health_probe",
+      "kind": "subdomain",
+      "plane": "observation",
+      "parent": "holder:healthops"
+    },
+    {
+      "id": "sub:healthops:benchmark",
+      "label": "benchmark",
+      "kind": "subdomain",
+      "plane": "observation",
+      "parent": "holder:healthops"
+    },
+    {
+      "id": "holder:enforcer",
+      "label": "enforcer",
+      "kind": "holder",
+      "plane": "observation",
+      "funcs": 49,
+      "top_funcs": [
+        "red",
+        "green",
+        "yellow",
+        "cyan",
+        "bold",
+        "Guardianengine_section",
+        "ok",
+        "warn"
+      ],
+      "purpose": "NINA Guardian 2.0 \u2014 Forensic Engine",
+      "params": {
+        "red": [
+          "s"
+        ],
+        "green": [
+          "s"
+        ],
+        "yellow": [
+          "s"
+        ],
+        "cyan": [
+          "s"
+        ],
+        "bold": [
+          "s"
+        ],
+        "Guardianengine_section": [
+          "title"
+        ],
+        "ok": [
+          "msg"
+        ],
+        "warn": [
+          "msg"
+        ]
+      }
+    },
+    {
+      "id": "sub:enforcer:commit_guard",
+      "label": "commit_guard",
+      "kind": "subdomain",
+      "plane": "observation",
+      "parent": "holder:enforcer"
+    },
+    {
+      "id": "plane:memory",
+      "label": "memory",
+      "kind": "plane",
+      "responsibility": "state, knowledge, identity, and persistence"
+    },
+    {
+      "id": "holder:memorysystem",
+      "label": "memorysystem",
+      "kind": "holder",
+      "plane": "memory",
+      "funcs": 0,
+      "top_funcs": [],
+      "purpose": "",
+      "params": {}
+    },
+    {
+      "id": "sub:memorysystem:knowledge_base",
+      "label": "knowledge_base",
+      "kind": "subdomain",
+      "plane": "memory",
+      "parent": "holder:memorysystem"
+    },
+    {
+      "id": "sub:memorysystem:vestige_engine",
+      "label": "vestige_engine",
+      "kind": "subdomain",
+      "plane": "memory",
+      "parent": "holder:memorysystem"
+    },
+    {
+      "id": "holder:skillops",
+      "label": "skillops",
+      "kind": "holder",
+      "plane": "memory",
+      "funcs": 12,
+      "top_funcs": [
+        "_ensure_skills_dir",
+        "_validate_yaml_header",
+        "rebuild_index",
+        "get_index",
+        "get_skill",
+        "index_prompt",
+        "capture_skill",
+        "queue_capture"
+      ],
+      "purpose": "DSN: tools/skillops.py",
+      "params": {
+        "_ensure_skills_dir": [],
+        "_validate_yaml_header": [
+          "text"
+        ],
+        "rebuild_index": [],
+        "get_index": [],
+        "get_skill": [
+          "name"
+        ],
+        "index_prompt": [
+          "max_skills"
+        ],
+        "capture_skill": [
+          "name",
+          "domain",
+          "problem",
+          "solution",
+          "steps",
+          "verification"
+        ],
+        "queue_capture": [
+          "task_id",
+          "summary"
+        ]
+      }
+    },
+    {
+      "id": "sub:skillops:capture",
+      "label": "capture",
+      "kind": "subdomain",
+      "plane": "memory",
+      "parent": "holder:skillops"
+    },
+    {
+      "id": "sub:skillops:index",
+      "label": "index",
+      "kind": "subdomain",
+      "plane": "memory",
+      "parent": "holder:skillops"
+    },
+    {
+      "id": "sub:skillops:retrieval",
+      "label": "retrieval",
+      "kind": "subdomain",
+      "plane": "memory",
+      "parent": "holder:skillops"
+    },
+    {
+      "id": "holder:tasteops",
+      "label": "tasteops",
+      "kind": "holder",
+      "plane": "memory",
+      "funcs": 13,
+      "top_funcs": [
+        "__dir__",
+        "_ensure_dir",
+        "_Taste_load",
+        "_Taste_save",
+        "_rebuild_index",
+        "learn",
+        "Taste_recall",
+        "Taste_forget"
+      ],
+      "purpose": "tools/tasteops.py \u2014 Persistent preference memory for all NINA agents.",
+      "params": {
+        "__dir__": [],
+        "_ensure_dir": [],
+        "_Taste_load": [],
+        "_Taste_save": [
+          "taste"
+        ],
+        "_rebuild_index": [
+          "taste"
+        ],
+        "learn": [
+          "category",
+          "learning",
+          "confidence",
+          "source"
+        ],
+        "Taste_recall": [
+          "query",
+          "max_results",
+          "min_confidence"
+        ],
+        "Taste_forget": [
+          "category",
+          "learning_id"
+        ]
+      }
+    },
+    {
+      "id": "sub:tasteops:persistence",
+      "label": "persistence",
+      "kind": "subdomain",
+      "plane": "memory",
+      "parent": "holder:tasteops"
+    },
+    {
+      "id": "sub:tasteops:recall",
+      "label": "recall",
+      "kind": "subdomain",
+      "plane": "memory",
+      "parent": "holder:tasteops"
+    },
+    {
+      "id": "sub:tasteops:correction",
+      "label": "correction",
+      "kind": "subdomain",
+      "plane": "memory",
+      "parent": "holder:tasteops"
+    },
+    {
+      "id": "plane:governance",
+      "label": "governance",
+      "kind": "plane",
+      "responsibility": "policy, authority, SSOT, and enforcement"
+    },
+    {
+      "id": "holder:ssotops",
+      "label": "ssotops",
+      "kind": "holder",
+      "plane": "governance",
+      "funcs": 65,
+      "top_funcs": [
+        "parse_nina_naming",
+        "parse_nina_constitution",
+        "parse_nina_governor",
+        "parse_nina_rules",
+        "generate_policy_ssot_json",
+        "_load_canonical_ck_directives",
+        "generate_cognitive_kernel_json",
+        "generate_memory_ssot_json"
+      ],
+      "purpose": "",
+      "params": {
+        "parse_nina_naming": [],
+        "parse_nina_constitution": [],
+        "parse_nina_governor": [],
+        "parse_nina_rules": [],
+        "generate_policy_ssot_json": [],
+        "_load_canonical_ck_directives": [],
+        "generate_cognitive_kernel_json": [],
+        "generate_memory_ssot_json": []
+      }
+    },
+    {
+      "id": "sub:ssotops:integration_registry",
+      "label": "integration_registry",
+      "kind": "subdomain",
+      "plane": "governance",
+      "parent": "holder:ssotops"
+    },
+    {
+      "id": "sub:enforcer:commit_guard",
+      "label": "commit_guard",
+      "kind": "subdomain",
+      "plane": "governance",
+      "parent": "holder:enforcer"
+    },
+    {
+      "id": "holder:governanceops",
+      "label": "governanceops",
+      "kind": "holder",
+      "plane": "governance",
+      "funcs": 4,
+      "top_funcs": [
+        "detect_secret_extraction",
+        "risk_tier",
+        "__dir__",
+        "test_nds_boundary"
+      ],
+      "purpose": "NINA Governance Ops \u2014 canonical holder for merge risk classification and policy enforcement.",
+      "params": {
+        "detect_secret_extraction": [
+          "prompt"
+        ],
+        "risk_tier": [
+          "files",
+          "task_id",
+          "description"
+        ],
+        "__dir__": [],
+        "test_nds_boundary": []
+      }
+    },
+    {
+      "id": "sub:governanceops:risk_policy",
+      "label": "risk_policy",
+      "kind": "subdomain",
+      "plane": "governance",
+      "parent": "holder:governanceops"
+    },
+    {
+      "id": "sub:governanceops:change_policy",
+      "label": "change_policy",
+      "kind": "subdomain",
+      "plane": "governance",
+      "parent": "holder:governanceops"
+    },
+    {
+      "id": "holder:quarantineops",
+      "label": "quarantineops",
+      "kind": "holder",
+      "plane": "governance",
+      "funcs": 2,
+      "top_funcs": [
+        "Quarantine_get_status",
+        "_test_nds_boundary"
+      ],
+      "purpose": "",
+      "params": {
+        "Quarantine_get_status": [],
+        "_test_nds_boundary": []
+      }
+    },
+    {
+      "id": "sub:quarantineops:drain_to_zero",
+      "label": "drain_to_zero",
+      "kind": "subdomain",
+      "plane": "governance",
+      "parent": "holder:quarantineops"
+    },
+    {
+      "id": "prism:PRISM-COMPRESS",
+      "label": "PRISM-COMPRESS",
+      "kind": "prism",
+      "responsibility": "cross-cutting efficiency/validation layer"
+    },
+    {
+      "id": "prism:PRISM-VERIFY",
+      "label": "PRISM-VERIFY",
+      "kind": "prism",
+      "responsibility": "cross-cutting efficiency/validation layer"
+    },
+    {
+      "id": "prism:PRISM-OBSERVE",
+      "label": "PRISM-OBSERVE",
+      "kind": "prism",
+      "responsibility": "cross-cutting efficiency/validation layer"
+    }
+  ],
+  "edges": [
+    {
+      "source": "plane:kernel",
+      "target": "holder:cogops",
+      "kind": "owns"
+    },
+    {
+      "source": "holder:cogops",
+      "target": "sub:cogops:cognitive_kernel",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:cogops",
+      "target": "sub:cogops:symbol_map",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:cogops",
+      "target": "sub:cogops:dependency_graph",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:cogops",
+      "target": "sub:cogops:reflexion",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:cogops",
+      "target": "sub:cogops:reasoning",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:cogops",
+      "target": "sub:cogops:think_mode",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:cogops",
+      "target": "sub:cogops:research_daemon",
+      "kind": "subdivides"
+    },
+    {
+      "source": "plane:kernel",
+      "target": "holder:tokenops",
+      "kind": "owns"
+    },
+    {
+      "source": "holder:tokenops",
+      "target": "sub:tokenops:budget",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:tokenops",
+      "target": "sub:tokenops:compression",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:tokenops",
+      "target": "sub:tokenops:cost",
+      "kind": "subdivides"
+    },
+    {
+      "source": "plane:gateway",
+      "target": "holder:ninagate",
+      "kind": "owns"
+    },
+    {
+      "source": "holder:ninagate",
+      "target": "sub:ninagate:hybrid_router",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:ninagate",
+      "target": "sub:ninagate:quota_control",
+      "kind": "subdivides"
+    },
+    {
+      "source": "plane:gateway",
+      "target": "holder:telegramops",
+      "kind": "owns"
+    },
+    {
+      "source": "holder:telegramops",
+      "target": "sub:telegramops:commands",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:telegramops",
+      "target": "sub:telegramops:notifications",
+      "kind": "subdivides"
+    },
+    {
+      "source": "plane:gateway",
+      "target": "holder:ninaclientops",
+      "kind": "owns"
+    },
+    {
+      "source": "holder:ninaclientops",
+      "target": "sub:ninaclientops:chat",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:ninaclientops",
+      "target": "sub:ninaclientops:think",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:ninaclientops",
+      "target": "sub:ninaclientops:research",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:ninaclientops",
+      "target": "sub:ninaclientops:context",
+      "kind": "subdivides"
+    },
+    {
+      "source": "plane:gateway",
+      "target": "holder:ninamcp",
+      "kind": "owns"
+    },
+    {
+      "source": "holder:ninamcp",
+      "target": "sub:ninamcp:mcp_relay",
+      "kind": "subdivides"
+    },
+    {
+      "source": "plane:gateway",
+      "target": "holder:mcpops",
+      "kind": "owns"
+    },
+    {
+      "source": "holder:mcpops",
+      "target": "sub:mcpops:model_context_protocol",
+      "kind": "subdivides"
+    },
+    {
+      "source": "plane:operator",
+      "target": "holder:orchestrateops",
+      "kind": "owns"
+    },
+    {
+      "source": "holder:orchestrateops",
+      "target": "sub:orchestrateops:boot",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:orchestrateops",
+      "target": "sub:orchestrateops:orchestration",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:orchestrateops",
+      "target": "sub:orchestrateops:intervention",
+      "kind": "subdivides"
+    },
+    {
+      "source": "plane:operator",
+      "target": "holder:syncops",
+      "kind": "owns"
+    },
+    {
+      "source": "holder:syncops",
+      "target": "sub:syncops:status",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:syncops",
+      "target": "sub:syncops:routing_history_dedup",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:syncops",
+      "target": "sub:syncops:ooda_reconciliation",
+      "kind": "subdivides"
+    },
+    {
+      "source": "plane:operator",
+      "target": "holder:gitops",
+      "kind": "owns"
+    },
+    {
+      "source": "holder:gitops",
+      "target": "sub:gitops:merge",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:gitops",
+      "target": "sub:gitops:pr_validation",
+      "kind": "subdivides"
+    },
+    {
+      "source": "plane:operator",
+      "target": "holder:rescue",
+      "kind": "owns"
+    },
+    {
+      "source": "holder:rescue",
+      "target": "sub:rescue:incident_recovery",
+      "kind": "subdivides"
+    },
+    {
+      "source": "plane:operator",
+      "target": "holder:ideaops",
+      "kind": "owns"
+    },
+    {
+      "source": "holder:ideaops",
+      "target": "sub:ideaops:capture",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:ideaops",
+      "target": "sub:ideaops:dedup",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:ideaops",
+      "target": "sub:ideaops:enrichment",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:ideaops",
+      "target": "sub:ideaops:build_engine_dispatch",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:ideaops",
+      "target": "sub:ideaops:frontier_log",
+      "kind": "subdivides"
+    },
+    {
+      "source": "plane:operator",
+      "target": "holder:contextops",
+      "kind": "owns"
+    },
+    {
+      "source": "holder:contextops",
+      "target": "sub:contextops:claude_code",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:contextops",
+      "target": "sub:contextops:codex",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:contextops",
+      "target": "sub:contextops:command_code",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:contextops",
+      "target": "sub:contextops:opencode",
+      "kind": "subdivides"
+    },
+    {
+      "source": "plane:operator",
+      "target": "holder:nexus",
+      "kind": "owns"
+    },
+    {
+      "source": "holder:nexus",
+      "target": "sub:nexus:evolution",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:nexus",
+      "target": "sub:nexus:self_heal",
+      "kind": "subdivides"
+    },
+    {
+      "source": "plane:operator",
+      "target": "holder:autops",
+      "kind": "owns"
+    },
+    {
+      "source": "holder:autops",
+      "target": "sub:autops:failure_automation",
+      "kind": "subdivides"
+    },
+    {
+      "source": "plane:operator",
+      "target": "holder:dispatchops",
+      "kind": "owns"
+    },
+    {
+      "source": "holder:dispatchops",
+      "target": "sub:dispatchops:self_heal",
+      "kind": "subdivides"
+    },
+    {
+      "source": "plane:operator",
+      "target": "holder:tierops",
+      "kind": "owns"
+    },
+    {
+      "source": "holder:tierops",
+      "target": "sub:tierops:tier_reconciliation",
+      "kind": "subdivides"
+    },
+    {
+      "source": "plane:operator",
+      "target": "holder:vaultops",
+      "kind": "owns"
+    },
+    {
+      "source": "holder:vaultops",
+      "target": "sub:vaultops:secrets",
+      "kind": "subdivides"
+    },
+    {
+      "source": "plane:operator",
+      "target": "holder:context_tierops",
+      "kind": "owns"
+    },
+    {
+      "source": "holder:context_tierops",
+      "target": "sub:context_tierops:context_compression",
+      "kind": "subdivides"
+    },
+    {
+      "source": "plane:operator",
+      "target": "holder:ndsheaderops",
+      "kind": "owns"
+    },
+    {
+      "source": "holder:ndsheaderops",
+      "target": "sub:ndsheaderops:nds_headers",
+      "kind": "subdivides"
+    },
+    {
+      "source": "plane:operator",
+      "target": "holder:fastindexops",
+      "kind": "owns"
+    },
+    {
+      "source": "holder:fastindexops",
+      "target": "sub:fastindexops:file_index",
+      "kind": "subdivides"
+    },
+    {
+      "source": "plane:operator",
+      "target": "holder:analogyops",
+      "kind": "owns"
+    },
+    {
+      "source": "holder:analogyops",
+      "target": "sub:analogyops:analogy_discovery",
+      "kind": "subdivides"
+    },
+    {
+      "source": "plane:execution",
+      "target": "holder:dispatchops",
+      "kind": "owns"
+    },
+    {
+      "source": "holder:dispatchops",
+      "target": "sub:dispatchops:task_control",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:dispatchops",
+      "target": "sub:dispatchops:pipeline_daemon",
+      "kind": "subdivides"
+    },
+    {
+      "source": "plane:execution",
+      "target": "holder:execops",
+      "kind": "owns"
+    },
+    {
+      "source": "holder:execops",
+      "target": "sub:execops:agent_cli",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:execops",
+      "target": "sub:execops:process_control",
+      "kind": "subdivides"
+    },
+    {
+      "source": "plane:observation",
+      "target": "holder:warden",
+      "kind": "owns"
+    },
+    {
+      "source": "holder:warden",
+      "target": "sub:warden:runtime_watch",
+      "kind": "subdivides"
+    },
+    {
+      "source": "plane:observation",
+      "target": "holder:auditops",
+      "kind": "owns"
+    },
+    {
+      "source": "holder:auditops",
+      "target": "sub:auditops:audit",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:auditops",
+      "target": "sub:auditops:dead_code",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:auditops",
+      "target": "sub:auditops:wiring",
+      "kind": "subdivides"
+    },
+    {
+      "source": "plane:observation",
+      "target": "holder:testops",
+      "kind": "owns"
+    },
+    {
+      "source": "holder:testops",
+      "target": "sub:testops:gate",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:testops",
+      "target": "sub:testops:fast",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:testops",
+      "target": "sub:testops:full",
+      "kind": "subdivides"
+    },
+    {
+      "source": "plane:observation",
+      "target": "holder:healthops",
+      "kind": "owns"
+    },
+    {
+      "source": "holder:healthops",
+      "target": "sub:healthops:health_probe",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:healthops",
+      "target": "sub:healthops:benchmark",
+      "kind": "subdivides"
+    },
+    {
+      "source": "plane:observation",
+      "target": "holder:enforcer",
+      "kind": "owns"
+    },
+    {
+      "source": "holder:enforcer",
+      "target": "sub:enforcer:commit_guard",
+      "kind": "subdivides"
+    },
+    {
+      "source": "plane:memory",
+      "target": "holder:memorysystem",
+      "kind": "owns"
+    },
+    {
+      "source": "holder:memorysystem",
+      "target": "sub:memorysystem:knowledge_base",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:memorysystem",
+      "target": "sub:memorysystem:vestige_engine",
+      "kind": "subdivides"
+    },
+    {
+      "source": "plane:memory",
+      "target": "holder:skillops",
+      "kind": "owns"
+    },
+    {
+      "source": "holder:skillops",
+      "target": "sub:skillops:capture",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:skillops",
+      "target": "sub:skillops:index",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:skillops",
+      "target": "sub:skillops:retrieval",
+      "kind": "subdivides"
+    },
+    {
+      "source": "plane:memory",
+      "target": "holder:tasteops",
+      "kind": "owns"
+    },
+    {
+      "source": "holder:tasteops",
+      "target": "sub:tasteops:persistence",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:tasteops",
+      "target": "sub:tasteops:recall",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:tasteops",
+      "target": "sub:tasteops:correction",
+      "kind": "subdivides"
+    },
+    {
+      "source": "plane:governance",
+      "target": "holder:ssotops",
+      "kind": "owns"
+    },
+    {
+      "source": "holder:ssotops",
+      "target": "sub:ssotops:integration_registry",
+      "kind": "subdivides"
+    },
+    {
+      "source": "plane:governance",
+      "target": "holder:enforcer",
+      "kind": "owns"
+    },
+    {
+      "source": "holder:enforcer",
+      "target": "sub:enforcer:commit_guard",
+      "kind": "subdivides"
+    },
+    {
+      "source": "plane:governance",
+      "target": "holder:governanceops",
+      "kind": "owns"
+    },
+    {
+      "source": "holder:governanceops",
+      "target": "sub:governanceops:risk_policy",
+      "kind": "subdivides"
+    },
+    {
+      "source": "holder:governanceops",
+      "target": "sub:governanceops:change_policy",
+      "kind": "subdivides"
+    },
+    {
+      "source": "plane:governance",
+      "target": "holder:quarantineops",
+      "kind": "owns"
+    },
+    {
+      "source": "holder:quarantineops",
+      "target": "sub:quarantineops:drain_to_zero",
+      "kind": "subdivides"
+    },
+    {
+      "source": "prism:PRISM-COMPRESS",
+      "target": "plane:kernel",
+      "kind": "crosscuts"
+    },
+    {
+      "source": "prism:PRISM-COMPRESS",
+      "target": "plane:gateway",
+      "kind": "crosscuts"
+    },
+    {
+      "source": "prism:PRISM-COMPRESS",
+      "target": "plane:operator",
+      "kind": "crosscuts"
+    },
+    {
+      "source": "prism:PRISM-COMPRESS",
+      "target": "plane:execution",
+      "kind": "crosscuts"
+    },
+    {
+      "source": "prism:PRISM-COMPRESS",
+      "target": "plane:observation",
+      "kind": "crosscuts"
+    },
+    {
+      "source": "prism:PRISM-COMPRESS",
+      "target": "plane:memory",
+      "kind": "crosscuts"
+    },
+    {
+      "source": "prism:PRISM-COMPRESS",
+      "target": "plane:governance",
+      "kind": "crosscuts"
+    },
+    {
+      "source": "prism:PRISM-VERIFY",
+      "target": "plane:kernel",
+      "kind": "crosscuts"
+    },
+    {
+      "source": "prism:PRISM-VERIFY",
+      "target": "plane:gateway",
+      "kind": "crosscuts"
+    },
+    {
+      "source": "prism:PRISM-VERIFY",
+      "target": "plane:operator",
+      "kind": "crosscuts"
+    },
+    {
+      "source": "prism:PRISM-VERIFY",
+      "target": "plane:execution",
+      "kind": "crosscuts"
+    },
+    {
+      "source": "prism:PRISM-VERIFY",
+      "target": "plane:observation",
+      "kind": "crosscuts"
+    },
+    {
+      "source": "prism:PRISM-VERIFY",
+      "target": "plane:memory",
+      "kind": "crosscuts"
+    },
+    {
+      "source": "prism:PRISM-VERIFY",
+      "target": "plane:governance",
+      "kind": "crosscuts"
+    },
+    {
+      "source": "prism:PRISM-OBSERVE",
+      "target": "plane:kernel",
+      "kind": "crosscuts"
+    },
+    {
+      "source": "prism:PRISM-OBSERVE",
+      "target": "plane:gateway",
+      "kind": "crosscuts"
+    },
+    {
+      "source": "prism:PRISM-OBSERVE",
+      "target": "plane:operator",
+      "kind": "crosscuts"
+    },
+    {
+      "source": "prism:PRISM-OBSERVE",
+      "target": "plane:execution",
+      "kind": "crosscuts"
+    },
+    {
+      "source": "prism:PRISM-OBSERVE",
+      "target": "plane:observation",
+      "kind": "crosscuts"
+    },
+    {
+      "source": "prism:PRISM-OBSERVE",
+      "target": "plane:memory",
+      "kind": "crosscuts"
+    },
+    {
+      "source": "prism:PRISM-OBSERVE",
+      "target": "plane:governance",
+      "kind": "crosscuts"
+    },
+    {
+      "source": "holder:ninagate",
+      "target": "holder:warden",
+      "kind": "collision",
+      "name": "CircuitBreakerOpenError"
+    },
+    {
+      "source": "holder:execops",
+      "target": "holder:quarantineops",
+      "kind": "collision",
+      "name": "MockAgent"
+    },
+    {
+      "source": "holder:ninagate",
+      "target": "holder:warden",
+      "kind": "collision",
+      "name": "ProviderAuthError"
+    },
+    {
+      "source": "holder:ninagate",
+      "target": "holder:warden",
+      "kind": "collision",
+      "name": "ProviderExhaustedError"
+    },
+    {
+      "source": "holder:ninagate",
+      "target": "holder:warden",
+      "kind": "collision",
+      "name": "RateLimitError"
+    },
+    {
+      "source": "holder:quarantineops",
+      "target": "holder:warden",
+      "kind": "collision",
+      "name": "SecretLeakError"
+    },
+    {
+      "source": "holder:quarantineops",
+      "target": "holder:warden",
+      "kind": "collision",
+      "name": "TokenBudgetExceededError"
+    },
+    {
+      "source": "holder:ninagate",
+      "target": "holder:warden",
+      "kind": "collision",
+      "name": "VRAMExhaustedError"
+    },
+    {
+      "source": "holder:auditops",
+      "target": "holder:governanceops",
+      "kind": "shared_name",
+      "name": "AUDIT_LOG_FILE"
+    },
+    {
+      "source": "holder:dispatchops",
+      "target": "holder:orchestrateops",
+      "kind": "shared_name",
+      "name": "BACKLOG_PATH"
+    },
+    {
+      "source": "holder:governanceops",
+      "target": "holder:ninagate",
+      "kind": "shared_name",
+      "name": "DATA_FILE"
+    },
+    {
+      "source": "holder:auditops",
+      "target": "holder:quarantineops",
+      "kind": "shared_name",
+      "name": "FILE_PURPOSE"
+    },
+    {
+      "source": "holder:auditops",
+      "target": "holder:syncops",
+      "kind": "shared_name",
+      "name": "FILE_PURPOSE"
+    },
+    {
+      "source": "holder:quarantineops",
+      "target": "holder:syncops",
+      "kind": "shared_name",
+      "name": "FILE_PURPOSE"
+    },
+    {
+      "source": "holder:execops",
+      "target": "holder:orchestrateops",
+      "kind": "shared_name",
+      "name": "HIGH_RISK_FILES"
+    },
+    {
+      "source": "holder:orchestrateops",
+      "target": "holder:ssotops",
+      "kind": "shared_name",
+      "name": "IGNORE_DIRS"
+    },
+    {
+      "source": "holder:dispatchops",
+      "target": "holder:ssotops",
+      "kind": "shared_name",
+      "name": "build_engine_BACKLOG_PATH"
+    },
+    {
+      "source": "holder:dispatchops",
+      "target": "holder:ssotops",
+      "kind": "shared_name",
+      "name": "build_engine_REGISTRY_PATH"
+    },
+    {
+      "source": "holder:auditops",
+      "target": "holder:tierops",
+      "kind": "shared_name",
+      "name": "LOG"
+    },
+    {
+      "source": "holder:execops",
+      "target": "holder:orchestrateops",
+      "kind": "shared_name",
+      "name": "MAX_OUTPUT_CHARS"
+    },
+    {
+      "source": "holder:auditops",
+      "target": "holder:orchestrateops",
+      "kind": "shared_name",
+      "name": "NINA_ROOT"
+    },
+    {
+      "source": "holder:contextops",
+      "target": "holder:orchestrateops",
+      "kind": "shared_name",
+      "name": "OUT_FILE"
+    },
+    {
+      "source": "holder:healthops",
+      "target": "holder:ninagate",
+      "kind": "shared_name",
+      "name": "PROVIDERS_FILE"
+    },
+    {
+      "source": "holder:auditops",
+      "target": "holder:ssotops",
+      "kind": "shared_name",
+      "name": "SCRATCH"
+    },
+    {
+      "source": "holder:execops",
+      "target": "holder:orchestrateops",
+      "kind": "shared_name",
+      "name": "TEMPLATE_DIR"
+    },
+    {
+      "source": "holder:quarantineops",
+      "target": "holder:ssotops",
+      "kind": "shared_name",
+      "name": "TOOLS_DIR"
+    },
+    {
+      "source": "holder:auditops",
+      "target": "holder:execops",
+      "kind": "shared_name",
+      "name": "act"
+    },
+    {
+      "source": "holder:auditops",
+      "target": "holder:orchestrateops",
+      "kind": "shared_name",
+      "name": "act"
+    },
+    {
+      "source": "holder:execops",
+      "target": "holder:orchestrateops",
+      "kind": "shared_name",
+      "name": "act"
+    },
+    {
+      "source": "holder:execops",
+      "target": "holder:governanceops",
+      "kind": "shared_name",
+      "name": "append_audit"
+    },
+    {
+      "source": "holder:execops",
+      "target": "holder:quarantineops",
+      "kind": "shared_name",
+      "name": "build_graph"
+    },
+    {
+      "source": "holder:execops",
+      "target": "holder:ninaclientops",
+      "kind": "shared_name",
+      "name": "classify"
+    },
+    {
+      "source": "holder:orchestrateops",
+      "target": "holder:ssotops",
+      "kind": "shared_name",
+      "name": "cmd_sync"
+    },
+    {
+      "source": "holder:orchestrateops",
+      "target": "holder:ssotops",
+      "kind": "shared_name",
+      "name": "count_tokens"
+    },
+    {
+      "source": "holder:cogops",
+      "target": "holder:rescue",
+      "kind": "shared_name",
+      "name": "emit_sos"
+    },
+    {
+      "source": "holder:healthops",
+      "target": "holder:orchestrateops",
+      "kind": "shared_name",
+      "name": "get_disk_used_pct"
+    },
+    {
+      "source": "holder:healthops",
+      "target": "holder:orchestrateops",
+      "kind": "shared_name",
+      "name": "get_gpu_info"
+    },
+    {
+      "source": "holder:healthops",
+      "target": "holder:orchestrateops",
+      "kind": "shared_name",
+      "name": "get_hw_metrics"
+    },
+    {
+      "source": "holder:healthops",
+      "target": "holder:orchestrateops",
+      "kind": "shared_name",
+      "name": "get_ram_info"
+    },
+    {
+      "source": "holder:healthops",
+      "target": "holder:orchestrateops",
+      "kind": "shared_name",
+      "name": "get_ram_used_gb"
+    },
+    {
+      "source": "holder:memorysystem",
+      "target": "holder:ninaclientops",
+      "kind": "shared_name",
+      "name": "get_stats"
+    },
+    {
+      "source": "holder:contextops",
+      "target": "holder:ideaops",
+      "kind": "shared_name",
+      "name": "get_status"
+    },
+    {
+      "source": "holder:contextops",
+      "target": "holder:orchestrateops",
+      "kind": "shared_name",
+      "name": "get_status"
+    },
+    {
+      "source": "holder:contextops",
+      "target": "holder:quarantineops",
+      "kind": "shared_name",
+      "name": "get_status"
+    },
+    {
+      "source": "holder:ideaops",
+      "target": "holder:orchestrateops",
+      "kind": "shared_name",
+      "name": "get_status"
+    },
+    {
+      "source": "holder:ideaops",
+      "target": "holder:quarantineops",
+      "kind": "shared_name",
+      "name": "get_status"
+    },
+    {
+      "source": "holder:orchestrateops",
+      "target": "holder:quarantineops",
+      "kind": "shared_name",
+      "name": "get_status"
+    },
+    {
+      "source": "holder:healthops",
+      "target": "holder:orchestrateops",
+      "kind": "shared_name",
+      "name": "get_temps"
+    },
+    {
+      "source": "holder:healthops",
+      "target": "holder:orchestrateops",
+      "kind": "shared_name",
+      "name": "get_vram_free"
+    },
+    {
+      "source": "holder:healthops",
+      "target": "holder:orchestrateops",
+      "kind": "shared_name",
+      "name": "get_vram_used_mb"
+    },
+    {
+      "source": "holder:autops",
+      "target": "holder:dispatchops",
+      "kind": "shared_name",
+      "name": "heal"
+    },
+    {
+      "source": "holder:healthops",
+      "target": "holder:orchestrateops",
+      "kind": "shared_name",
+      "name": "is_thermal_safe"
+    },
+    {
+      "source": "holder:dispatchops",
+      "target": "holder:quarantineops",
+      "kind": "shared_name",
+      "name": "load_registry"
+    },
+    {
+      "source": "holder:governanceops",
+      "target": "holder:quarantineops",
+      "kind": "shared_name",
+      "name": "patch_file"
+    },
+    {
+      "source": "holder:execops",
+      "target": "holder:quarantineops",
+      "kind": "shared_name",
+      "name": "print_report"
+    },
+    {
+      "source": "holder:orchestrateops",
+      "target": "holder:quarantineops",
+      "kind": "shared_name",
+      "name": "probe_cpu"
+    },
+    {
+      "source": "holder:orchestrateops",
+      "target": "holder:quarantineops",
+      "kind": "shared_name",
+      "name": "probe_cuda"
+    },
+    {
+      "source": "holder:orchestrateops",
+      "target": "holder:quarantineops",
+      "kind": "shared_name",
+      "name": "probe_gpu"
+    },
+    {
+      "source": "holder:orchestrateops",
+      "target": "holder:quarantineops",
+      "kind": "shared_name",
+      "name": "probe_ollama"
+    },
+    {
+      "source": "holder:orchestrateops",
+      "target": "holder:quarantineops",
+      "kind": "shared_name",
+      "name": "probe_ram"
+    },
+    {
+      "source": "holder:gitops",
+      "target": "holder:dispatchops",
+      "kind": "shared_name",
+      "name": "prune_orphan_branches"
+    },
+    {
+      "source": "holder:cogops",
+      "target": "holder:rescue",
+      "kind": "shared_name",
+      "name": "read_sos"
+    },
+    {
+      "source": "holder:gitops",
+      "target": "holder:dispatchops",
+      "kind": "shared_name",
+      "name": "resolve_prs_parallel"
+    },
+    {
+      "source": "holder:cogops",
+      "target": "holder:rescue",
+      "kind": "shared_name",
+      "name": "resolve_sos"
+    },
+    {
+      "source": "holder:auditops",
+      "target": "holder:execops",
+      "kind": "shared_name",
+      "name": "run_all_checks"
+    },
+    {
+      "source": "holder:auditops",
+      "target": "holder:execops",
+      "kind": "shared_name",
+      "name": "run_audit"
+    },
+    {
+      "source": "holder:auditops",
+      "target": "holder:healthops",
+      "kind": "shared_name",
+      "name": "run_audit"
+    },
+    {
+      "source": "holder:execops",
+      "target": "holder:healthops",
+      "kind": "shared_name",
+      "name": "run_audit"
+    },
+    {
+      "source": "holder:auditops",
+      "target": "holder:enforcer",
+      "kind": "shared_name",
+      "name": "run_cmd"
+    },
+    {
+      "source": "holder:auditops",
+      "target": "holder:execops",
+      "kind": "shared_name",
+      "name": "run_cmd"
+    },
+    {
+      "source": "holder:enforcer",
+      "target": "holder:execops",
+      "kind": "shared_name",
+      "name": "run_cmd"
+    },
+    {
+      "source": "holder:orchestrateops",
+      "target": "holder:quarantineops",
+      "kind": "shared_name",
+      "name": "run_probe"
+    },
+    {
+      "source": "holder:dispatchops",
+      "target": "holder:quarantineops",
+      "kind": "shared_name",
+      "name": "save_registry"
+    },
+    {
+      "source": "holder:execops",
+      "target": "holder:ssotops",
+      "kind": "shared_name",
+      "name": "scan"
+    },
+    {
+      "source": "holder:quarantineops",
+      "target": "holder:telegramops",
+      "kind": "shared_name",
+      "name": "send_telegram"
+    },
+    {
+      "source": "holder:ninaclientops",
+      "target": "holder:ssotops",
+      "kind": "shared_name",
+      "name": "test_adr020_naming_compliance"
+    },
+    {
+      "source": "holder:quarantineops",
+      "target": "holder:ssotops",
+      "kind": "shared_name",
+      "name": "test_all"
+    },
+    {
+      "source": "holder:ninaclientops",
+      "target": "holder:ssotops",
+      "kind": "shared_name",
+      "name": "test_nds_all"
+    },
+    {
+      "source": "holder:governanceops",
+      "target": "holder:orchestrateops",
+      "kind": "shared_name",
+      "name": "test_nds_boundary"
+    },
+    {
+      "source": "holder:governanceops",
+      "target": "holder:warden",
+      "kind": "shared_name",
+      "name": "test_nds_boundary"
+    },
+    {
+      "source": "holder:orchestrateops",
+      "target": "holder:warden",
+      "kind": "shared_name",
+      "name": "test_nds_boundary"
+    },
+    {
+      "source": "holder:ninaclientops",
+      "target": "holder:orchestrateops",
+      "kind": "shared_name",
+      "name": "test_nds_dir"
+    },
+    {
+      "source": "holder:ninaclientops",
+      "target": "holder:quarantineops",
+      "kind": "shared_name",
+      "name": "test_nds_dir"
+    },
+    {
+      "source": "holder:ninaclientops",
+      "target": "holder:ssotops",
+      "kind": "shared_name",
+      "name": "test_nds_dir"
+    },
+    {
+      "source": "holder:orchestrateops",
+      "target": "holder:quarantineops",
+      "kind": "shared_name",
+      "name": "test_nds_dir"
+    },
+    {
+      "source": "holder:orchestrateops",
+      "target": "holder:ssotops",
+      "kind": "shared_name",
+      "name": "test_nds_dir"
+    },
+    {
+      "source": "holder:quarantineops",
+      "target": "holder:ssotops",
+      "kind": "shared_name",
+      "name": "test_nds_dir"
+    },
+    {
+      "source": "holder:ssotops",
+      "target": "holder:warden",
+      "kind": "shared_name",
+      "name": "test_nds_dsn_header"
+    },
+    {
+      "source": "holder:execops",
+      "target": "holder:ninagate",
+      "kind": "shared_name",
+      "name": "ts"
+    },
+    {
+      "source": "holder:execops",
+      "target": "holder:gitops",
+      "kind": "shared_name",
+      "name": "verify_pr"
+    },
+    {
+      "source": "holder:execops",
+      "target": "holder:dispatchops",
+      "kind": "shared_name",
+      "name": "verify_pr"
+    },
+    {
+      "source": "holder:gitops",
+      "target": "holder:dispatchops",
+      "kind": "shared_name",
+      "name": "verify_pr"
+    },
+    {
+      "source": "holder:execops",
+      "target": "holder:quarantineops",
+      "kind": "shared_name",
+      "name": "write_handoff"
+    }
+  ],
+  "counts": {
+    "nodes": 119,
+    "edges": 225,
+    "planes": 7
+  },
+  "stats": {
+    "total_elements": 38478,
+    "collisions": 71,
+    "collisions_actionable": 8,
+    "overhaul_done": 20,
+    "overhaul_total": 56,
+    "overhaul_pct": 35.7
+  }
+}

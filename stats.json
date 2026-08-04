@@ -1,7 +1,7 @@
 {
-  "commits": 11098,
+  "commits": 11099,
   "date": "2026-08-04",
-  "generated_at": "2026-08-04T17:00:01.157777+00:00",
+  "generated_at": "2026-08-04T17:02:59.310462+00:00",
   "merged_prs": 2574,
   "pipelines": {
     "normal_build": {
@@ -49,12 +49,12 @@
       "role": "merge / branch cleanup"
     },
     {
-      "available": false,
+      "available": true,
       "name": "commandcode",
       "role": "shell / system ops"
     },
     {
-      "available": false,
+      "available": true,
       "name": "opencode",
       "role": "policy read surface"
     }
