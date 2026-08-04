@@ -122,6 +122,45 @@
     border:1px solid rgba(83,221,233,.35); background:rgba(83,221,233,.06); padding:6px 13px; border-radius:99px; }
   .chip.a{ color:var(--amber); border-color:rgba(242,179,84,.35); background:rgba(242,179,84,.06); }
 
+
+  /* ── LIVE RAIL — instrument readout, deliberately distinct from written prose ── */
+  .liverail{ position:sticky; top:0; z-index:20; background:rgba(6,11,20,.94); backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(83,221,233,.22); font-family:'JetBrains Mono'; font-size:11px; }
+  .liverail .lr-in{ max-width:1060px; margin:0 auto; padding:7px 24px; display:flex; align-items:center;
+    gap:18px; flex-wrap:wrap; }
+  .lr-badge{ display:inline-flex; align-items:center; gap:7px; color:var(--cyan); letter-spacing:.16em;
+    font-weight:700; flex-shrink:0; }
+  .lr-pulse{ width:7px; height:7px; border-radius:50%; background:var(--cyan);
+    box-shadow:0 0 0 0 rgba(83,221,233,.7); animation:lrpulse 2.2s ease-out infinite; }
+  @keyframes lrpulse{ 0%{box-shadow:0 0 0 0 rgba(83,221,233,.65);} 70%{box-shadow:0 0 0 7px rgba(83,221,233,0);}
+    100%{box-shadow:0 0 0 0 rgba(83,221,233,0);} }
+  .lr-item{ color:var(--faint); white-space:nowrap; }
+  .lr-item b{ color:var(--cyan-soft); font-weight:500; font-variant-numeric:tabular-nums; }
+  .lr-raw{ margin-left:auto; color:var(--faint); }
+  .lr-raw a{ color:var(--cyan); text-decoration:none; border-bottom:1px solid rgba(83,221,233,.3); }
+  @media(prefers-reduced-motion:reduce){ .lr-pulse{ animation:none; } }
+  @media(max-width:640px){
+    .liverail{ position:static; }
+    .liverail .lr-in{ padding:7px 14px; gap:12px; font-size:10px; }
+    .lr-raw{ margin-left:0; }
+  }
+  /* live values elsewhere on the page flash when they change */
+  .ls-item b.changed{ animation:lrflash 1.6s ease-out; }
+  @keyframes lrflash{ 0%{ color:#FFF; text-shadow:0 0 14px var(--cyan);} 100%{ color:var(--cyan); text-shadow:none;} }
+
+
+  /* ── LIVE MARKER — attaches to any block fed by real data, so a reader can
+        always tell instrument readout apart from written prose ── */
+  .livetag{ display:inline-flex; align-items:center; gap:7px; font-family:'JetBrains Mono';
+    font-size:9.5px; letter-spacing:.16em; color:var(--cyan); text-transform:uppercase;
+    border:1px solid rgba(83,221,233,.3); background:rgba(83,221,233,.06);
+    padding:4px 10px; border-radius:99px; margin-bottom:12px; }
+  .livetag .dot{ width:6px; height:6px; border-radius:50%; background:var(--cyan);
+    animation:lrpulse 2.2s ease-out infinite; }
+  .livetag .muted{ color:var(--faint); letter-spacing:.08em; }
+  /* the block a live tag introduces gets a cyan edge — static blocks never do */
+  .livestats{ border-left:2px solid rgba(83,221,233,.45) !important; }
+
   .livestats{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px 20px; margin:0 0 22px;
     padding:16px 18px; border:1px solid var(--line); border-radius:10px; font-family:'JetBrains Mono';
     background:linear-gradient(180deg, rgba(16,27,49,.5), rgba(12,21,38,.28)); }
@@ -264,6 +303,16 @@
 </head>
 <body>
 
+<div class="liverail" id="liveRail">
+  <div class="lr-in">
+    <span class="lr-badge"><span class="lr-pulse"></span>LIVE SYSTEM STATUS</span>
+    <span class="lr-item" id="lrDeploy">reading deployment…</span>
+    <span class="lr-item" id="lrSync"></span>
+    <span class="lr-item" id="lrElements"></span>
+    <span class="lr-raw">not a static page &mdash; <a href="stats.json" target="_blank" rel="noopener">read the raw feed &#8599;</a></span>
+  </div>
+</div>
+
 <a id="top"></a>
 <nav>
   <div class="wrap">
@@ -377,6 +426,7 @@
       <span class="chip a">UNDER ACTIVE DEVELOPMENT</span>
     </div>
     <p class="body lede">NINA is a personal, local-first autonomous AI infrastructure: a multi-agent orchestration system I designed, built and operate independently, built to run continuously on consumer hardware under strict resource constraints — every change passing through a governance layer as a governed transaction rather than a blind edit.</p>
+    <div class="livetag"><span class="dot"></span>Live data <span class="muted">&mdash; machine-read, re-synced every 30 min</span></div>
     <div class="livestats" id="liveStats"><span class="ls-loading">loading live stats…</span></div>
     <div class="honest">
       <p>Stated plainly: NINA is not a product, not for sale, and not production-grade. She is a capability project under active development. What she proves is one thing, and proves it well — that I am tech-native: able to research, design, build and govern working AI systems with my own hands. I research, build, repeat.</p>
@@ -579,12 +629,86 @@
         {v: scale.repo_size_mb ? scale.repo_size_mb + ' MB' : null, l: 'repo size · 2 GB VRAM'},
       ].filter(i => i.v != null);
       if (!items.length) throw new Error('no data');
-      el.innerHTML = items.map(i => `<div class="ls-item"><b>${typeof i.v === 'number' ? i.v.toLocaleString() : i.v}</b><span>${i.l}</span></div>`).join('')
-        + `<span class="ls-asof">as of ${d.date || '?'} · <a href="graph_data.json" style="color:inherit">raw</a></span>`;
+      const prev = window.__lastStats || {};
+      el.innerHTML = items.map(i => {
+        const isNum = typeof i.v === 'number';
+        const moved = prev[i.l] != null && prev[i.l] !== i.v;
+        return `<div class="ls-item"><b class="${moved ? 'changed' : ''}" data-target="${isNum ? i.v : ''}">${isNum ? i.v.toLocaleString() : i.v}</b><span>${i.l}</span></div>`;
+      }).join('')
+        + `<span class="ls-asof">Every figure above is read from a generated file at page load — none are typed into this page. Last sync ${d.date || '?'} · <a href="stats.json" target="_blank" rel="noopener" style="color:var(--cyan)">read the raw feed &#8599;</a></span>`;
+      window.__lastStats = {}; items.forEach(i => window.__lastStats[i.l] = i.v);
+      countUp(el);
     } catch (err) {
       el.innerHTML = '<span class="ls-loading">live stats unavailable</span>';
     }
   })();
+</script>
+
+<script>
+/* Numbers count up on first paint — a value that animates from zero reads as
+   computed; a value that simply appears reads as typed. */
+function countUp(root){
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  root.querySelectorAll('b[data-target]').forEach(b => {
+    const target = parseInt(b.dataset.target, 10);
+    if (!target || target < 10) return;
+    const dur = 900, t0 = performance.now();
+    const step = now => {
+      const p = Math.min(1, (now - t0) / dur);
+      const eased = 1 - Math.pow(1 - p, 3);
+      b.textContent = Math.round(target * eased).toLocaleString();
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  });
+}
+</script>
+<script>
+/* Live rail: proves the page is a readout, not a document.
+   Deployment age comes from GitHub's API in the visitor's own browser —
+   third-party sourced, so it cannot be faked from this repo. */
+(function(){
+  const el = id => document.getElementById(id);
+  const rel = ms => {
+    const s = Math.max(0, Math.floor(ms/1000));
+    if (s < 60) return s + 's ago';
+    const m = Math.floor(s/60);
+    if (m < 60) return m + 'm ago';
+    const h = Math.floor(m/60);
+    if (h < 48) return h + 'h ago';
+    return Math.floor(h/24) + 'd ago';
+  };
+  let deployAt = null, syncAt = null;
+
+  function tick(){
+    if (deployAt) el('lrDeploy').innerHTML = 'site deployed <b>' + rel(Date.now()-deployAt) + '</b>';
+    if (syncAt)   el('lrSync').innerHTML   = 'metrics synced <b>' + rel(Date.now()-syncAt) + '</b>';
+  }
+  setInterval(tick, 1000);
+
+  async function pullDeploy(){
+    try {
+      const r = await fetch('https://api.github.com/repos/aibony/aibony.github.io/commits?per_page=1');
+      const j = await r.json();
+      deployAt = new Date(j[0].commit.committer.date).getTime();
+      tick();
+    } catch(e){ el('lrDeploy').textContent = 'deployment feed unavailable'; }
+  }
+
+  async function pullStats(){
+    try {
+      const d = await (await fetch('stats.json', {cache:'no-store'})).json();
+      if (d.generated_at) { syncAt = new Date(d.generated_at).getTime(); tick(); }
+      const g = d.governance || {};
+      if (g.governed_elements)
+        el('lrElements').innerHTML = '<b>' + g.governed_elements.toLocaleString() + '</b> governed elements under continuous audit';
+    } catch(e){}
+  }
+
+  pullDeploy(); pullStats();
+  setInterval(pullDeploy, 120000);   // GitHub: 60 req/hr budget, well inside it
+  setInterval(pullStats, 60000);
+})();
 </script>
 </body>
 </html>
