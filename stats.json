@@ -1,14 +1,136 @@
 {
-  "commits": 11102,
+  "commit_activity": [
+    {
+      "commits": 154,
+      "date": "2026-07-07"
+    },
+    {
+      "commits": 190,
+      "date": "2026-07-08"
+    },
+    {
+      "commits": 542,
+      "date": "2026-07-09"
+    },
+    {
+      "commits": 604,
+      "date": "2026-07-10"
+    },
+    {
+      "commits": 335,
+      "date": "2026-07-11"
+    },
+    {
+      "commits": 172,
+      "date": "2026-07-12"
+    },
+    {
+      "commits": 435,
+      "date": "2026-07-13"
+    },
+    {
+      "commits": 382,
+      "date": "2026-07-14"
+    },
+    {
+      "commits": 200,
+      "date": "2026-07-15"
+    },
+    {
+      "commits": 239,
+      "date": "2026-07-16"
+    },
+    {
+      "commits": 537,
+      "date": "2026-07-17"
+    },
+    {
+      "commits": 641,
+      "date": "2026-07-18"
+    },
+    {
+      "commits": 197,
+      "date": "2026-07-19"
+    },
+    {
+      "commits": 110,
+      "date": "2026-07-20"
+    },
+    {
+      "commits": 185,
+      "date": "2026-07-21"
+    },
+    {
+      "commits": 255,
+      "date": "2026-07-22"
+    },
+    {
+      "commits": 198,
+      "date": "2026-07-23"
+    },
+    {
+      "commits": 364,
+      "date": "2026-07-24"
+    },
+    {
+      "commits": 142,
+      "date": "2026-07-25"
+    },
+    {
+      "commits": 35,
+      "date": "2026-07-26"
+    },
+    {
+      "commits": 4,
+      "date": "2026-07-27"
+    },
+    {
+      "commits": 22,
+      "date": "2026-07-28"
+    },
+    {
+      "commits": 53,
+      "date": "2026-07-29"
+    },
+    {
+      "commits": 66,
+      "date": "2026-07-30"
+    },
+    {
+      "commits": 412,
+      "date": "2026-07-31"
+    },
+    {
+      "commits": 252,
+      "date": "2026-08-01"
+    },
+    {
+      "commits": 463,
+      "date": "2026-08-02"
+    },
+    {
+      "commits": 211,
+      "date": "2026-08-03"
+    },
+    {
+      "commits": 123,
+      "date": "2026-08-04"
+    },
+    {
+      "commits": 3,
+      "date": "2026-08-05"
+    }
+  ],
+  "commits": 11103,
   "date": "2026-08-04",
   "gate": {
-    "checked_at": "2026-08-04T18:58:11.502646+00:00",
-    "duration_s": 52.81,
+    "checked_at": "2026-08-04T19:03:07.929233+00:00",
+    "duration_s": 54.04,
     "evidence_count": 3,
     "reliability_score": 100.0,
     "status": "PASS"
   },
-  "generated_at": "2026-08-04T19:00:00.962872+00:00",
+  "generated_at": "2026-08-04T19:04:11.585598+00:00",
   "merged_prs": 2574,
   "pipelines": {
     "normal_build": {
@@ -35,7 +157,7 @@
     "open_prs": 0
   },
   "repo_scale": {
-    "lines_of_code": 110603,
+    "lines_of_code": 110612,
     "python_modules": 951,
     "test_files": 532
   },
@@ -56,12 +178,12 @@
       "role": "merge / branch cleanup"
     },
     {
-      "available": false,
+      "available": true,
       "name": "commandcode",
       "role": "shell / system ops"
     },
     {
-      "available": false,
+      "available": true,
       "name": "opencode",
       "role": "policy read surface"
     }
