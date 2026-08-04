@@ -130,7 +130,7 @@
     "reliability_score": 100.0,
     "status": "PASS"
   },
-  "generated_at": "2026-08-04T22:30:01.313499+00:00",
+  "generated_at": "2026-08-04T23:30:01.202728+00:00",
   "governance": {
     "capabilities": 546,
     "classified_entities": 2577,
@@ -148,11 +148,11 @@
       "status": "paused"
     },
     "overhaul": {
-      "done": 950,
+      "done": 951,
       "failed": 1055,
       "ready": 0,
-      "running": 1,
-      "status": "active"
+      "running": 0,
+      "status": "idle"
     },
     "overhaul_enrichment": {
       "done": 0,
