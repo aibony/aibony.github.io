@@ -152,9 +152,44 @@
     .count .n{ font-size:17px; }
     .count .l{ font-size:8px; letter-spacing:.08em; }
   }
+
+  /* ── LIVE LANGUAGE — identical vocabulary to the hub, so a reader learns it once ── */
+  .liverail{ position:sticky; top:0; z-index:20; background:rgba(7,13,24,.94); backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(83,221,233,.22); font-family:'JetBrains Mono'; font-size:11px; }
+  .liverail .lr-in{ max-width:1060px; margin:0 auto; padding:7px 24px; display:flex; align-items:center;
+    gap:18px; flex-wrap:wrap; }
+  .lr-badge{ display:inline-flex; align-items:center; gap:7px; color:var(--cyan); letter-spacing:.16em;
+    font-weight:700; flex-shrink:0; }
+  .lr-pulse{ width:7px; height:7px; border-radius:50%; background:var(--cyan);
+    animation:lrpulse 2.2s ease-out infinite; }
+  @keyframes lrpulse{ 0%{box-shadow:0 0 0 0 rgba(83,221,233,.65);} 70%{box-shadow:0 0 0 7px rgba(83,221,233,0);}
+    100%{box-shadow:0 0 0 0 rgba(83,221,233,0);} }
+  .lr-item{ color:var(--faint); white-space:nowrap; }
+  .lr-item b{ color:var(--cyan-soft); font-weight:500; font-variant-numeric:tabular-nums; }
+  .lr-raw{ margin-left:auto; color:var(--faint); }
+  .lr-raw a{ color:var(--cyan); border-bottom:1px solid rgba(83,221,233,.3); }
+  .livetag{ display:inline-flex; align-items:center; gap:7px; font-family:'JetBrains Mono';
+    font-size:9.5px; letter-spacing:.16em; color:var(--cyan); text-transform:uppercase;
+    border:1px solid rgba(83,221,233,.3); background:rgba(83,221,233,.06);
+    padding:4px 10px; border-radius:99px; margin:0 0 14px; }
+  .livetag .dot{ width:6px; height:6px; border-radius:50%; background:var(--cyan);
+    animation:lrpulse 2.2s ease-out infinite; }
+  .livetag .muted{ color:var(--faint); letter-spacing:.08em; }
+  @media(prefers-reduced-motion:reduce){ .lr-pulse,.livetag .dot{ animation:none; } }
+  @media(max-width:640px){ .liverail{ position:static; } .liverail .lr-in{ padding:7px 14px; gap:12px; font-size:10px; }
+    .lr-raw{ margin-left:0; } }
 </style>
 </head>
 <body>
+
+<div class="liverail" id="liveRail">
+  <div class="lr-in">
+    <span class="lr-badge"><span class="lr-pulse"></span>LIVE SYSTEM STATUS</span>
+    <span class="lr-item" id="lrDeploy">reading deployment&hellip;</span>
+    <span class="lr-item" id="lrSync"></span>
+    <span class="lr-raw">nothing on this page is typed &mdash; <a href="stats.json" target="_blank" rel="noopener">read the raw feed &#8599;</a></span>
+  </div>
+</div>
 
 <nav>
   <div class="in">
@@ -183,13 +218,16 @@
 <p id="loadfail">Status file could not be loaded. Try again in a moment.</p>
 
 <h2><span class="n">01</span>Repository health</h2>
+<div class="livetag"><span class="dot"></span>Live <span class="muted">&mdash; read from a generated file, re-synced every 30 min</span></div>
 <p id="statstrip"></p>
 
 <h2><span class="n">02</span>Pipelines</h2>
+<div class="livetag"><span class="dot"></span>Live <span class="muted">&mdash; read from a generated file, re-synced every 30 min</span></div>
 <p>Three asynchronous build pipelines. Each reports its own status word and, where applicable, its completed / failed / running / ready counts.</p>
 <div class="grid3" id="pipelinegrid"></div>
 
 <h2><span class="n">03</span>Tooling availability</h2>
+<div class="livetag"><span class="dot"></span>Live <span class="muted">&mdash; read from a generated file, re-synced every 30 min</span></div>
 <p>The agent toolchain currently in use. Pills are dimmed when a tool is not currently available on the host.</p>
 <div class="chips" id="tooling"></div>
 
@@ -337,6 +375,34 @@
       el("loadfail").style.display = "block";
       el("genline").textContent = "STATUS DATA UNAVAILABLE — RETRYING ON NEXT VISIT";
     });
+})();
+</script>
+
+<script>
+(function(){
+  const el = id => document.getElementById(id);
+  const rel = ms => { const s=Math.max(0,Math.floor(ms/1000));
+    if(s<60) return s+'s ago'; const m=Math.floor(s/60);
+    if(m<60) return m+'m ago'; const h=Math.floor(m/60);
+    return h<48 ? h+'h ago' : Math.floor(h/24)+'d ago'; };
+  let deployAt=null, syncAt=null;
+  function tick(){
+    if(deployAt) el('lrDeploy').innerHTML = 'site deployed <b>'+rel(Date.now()-deployAt)+'</b>';
+    if(syncAt)   el('lrSync').innerHTML   = 'metrics synced <b>'+rel(Date.now()-syncAt)+'</b>';
+  }
+  setInterval(tick,1000);
+  async function pullDeploy(){
+    try{ const j = await (await fetch('https://api.github.com/repos/aibony/aibony.github.io/commits?per_page=1')).json();
+      deployAt = new Date(j[0].commit.committer.date).getTime(); tick();
+    }catch(e){ el('lrDeploy').textContent='deployment feed unavailable'; }
+  }
+  async function pullSync(){
+    try{ const d = await (await fetch('stats.json',{cache:'no-store'})).json();
+      if(d.generated_at){ syncAt = new Date(d.generated_at).getTime(); tick(); }
+    }catch(e){}
+  }
+  pullDeploy(); pullSync();
+  setInterval(pullDeploy,120000); setInterval(pullSync,60000);
 })();
 </script>
 </body>
