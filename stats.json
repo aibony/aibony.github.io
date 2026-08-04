@@ -1,0 +1,52 @@
+{
+  "commits": 0,
+  "date": "2026-08-04",
+  "generated_at": "2026-08-04T08:30:01.098202+00:00",
+  "merged_prs": 0,
+  "pipelines": {
+    "normal_build": {
+      "status": "active"
+    },
+    "overhaul": {
+      "done": 858,
+      "failed": 1033,
+      "ready": 0,
+      "running": 32,
+      "status": "active"
+    },
+    "overhaul_enrichment": {
+      "status": "unknown"
+    }
+  },
+  "repo_health": {
+    "open_branches": 1,
+    "open_prs": 0
+  },
+  "sync_tooling": [
+    {
+      "available": true,
+      "name": "claude_code",
+      "role": "architect / planning"
+    },
+    {
+      "available": true,
+      "name": "codex",
+      "role": "consolidation"
+    },
+    {
+      "available": true,
+      "name": "agy",
+      "role": "merge / branch cleanup"
+    },
+    {
+      "available": false,
+      "name": "commandcode",
+      "role": "shell / system ops"
+    },
+    {
+      "available": false,
+      "name": "opencode",
+      "role": "policy read surface"
+    }
+  ]
+}
