@@ -267,8 +267,8 @@
     <p>Shown openly, including what isn't finished — the honest-scoping discipline applied to the repository itself.</p>
   </div>
   <div class="card">
-    <div class="idx">GITHUB ACTIVITY</div>
-    <img src="https://ghchart.rshah.org/53DDE9/aibony" alt="M. Baizid Alam's GitHub contribution graph" style="width:100%;border-radius:6px;margin-top:6px;" loading="lazy">
+    <div class="idx">30-DAY COMMIT ACTIVITY</div>
+    <svg id="lpSpark" width="100%" height="60" viewBox="0 0 300 60" style="margin-top:6px;display:block;"></svg>
   </div>
   <div class="card">
     <div class="idx">COST ENGINEERING</div>
@@ -288,6 +288,18 @@
       const total = oh.done + oh.failed + oh.running + oh.ready;
       const pct = total ? Math.round(100*oh.done/total) : 0;
       document.getElementById('lpOverhaul').textContent = oh.done + '/' + total + ' complete (' + pct + '%)';
+    }
+    const activity = d.commit_activity || [];
+    if (activity.length) {
+      const svg = document.getElementById('lpSpark');
+      const max = Math.max(...activity.map(a=>a.commits), 1);
+      const w = 300, h = 60, bw = w / activity.length;
+      let bars = '';
+      activity.forEach((a,i) => {
+        const bh = Math.max(2, (a.commits/max) * (h-4));
+        bars += '<rect x="' + (i*bw+1) + '" y="' + (h-bh) + '" width="' + Math.max(1,bw-2) + '" height="' + bh + '" fill="#53DDE9" opacity="' + (0.4 + 0.6*a.commits/max) + '"><title>' + a.date + ': ' + a.commits + ' commits</title></rect>';
+      });
+      svg.innerHTML = bars;
     }
   }).catch(()=>{});
 </script>
