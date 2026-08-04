@@ -253,7 +253,46 @@
   </tbody>
 </table></div>
 
-<h2><span class="n">03</span>Independent technical due diligence</h2>
+<h2><span class="n">03</span>Live proof, not screenshots</h2>
+<p>Four verifiable signals, none of them self-reported claims — each pulled live from the repository or a third party.</p>
+<div class="grid2" id="liveProofGrid">
+  <div class="card">
+    <div class="idx">GATE STATUS</div>
+    <h4 id="lpGateStatus">loading…</h4>
+    <p id="lpGateDetail"></p>
+  </div>
+  <div class="card">
+    <div class="idx">OVERHAUL TRANSPARENCY</div>
+    <h4 id="lpOverhaul">loading…</h4>
+    <p>Shown openly, including what isn't finished — the honest-scoping discipline applied to the repository itself.</p>
+  </div>
+  <div class="card">
+    <div class="idx">GITHUB ACTIVITY</div>
+    <img src="https://ghchart.rshah.org/53DDE9/aibony" alt="M. Baizid Alam's GitHub contribution graph" style="width:100%;border-radius:6px;margin-top:6px;" loading="lazy">
+  </div>
+  <div class="card">
+    <div class="idx">COST ENGINEERING</div>
+    <h4>Tiered, cost-aware inference</h4>
+    <p>Local models preferred before low-cost external, before paid fallback — continuously re-evaluated, not configured once. Full token/time/throughput/intelligence breakdown in the <a href="https://github.com/aibony/nina/blob/main/ARCHITECTURE.md" target="_blank" rel="noopener">architecture doc</a>.</p>
+  </div>
+</div>
+<script>
+  fetch('stats.json', {cache:'no-store'}).then(r=>r.json()).then(d=>{
+    const g = d.gate || {};
+    if (g.status) {
+      document.getElementById('lpGateStatus').textContent = g.status + ' — ' + (g.reliability_score||'?') + '/100';
+      document.getElementById('lpGateDetail').textContent = (g.evidence_count||'?') + ' checks, ' + (g.duration_s||'?') + 's, last run ' + (g.checked_at||'').slice(0,10);
+    }
+    const oh = (d.pipelines||{}).overhaul || {};
+    if (typeof oh.done === 'number') {
+      const total = oh.done + oh.failed + oh.running + oh.ready;
+      const pct = total ? Math.round(100*oh.done/total) : 0;
+      document.getElementById('lpOverhaul').textContent = oh.done + '/' + total + ' complete (' + pct + '%)';
+    }
+  }).catch(()=>{});
+</script>
+
+<h2><span class="n">04</span>Independent technical due diligence</h2>
 <p>An independent technical review of the repository found a local-first, continuously-running autonomous AI system built and maintained by a single owner-operator, using a workflow that combines human-directed architecture with AI-assisted implementation — with sustained, high-frequency engineering activity over an extended period and a large, actively maintained backlog of fully specified work.</p>
 <p>The review named <b>governance-as-code</b> as the system's defining trait: a defined precedence among competing engineering priorities embedded directly into operating rules, with safety and data protection treated as non-negotiable constraints. Distinct execution components carry different trust and permission levels, and sensitive information is handled through a dedicated component under stricter isolation.</p>
 
@@ -273,7 +312,7 @@
   <div class="src">— TECHNICAL DUE DILIGENCE REPORT · REPRODUCED HERE DELIBERATELY: I SELL HONEST ENGINEERING, INCLUDING ABOUT MY OWN WORK</div>
 </div>
 
-<h2><span class="n">04</span>Competencies</h2>
+<h2><span class="n">05</span>Competencies</h2>
 <div class="grid2">
   <div class="card"><div class="idx">MODULE 01 — TRADE FINANCE</div><h4>SWIFT Administration</h4><p>SWIFT operator since 2009, administrator since 2024. Alliance Access/Web administration and migration, CBPR+ ISO 20022 (coordinator and internal trainer), CSP compliance, sanctions screening, FATCA/IDES, RMA &amp; GPI, ASYCUDA, EDF, correspondent banking.</p></div>
   <div class="card"><div class="idx">MODULE 02 — RISK / COMPLIANCE</div><h4>Regulatory Risk &amp; ISO 27001</h4><p>Lead Auditor, ISO/IEC 27001:2022 (ISMS). AIBB and JAIBB, Institute of Bankers Bangladesh. Basel III, ICRRS credit risk grading, AML/KYC, CTR/STR reporting, board-level regulatory and security memoranda.</p></div>
@@ -285,7 +324,7 @@
   <div class="card"><div class="idx">MODULE 08 — DEVOPS</div><h4>Systems Orchestration</h4><p>Linux services, cron pipelines, Git/GitHub Actions, virtual runtimes, secure cloud-to-local relays, continuous background operation with automated recovery.</p></div>
 </div>
 
-<h2><span class="n">05</span>Engineering competency analysis</h2>
+<h2><span class="n">06</span>Engineering competency analysis</h2>
 <p>A separate independent analysis mapped the repository evidence to transferable professional value, concluding on a profile centred on distributed-systems thinking, AI infrastructure cost engineering, autonomous-system governance design, and structuring complex work for delegation.</p>
 <div class="tablewrap"><table>
   <thead><tr><th>Competency</th><th>Evidence category</th><th>Transferable value</th></tr></thead>
@@ -312,7 +351,7 @@
   <div class="src">— INDEPENDENT DEEP-PROFILE ASSESSMENT, 2026</div>
 </div>
 
-<h2><span class="n">06</span>Career record</h2>
+<h2><span class="n">07</span>Career record</h2>
 <p>The dated record. The same sixteen years told as a story — what each posting taught me — is in <a href="profile.html">the long-form profile</a>.</p>
 <div class="tl">
   <div class="tl-item am"><h4>Assistant General Manager &amp; Deputy Head — Trade Finance Division</h4>
@@ -345,7 +384,7 @@
   <li><b>In progress:</b> CISSP. <b>Member:</b> Institution of Engineers, Bangladesh.</li>
 </ul>
 
-<h2><span class="n">07</span>What hiring me buys</h2>
+<h2><span class="n">08</span>What hiring me buys</h2>
 <p>NINA is the proof of concept, not the product. The product is a repeatable capability: <b>I research, build, and repeat</b> — I don't just build AI features; I engineer autonomous, governed systems that organisations can trust. An independent business-value review mapped the evidence to problems organisations actually pay to solve.</p>
 <div class="tablewrap"><table>
   <thead><tr><th>Business problem</th><th>Evidence it can be solved</th><th>Value proposition</th></tr></thead>
@@ -374,7 +413,7 @@
   <span class="chip a">SWIFT / ISO 20022 CONSULTING</span>
 </div>
 
-<h2><span class="n">08</span>Take the file with you</h2>
+<h2><span class="n">09</span>Take the file with you</h2>
 <div class="dl">
   <div class="dlc"><div class="k">DESIGNED EDITION</div><a class="am" href="portfolio.pdf">portfolio.pdf</a><div class="d">Ten-page dossier — this content, art-directed, for attaching to proposals.</div></div>
   <div class="dlc"><div class="k">CV · PRINTABLE</div><a href="cv.pdf">cv.pdf</a><div class="d">Two pages, light theme, prints cleanly on any office printer.</div></div>
