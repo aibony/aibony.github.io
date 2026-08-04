@@ -117,20 +117,20 @@
       "date": "2026-08-04"
     },
     {
-      "commits": 15,
+      "commits": 16,
       "date": "2026-08-05"
     }
   ],
-  "commits": 11122,
+  "commits": 11123,
   "date": "2026-08-04",
   "gate": {
-    "checked_at": "2026-08-04T20:06:39.476902+00:00",
-    "duration_s": 61.66,
-    "evidence_count": 3,
+    "checked_at": "2026-08-04T20:22:41.396677+00:00",
+    "duration_s": 44.6,
+    "evidence_count": 2,
     "reliability_score": 100.0,
     "status": "PASS"
   },
-  "generated_at": "2026-08-04T20:13:49.782540+00:00",
+  "generated_at": "2026-08-04T20:30:01.606546+00:00",
   "governance": {
     "capabilities": 546,
     "classified_entities": 2577,
@@ -141,17 +141,17 @@
     "kernel_directives": 205,
     "ops_holders": 62
   },
-  "merged_prs": 2582,
+  "merged_prs": 2585,
   "pipelines": {
     "normal_build": {
       "resume_after": "2026-07-20T04:30:27.485657+00:00",
       "status": "paused"
     },
     "overhaul": {
-      "done": 935,
+      "done": 941,
       "failed": 1054,
       "ready": 0,
-      "running": 17,
+      "running": 11,
       "status": "active"
     },
     "overhaul_enrichment": {
@@ -163,13 +163,13 @@
     }
   },
   "repo_health": {
-    "open_branches": 5,
+    "open_branches": 8,
     "open_prs": 0
   },
   "repo_scale": {
     "adrs": 30,
     "json_registries": 1651,
-    "lines_of_code": 111590,
+    "lines_of_code": 111604,
     "markdown_docs": 467,
     "non_python_files": 2311,
     "python_modules": 955,
@@ -195,12 +195,12 @@
       "role": "merge / branch cleanup"
     },
     {
-      "available": true,
+      "available": false,
       "name": "commandcode",
       "role": "shell / system ops"
     },
     {
-      "available": true,
+      "available": false,
       "name": "opencode",
       "role": "policy read surface"
     }
