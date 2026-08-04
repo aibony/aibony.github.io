@@ -1,7 +1,7 @@
 {
-  "commits": 11071,
+  "commits": 11076,
   "date": "2026-08-04",
-  "generated_at": "2026-08-04T11:30:01.009218+00:00",
+  "generated_at": "2026-08-04T12:00:01.046124+00:00",
   "merged_prs": 2574,
   "pipelines": {
     "normal_build": {
@@ -9,10 +9,10 @@
       "status": "paused"
     },
     "overhaul": {
-      "done": 916,
+      "done": 917,
       "failed": 1052,
       "ready": 0,
-      "running": 3,
+      "running": 2,
       "status": "active"
     },
     "overhaul_enrichment": {
