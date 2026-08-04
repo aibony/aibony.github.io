@@ -169,12 +169,20 @@
 <p>That is why NINA is built the way it is. It is not a chatbot with ambitions; it is a mechanism. It has interlocks, because mechanisms that can act need places where they must stop. It has an audit engine, because a machine you cannot inspect is a machine you cannot trust. It has thermal and resource guards, because every real mechanism operates inside physical limits — a fact software people can forget and mechanical engineers cannot.</p>
 
 <h2><span class="n">06</span>What it proves — and what it doesn't</h2>
-<div class="facts">
-  <div class="fact"><div class="v">9,600+</div><div class="k">COMMITS</div></div>
-  <div class="fact"><div class="v">515</div><div class="k">MODULES</div></div>
-  <div class="fact"><div class="v">~70K</div><div class="k">LINES OF CODE</div></div>
+<div class="facts" id="liveFacts">
+  <div class="fact"><div class="v" id="fCommits">…</div><div class="k">COMMITS</div></div>
+  <div class="fact"><div class="v" id="fModules">…</div><div class="k">MODULES</div></div>
+  <div class="fact"><div class="v" id="fLines">…</div><div class="k">LINES OF CODE</div></div>
   <div class="fact"><div class="v">2 GB</div><div class="k">VRAM CEILING</div></div>
 </div>
+<script>
+  fetch('stats.json', {cache:'no-store'}).then(r=>r.json()).then(d=>{
+    const s = d.repo_scale || {};
+    if (d.commits) document.getElementById('fCommits').textContent = d.commits.toLocaleString() + '+';
+    if (s.python_modules) document.getElementById('fModules').textContent = s.python_modules;
+    if (s.lines_of_code) document.getElementById('fLines').textContent = '~' + Math.round(s.lines_of_code/1000) + 'K';
+  }).catch(()=>{});
+</script>
 <p>Those numbers are computed from the repository, not written by hand. But the number that matters most is a different one: <b>I hand-wrote almost none of that code.</b></p>
 <p>I specified it. I governed it. I dispatched it to agents, reviewed what came back, rejected what drifted, and enforced the architectural rules when no one else was there to enforce them. Which is, once you look at it plainly, the same thing I have done for sixteen years in a bank: write instructions precise enough that someone else can execute them without ambiguity, and an auditor can verify them afterwards. I ran a specialised LC unit that way. I run an agent mesh the same way.</p>
 <div class="box amberline">
