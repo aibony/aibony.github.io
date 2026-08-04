@@ -1,6 +1,6 @@
 {
   "generated": "2026-08-04",
-  "ascii_summary": "NINA \u2014 SOVEREIGN COGNITIVE OPERATING ECOSYSTEM\n\n  OPERATOR -> GATEWAY -> GOVERNANCE GATE -> BUILD ENGINE / AUDIT ENGINE\n\n  PLANES (7): kernel | gateway | operator | execution | observation | memory | governance\n  PRISM (3, cross-cutting): PRISM-COMPRESS | PRISM-VERIFY | PRISM-OBSERVE\n\n  38478 tracked elements  \u00b7  71 collisions (8 actionable)\n  overhaul 20/56 complete (35.7%)",
+  "ascii_summary": "NINA \u2014 SOVEREIGN COGNITIVE OPERATING ECOSYSTEM\n\n  OPERATOR -> GATEWAY -> GOVERNANCE GATE -> BUILD ENGINE / AUDIT ENGINE\n\n  PLANES (7): kernel | gateway | operator | execution | observation | memory | governance\n  PRISM (3, cross-cutting): PRISM-COMPRESS | PRISM-VERIFY | PRISM-OBSERVE\n\n  38436 tracked elements  \u00b7  71 collisions (8 actionable)\n  overhaul 20/56 complete (35.7%)",
   "schema_version": 2,
   "nodes": [
     {
@@ -25,33 +25,7 @@
         "reflexion_read",
         "reflexion_trigger"
       ],
-      "purpose": "tools/cogops.py",
-      "params": {
-        "kernel_load": [],
-        "kernel_get_module": [
-          "name"
-        ],
-        "kernel_status": [],
-        "symbol_lookup": [
-          "query",
-          "max_results"
-        ],
-        "symbol_context_str": [
-          "query",
-          "max_results"
-        ],
-        "dependency_impact": [
-          "file_path"
-        ],
-        "reflexion_read": [
-          "limit"
-        ],
-        "reflexion_trigger": [
-          "task_id",
-          "outcome",
-          "notes"
-        ]
-      }
+      "purpose": "tools/cogops.py"
     },
     {
       "id": "sub:cogops:cognitive_kernel",
@@ -117,29 +91,7 @@
         "budget_check",
         "test_tokenops_budget_check_fix"
       ],
-      "purpose": "Token spend tracker \u2014 per-agent savings metrics.",
-      "params": {
-        "provider_supply_pressure": [
-          "provider_states"
-        ],
-        "_Token_load": [],
-        "_Token_save": [
-          "data"
-        ],
-        "record_spend": [
-          "agent",
-          "input_t",
-          "output_t",
-          "compressed_input_t"
-        ],
-        "get_report": [],
-        "budget_check": [
-          "agent",
-          "input_t",
-          "output_t"
-        ],
-        "test_tokenops_budget_check_fix": []
-      }
+      "purpose": "Token spend tracker \u2014 per-agent savings metrics."
     },
     {
       "id": "sub:tokenops:budget",
@@ -173,47 +125,9 @@
       "label": "ninagate",
       "kind": "holder",
       "plane": "gateway",
-      "funcs": 20,
-      "top_funcs": [
-        "_write_access",
-        "_authorize",
-        "_validate_payload",
-        "_content",
-        "_run_completion",
-        "_chat_sse",
-        "lifespan",
-        "graceful_shutdown_middleware"
-      ],
-      "purpose": "NinaGate: NINA's self-contained inference continuity service.",
-      "params": {
-        "_write_access": [
-          "event"
-        ],
-        "_authorize": [
-          "request"
-        ],
-        "_validate_payload": [
-          "payload"
-        ],
-        "_content": [
-          "result"
-        ],
-        "_run_completion": [
-          "payload",
-          "request"
-        ],
-        "_chat_sse": [
-          "result",
-          "request_id"
-        ],
-        "lifespan": [
-          "_"
-        ],
-        "graceful_shutdown_middleware": [
-          "request",
-          "call_next"
-        ]
-      }
+      "funcs": 0,
+      "top_funcs": [],
+      "purpose": ""
     },
     {
       "id": "sub:ninagate:hybrid_router",
@@ -245,30 +159,7 @@
         "send_quota_exhausted",
         "send_message"
       ],
-      "purpose": "",
-      "params": {
-        "__dir__": [],
-        "send_telegram": [
-          "message"
-        ],
-        "start_beep": [],
-        "stop_beep": [],
-        "send_build_engine_alert": [
-          "sid",
-          "title",
-          "state"
-        ],
-        "send_research_needed": [
-          "sid",
-          "query"
-        ],
-        "send_quota_exhausted": [
-          "key_count"
-        ],
-        "send_message": [
-          "message"
-        ]
-      }
+      "purpose": ""
     },
     {
       "id": "sub:telegramops:commands",
@@ -300,28 +191,7 @@
         "_cache_key",
         "test_cache_key_injection"
       ],
-      "purpose": "ninaclientops \u2014 NINA's unified intelligence client. Symbiosis hub.",
-      "params": {
-        "_get": [
-          "url",
-          "timeout"
-        ],
-        "_post": [
-          "url",
-          "payload",
-          "timeout"
-        ],
-        "_stats": [],
-        "_save": [
-          "s"
-        ],
-        "health": [],
-        "_pinned_models": [],
-        "_cache_key": [
-          "prefix"
-        ],
-        "test_cache_key_injection": []
-      }
+      "purpose": "ninaclientops \u2014 NINA's unified intelligence client. Symbiosis hub."
     },
     {
       "id": "sub:ninaclientops:chat",
@@ -358,8 +228,7 @@
       "plane": "gateway",
       "funcs": 0,
       "top_funcs": [],
-      "purpose": "Shim: Compatibility entrypoint for the canonical NinaMCP stdio server.",
-      "params": {}
+      "purpose": ""
     },
     {
       "id": "sub:ninamcp:mcp_relay",
@@ -384,26 +253,7 @@
         "nina_goals_list",
         "nina_memory_search"
       ],
-      "purpose": "mcpops \u2014 canonical MCP domain for NINA.",
-      "params": {
-        "scrub_repo_path": [],
-        "_load_goals": [],
-        "_load_memory": [],
-        "_load_agent_loop": [],
-        "nina_ask": [
-          "goal",
-          "context",
-          "timeout_seconds"
-        ],
-        "nina_status": [],
-        "nina_goals_list": [
-          "state"
-        ],
-        "nina_memory_search": [
-          "query",
-          "top_k"
-        ]
-      }
+      "purpose": "mcpops \u2014 canonical MCP domain for NINA."
     },
     {
       "id": "sub:mcpops:model_context_protocol",
@@ -434,33 +284,7 @@
         "poll_and_merge",
         "handle_approval"
       ],
-      "purpose": "[AUDIT NOTE: nds-boundary - Checked against NDS/ADRs. No actionable gap found for __dir__ since file",
-      "params": {
-        "update_backlog_status": [
-          "task_id",
-          "new_status"
-        ],
-        "mark_error_register_fixed": [
-          "task_id"
-        ],
-        "append_feedback_log": [
-          "health",
-          "top_priority",
-          "ranked_count",
-          "action",
-          "promoted",
-          "dispatched"
-        ],
-        "observe_and_orient": [],
-        "decide_and_promote": [
-          "ranked_tasks"
-        ],
-        "dispatch_ready_tasks": [],
-        "poll_and_merge": [],
-        "handle_approval": [
-          "task_id"
-        ]
-      }
+      "purpose": "[AUDIT NOTE: nds-boundary - Checked against NDS/ADRs. No actionable gap found for __dir__ since file"
     },
     {
       "id": "sub:orchestrateops:boot",
@@ -497,23 +321,7 @@
         "run",
         "main"
       ],
-      "purpose": "",
-      "params": {
-        "__dir__": [],
-        "_git": [],
-        "status": [],
-        "dedup_routing_history": [
-          "path"
-        ],
-        "run": [
-          "mode",
-          "extra_args",
-          "dry_run"
-        ],
-        "main": [
-          "argv"
-        ]
-      }
+      "purpose": ""
     },
     {
       "id": "sub:syncops:status",
@@ -552,23 +360,7 @@
         "auto_commit",
         "_Git_git"
       ],
-      "purpose": "gitops.py \u2014 All git/PR/GitHub operations for the NINA build_engine pipeline.",
-      "params": {
-        "_gitops_boundary": [],
-        "is_noise_only": [
-          "changed_files"
-        ],
-        "_safe": [
-          "path"
-        ],
-        "get_repo_status": [],
-        "Git_diff": [],
-        "stage": [
-          "path"
-        ],
-        "auto_commit": [],
-        "_Git_git": []
-      }
+      "purpose": "gitops.py \u2014 All git/PR/GitHub operations for the NINA build_engine pipeline."
     },
     {
       "id": "sub:gitops:merge",
@@ -591,8 +383,7 @@
       "plane": "operator",
       "funcs": 0,
       "top_funcs": [],
-      "purpose": "",
-      "params": {}
+      "purpose": ""
     },
     {
       "id": "sub:rescue:incident_recovery",
@@ -617,34 +408,7 @@
         "_build_build_engine_prompt",
         "review"
       ],
-      "purpose": "",
-      "params": {
-        "_load": [],
-        "_save": [
-          "ideas"
-        ],
-        "_fingerprint": [
-          "text"
-        ],
-        "_enrich": [
-          "idea_text"
-        ],
-        "_dedup_check": [
-          "idea_text",
-          "existing"
-        ],
-        "capture": [
-          "idea_text",
-          "tags"
-        ],
-        "_build_build_engine_prompt": [
-          "idea_text",
-          "enrichment"
-        ],
-        "review": [
-          "date_str"
-        ]
-      }
+      "purpose": ""
     },
     {
       "id": "sub:ideaops:capture",
@@ -697,26 +461,7 @@
         "get_service_status",
         "check_cron_health"
       ],
-      "purpose": "NINA Context Operations (contextops).",
-      "params": {
-        "prune_content": [
-          "text",
-          "ext"
-        ],
-        "run_prune": [
-          "file_path"
-        ],
-        "run_git": [
-          "cmd"
-        ],
-        "read_health": [],
-        "read_open_errors": [],
-        "read_ready_tasks": [],
-        "get_service_status": [
-          "name"
-        ],
-        "check_cron_health": []
-      }
+      "purpose": "NINA Context Operations (contextops)."
     },
     {
       "id": "sub:contextops:claude_code",
@@ -751,26 +496,9 @@
       "label": "nexus",
       "kind": "holder",
       "plane": "operator",
-      "funcs": 4,
-      "top_funcs": [
-        "_tokenize",
-        "run_sbfl",
-        "nexus_evolve",
-        "ouroboros_tick"
-      ],
-      "purpose": "DSN: tools/nexusops.py",
-      "params": {
-        "_tokenize": [
-          "line"
-        ],
-        "run_sbfl": [
-          "coverage_data",
-          "passing_inputs",
-          "failing_inputs"
-        ],
-        "nexus_evolve": [],
-        "ouroboros_tick": []
-      }
+      "funcs": 0,
+      "top_funcs": [],
+      "purpose": ""
     },
     {
       "id": "sub:nexus:evolution",
@@ -802,23 +530,7 @@
         "audit_and_heal_system_gaps",
         "run_autonomous_pipeline_cycle"
       ],
-      "purpose": "autops \u2014 Failure-proof automation layer for NINA.",
-      "params": {
-        "record": [
-          "component",
-          "action",
-          "detail"
-        ],
-        "read": [
-          "hours"
-        ],
-        "stamp_ownership": [],
-        "auto_spec": [],
-        "check_overdue_tasks": [],
-        "reconcile_backlog": [],
-        "audit_and_heal_system_gaps": [],
-        "run_autonomous_pipeline_cycle": []
-      }
+      "purpose": "autops \u2014 Failure-proof automation layer for NINA."
     },
     {
       "id": "sub:autops:failure_automation",
@@ -840,18 +552,7 @@
         "_report",
         "main"
       ],
-      "purpose": "commandcodeops \u2014 Self-healing health timer for CommandCode.",
-      "params": {
-        "heal": [],
-        "check_nds": [],
-        "dispatch_gain": [],
-        "_report": [
-          "health",
-          "nds",
-          "dispatch"
-        ],
-        "main": []
-      }
+      "purpose": "commandcodeops \u2014 Self-healing health timer for CommandCode."
     },
     {
       "id": "sub:dispatchops:self_heal",
@@ -876,30 +577,7 @@
         "run_reconcile",
         "explicit_dispatch"
       ],
-      "purpose": "",
-      "params": {
-        "_load_registry": [],
-        "_save_registry": [
-          "data"
-        ],
-        "_log": [
-          "event"
-        ],
-        "_parse_check": [
-          "check"
-        ],
-        "_check_condition": [
-          "check"
-        ],
-        "_dispatch_gap": [
-          "gap_id",
-          "gap"
-        ],
-        "run_reconcile": [],
-        "explicit_dispatch": [
-          "gap_id"
-        ]
-      }
+      "purpose": ""
     },
     {
       "id": "sub:tierops:tier_reconciliation",
@@ -924,30 +602,7 @@
         "_Vault_load",
         "_Vault_save"
       ],
-      "purpose": "vaultops \u2014 Single source of truth for all API keys and secrets.",
-      "params": {
-        "_vault_lock": [],
-        "register_provider": [
-          "name",
-          "key",
-          "targets"
-        ],
-        "use_key": [
-          "group"
-        ],
-        "distribute": [
-          "provider"
-        ],
-        "Vault_audit": [],
-        "rotate": [
-          "provider",
-          "new_key"
-        ],
-        "_Vault_load": [],
-        "_Vault_save": [
-          "data"
-        ]
-      }
+      "purpose": "vaultops \u2014 Single source of truth for all API keys and secrets."
     },
     {
       "id": "sub:vaultops:secrets",
@@ -972,33 +627,7 @@
         "Contexttier_compress",
         "component_tier"
       ],
-      "purpose": "context_tierops \u2014 Maslow-hierarchy tiered context for NINA agents.",
-      "params": {
-        "Contexttier_load": [],
-        "_Contexttier_write": [
-          "data"
-        ],
-        "get_tier": [
-          "tier"
-        ],
-        "Contexttier_push": [
-          "tier",
-          "key",
-          "value"
-        ],
-        "prioritize": [
-          "goal",
-          "task_id",
-          "current_file"
-        ],
-        "Contexttier_get_summary": [],
-        "Contexttier_compress": [
-          "max_tokens"
-        ],
-        "component_tier": [
-          "name"
-        ]
-      }
+      "purpose": "context_tierops \u2014 Maslow-hierarchy tiered context for NINA agents."
     },
     {
       "id": "sub:context_tierops:context_compression",
@@ -1022,32 +651,7 @@
         "suggest_reason",
         "main"
       ],
-      "purpose": "",
-      "params": {
-        "scan_file": [
-          "path"
-        ],
-        "extract_header": [
-          "path"
-        ],
-        "generate_header": [
-          "filename",
-          "reason",
-          "domain",
-          "role"
-        ],
-        "apply_header": [
-          "filename",
-          "reason",
-          "domain",
-          "role"
-        ],
-        "audit_missing_headers": [],
-        "suggest_reason": [
-          "filename"
-        ],
-        "main": []
-      }
+      "purpose": ""
     },
     {
       "id": "sub:ndsheaderops:nds_headers",
@@ -1072,26 +676,7 @@
         "Fastindex_stats",
         "_Fastindex_load"
       ],
-      "purpose": "fastindexops \u2014 Voidtools-style persistent file index for Linux.",
-      "params": {
-        "_walk": [],
-        "build": [],
-        "update": [],
-        "hook": [
-          "repo_root"
-        ],
-        "watch": [
-          "repo_root"
-        ],
-        "Fastindex_query": [
-          "pattern",
-          "suffix",
-          "min_size",
-          "max_size"
-        ],
-        "Fastindex_stats": [],
-        "_Fastindex_load": []
-      }
+      "purpose": "fastindexops \u2014 Voidtools-style persistent file index for Linux."
     },
     {
       "id": "sub:fastindexops:file_index",
@@ -1116,32 +701,7 @@
         "_Analogy_load",
         "_Analogy_save"
       ],
-      "purpose": "analogyops \u2014 Analogy-aware discovery engine for NINA.",
-      "params": {
-        "research": [
-          "query",
-          "max_results"
-        ],
-        "register_analogy": [
-          "name",
-          "source",
-          "concept",
-          "mapping"
-        ],
-        "map_gaps": [
-          "name"
-        ],
-        "discover": [],
-        "apply": [
-          "analogy_name",
-          "gap_index"
-        ],
-        "Analogy_get_summary": [],
-        "_Analogy_load": [],
-        "_Analogy_save": [
-          "data"
-        ]
-      }
+      "purpose": "analogyops \u2014 Analogy-aware discovery engine for NINA."
     },
     {
       "id": "sub:analogyops:analogy_discovery",
@@ -1186,36 +746,7 @@
         "_is_ignored",
         "_is_ignored_path"
       ],
-      "purpose": "",
-      "params": {
-        "_c": [
-          "code",
-          "text"
-        ],
-        "run_cmd": [
-          "cmd",
-          "cwd",
-          "timeout"
-        ],
-        "_safe_run": [
-          "cmd",
-          "timeout"
-        ],
-        "safe_run_cmd": [
-          "cmd",
-          "timeout"
-        ],
-        "_path_resolve": [
-          "rel_path"
-        ],
-        "_load_geminiignore": [],
-        "_is_ignored": [
-          "path_str"
-        ],
-        "_is_ignored_path": [
-          "path"
-        ]
-      }
+      "purpose": ""
     },
     {
       "id": "sub:execops:agent_cli",
@@ -1244,8 +775,7 @@
       "plane": "observation",
       "funcs": 0,
       "top_funcs": [],
-      "purpose": "",
-      "params": {}
+      "purpose": ""
     },
     {
       "id": "sub:warden:runtime_watch",
@@ -1270,17 +800,7 @@
         "audit_nds_purpose_uniqueness",
         "audit_nds_name_collisions"
       ],
-      "purpose": "DSN: tools/auditops.py",
-      "params": {
-        "append_audit_event": [],
-        "audit_oss_wiring": [],
-        "audit_spec_integrity": [],
-        "audit_orphan_modules": [],
-        "audit_dead_endpoints": [],
-        "audit_shim_chains": [],
-        "audit_nds_purpose_uniqueness": [],
-        "audit_nds_name_collisions": []
-      }
+      "purpose": "DSN: tools/auditops.py"
     },
     {
       "id": "sub:auditops:audit",
@@ -1313,11 +833,7 @@
         "main",
         "test_testops_patch"
       ],
-      "purpose": "",
-      "params": {
-        "main": [],
-        "test_testops_patch": []
-      }
+      "purpose": ""
     },
     {
       "id": "sub:testops:gate",
@@ -1356,24 +872,7 @@
         "get_ollama_status",
         "check_services"
       ],
-      "purpose": "tools/healthops.py",
-      "params": {
-        "register_probe": [
-          "name",
-          "fn"
-        ],
-        "run_health_aggregator": [],
-        "_probe_cpu_info": [],
-        "get_gpu_info": [],
-        "_thermal_state": [
-          "temp_c"
-        ],
-        "get_ram_info": [],
-        "get_ollama_status": [],
-        "check_services": [
-          "names"
-        ]
-      }
+      "purpose": "tools/healthops.py"
     },
     {
       "id": "sub:healthops:health_probe",
@@ -1394,44 +893,9 @@
       "label": "enforcer",
       "kind": "holder",
       "plane": "observation",
-      "funcs": 49,
-      "top_funcs": [
-        "red",
-        "green",
-        "yellow",
-        "cyan",
-        "bold",
-        "Guardianengine_section",
-        "ok",
-        "warn"
-      ],
-      "purpose": "NINA Guardian 2.0 \u2014 Forensic Engine",
-      "params": {
-        "red": [
-          "s"
-        ],
-        "green": [
-          "s"
-        ],
-        "yellow": [
-          "s"
-        ],
-        "cyan": [
-          "s"
-        ],
-        "bold": [
-          "s"
-        ],
-        "Guardianengine_section": [
-          "title"
-        ],
-        "ok": [
-          "msg"
-        ],
-        "warn": [
-          "msg"
-        ]
-      }
+      "funcs": 0,
+      "top_funcs": [],
+      "purpose": ""
     },
     {
       "id": "sub:enforcer:commit_guard",
@@ -1453,8 +917,7 @@
       "plane": "memory",
       "funcs": 0,
       "top_funcs": [],
-      "purpose": "",
-      "params": {}
+      "purpose": ""
     },
     {
       "id": "sub:memorysystem:knowledge_base",
@@ -1486,33 +949,7 @@
         "capture_skill",
         "queue_capture"
       ],
-      "purpose": "DSN: tools/skillops.py",
-      "params": {
-        "_ensure_skills_dir": [],
-        "_validate_yaml_header": [
-          "text"
-        ],
-        "rebuild_index": [],
-        "get_index": [],
-        "get_skill": [
-          "name"
-        ],
-        "index_prompt": [
-          "max_skills"
-        ],
-        "capture_skill": [
-          "name",
-          "domain",
-          "problem",
-          "solution",
-          "steps",
-          "verification"
-        ],
-        "queue_capture": [
-          "task_id",
-          "summary"
-        ]
-      }
+      "purpose": "DSN: tools/skillops.py"
     },
     {
       "id": "sub:skillops:capture",
@@ -1551,33 +988,7 @@
         "Taste_recall",
         "Taste_forget"
       ],
-      "purpose": "tools/tasteops.py \u2014 Persistent preference memory for all NINA agents.",
-      "params": {
-        "__dir__": [],
-        "_ensure_dir": [],
-        "_Taste_load": [],
-        "_Taste_save": [
-          "taste"
-        ],
-        "_rebuild_index": [
-          "taste"
-        ],
-        "learn": [
-          "category",
-          "learning",
-          "confidence",
-          "source"
-        ],
-        "Taste_recall": [
-          "query",
-          "max_results",
-          "min_confidence"
-        ],
-        "Taste_forget": [
-          "category",
-          "learning_id"
-        ]
-      }
+      "purpose": "tools/tasteops.py \u2014 Persistent preference memory for all NINA agents."
     },
     {
       "id": "sub:tasteops:persistence",
@@ -1622,17 +1033,7 @@
         "generate_cognitive_kernel_json",
         "generate_memory_ssot_json"
       ],
-      "purpose": "",
-      "params": {
-        "parse_nina_naming": [],
-        "parse_nina_constitution": [],
-        "parse_nina_governor": [],
-        "parse_nina_rules": [],
-        "generate_policy_ssot_json": [],
-        "_load_canonical_ck_directives": [],
-        "generate_cognitive_kernel_json": [],
-        "generate_memory_ssot_json": []
-      }
+      "purpose": ""
     },
     {
       "id": "sub:ssotops:integration_registry",
@@ -1660,19 +1061,7 @@
         "__dir__",
         "test_nds_boundary"
       ],
-      "purpose": "NINA Governance Ops \u2014 canonical holder for merge risk classification and policy enforcement.",
-      "params": {
-        "detect_secret_extraction": [
-          "prompt"
-        ],
-        "risk_tier": [
-          "files",
-          "task_id",
-          "description"
-        ],
-        "__dir__": [],
-        "test_nds_boundary": []
-      }
+      "purpose": "NINA Governance Ops \u2014 canonical holder for merge risk classification and policy enforcement."
     },
     {
       "id": "sub:governanceops:risk_policy",
@@ -1698,11 +1087,7 @@
         "Quarantine_get_status",
         "_test_nds_boundary"
       ],
-      "purpose": "",
-      "params": {
-        "Quarantine_get_status": [],
-        "_test_nds_boundary": []
-      }
+      "purpose": ""
     },
     {
       "id": "sub:quarantineops:drain_to_zero",
@@ -2956,7 +2341,7 @@
     "planes": 7
   },
   "stats": {
-    "total_elements": 38478,
+    "total_elements": 38436,
     "collisions": 71,
     "collisions_actionable": 8,
     "overhaul_done": 20,
