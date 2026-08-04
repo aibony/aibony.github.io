@@ -113,45 +113,45 @@
       "date": "2026-08-03"
     },
     {
-      "commits": 130,
+      "commits": 133,
       "date": "2026-08-04"
     },
     {
-      "commits": 16,
+      "commits": 20,
       "date": "2026-08-05"
     }
   ],
-  "commits": 11123,
+  "commits": 11130,
   "date": "2026-08-04",
   "gate": {
-    "checked_at": "2026-08-04T20:22:41.396677+00:00",
-    "duration_s": 44.6,
-    "evidence_count": 2,
+    "checked_at": "2026-08-04T20:33:09.962991+00:00",
+    "duration_s": 77.14,
+    "evidence_count": 3,
     "reliability_score": 100.0,
     "status": "PASS"
   },
-  "generated_at": "2026-08-04T20:30:01.606546+00:00",
+  "generated_at": "2026-08-04T20:39:36.920460+00:00",
   "governance": {
     "capabilities": 546,
     "classified_entities": 2577,
     "collisions": 71,
     "collisions_actionable": 8,
-    "dependency_edges": 853,
+    "dependency_edges": 854,
     "governed_elements": 38436,
     "kernel_directives": 205,
     "ops_holders": 62
   },
-  "merged_prs": 2585,
+  "merged_prs": 2586,
   "pipelines": {
     "normal_build": {
       "resume_after": "2026-07-20T04:30:27.485657+00:00",
       "status": "paused"
     },
     "overhaul": {
-      "done": 941,
+      "done": 943,
       "failed": 1054,
       "ready": 0,
-      "running": 11,
+      "running": 9,
       "status": "active"
     },
     "overhaul_enrichment": {
@@ -163,20 +163,21 @@
     }
   },
   "repo_health": {
-    "open_branches": 8,
-    "open_prs": 0
+    "open_branches": 10,
+    "open_prs": 1
   },
   "repo_scale": {
     "adrs": 30,
+    "git_history_mb": 654.4,
     "json_registries": 1651,
-    "lines_of_code": 111604,
+    "lines_of_code": 111898,
     "markdown_docs": 467,
     "non_python_files": 2311,
     "python_modules": 955,
-    "repo_size_mb": 67.6,
     "shell_scripts": 61,
     "test_files": 534,
-    "tracked_files": 3266
+    "tracked_files": 3266,
+    "tracked_size_mb": 67.6
   },
   "sync_tooling": [
     {
@@ -195,14 +196,23 @@
       "role": "merge / branch cleanup"
     },
     {
-      "available": false,
+      "available": true,
       "name": "commandcode",
       "role": "shell / system ops"
     },
     {
-      "available": false,
+      "available": true,
       "name": "opencode",
       "role": "policy read surface"
     }
-  ]
+  ],
+  "velocity": {
+    "active_days": 62,
+    "commits_per_day": 169,
+    "conventional_commits": 8614,
+    "conventional_pct": 77,
+    "first_commit": "2026-06-01",
+    "prs_per_day": 39.2,
+    "span_days": 66
+  }
 }

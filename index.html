@@ -637,13 +637,15 @@
       const scale = d.repo_scale || {};
       const gate = d.gate || {};
       const gov = d.governance || {};
+      const v = d.velocity || {};
       const items = [
         {v: d.commits, l: 'commits'},
         {v: d.merged_prs, l: 'merged PRs'},
         {v: gov.governed_elements, l: 'governed elements'},
         {v: gov.classified_entities, l: 'classified entities'},
         {v: gov.capabilities, l: 'capabilities'},
-        {v: gov.dependency_edges, l: 'dependency edges'},
+        {v: v.commits_per_day, l: 'commits per day'},
+        {v: v.prs_per_day, l: 'merged PRs per day'},
         {v: scale.python_modules, l: 'python modules'},
         {v: scale.test_files, l: 'test files'},
         {v: scale.adrs, l: 'decision records'},
@@ -658,7 +660,7 @@
         const moved = prev[i.l] != null && prev[i.l] !== i.v;
         return `<div class="ls-item"><b class="${moved ? 'changed' : ''}" data-target="${isNum ? i.v : ''}">${isNum ? i.v.toLocaleString() : i.v}</b><span>${i.l}</span></div>`;
       }).join('')
-        + `<span class="ls-asof">Every figure above is read from a generated file at page load — none are typed into this page. Last sync ${d.date || '?'} · <a href="stats.json" target="_blank" rel="noopener" style="color:var(--cyan)">read the raw feed &#8599;</a></span>`;
+        + (v.commits_per_day ? `<span class="ls-asof"><b style="color:var(--cyan-soft)">${v.commits_per_day} commits and ${v.prs_per_day} merged pull requests a day, every day, for ${v.span_days} days.</b> Not a person typing.<br><br>Every figure above is read from a generated file at page load — none are typed into this page. Last sync ${d.date || '?'} · <a href="stats.json" target="_blank" rel="noopener" style="color:var(--cyan)">read the raw feed &#8599;</a></span>` : '');
       window.__lastStats = {}; items.forEach(i => window.__lastStats[i.l] = i.v);
       countUp(el);
     } catch (err) {

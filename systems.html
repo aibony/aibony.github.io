@@ -250,6 +250,25 @@
 </div>
 
 <script>
+/* A number that animates from zero reads as computed; one that simply
+   appears reads as typed. Same helper as the hub, deliberately. */
+function countUp(root){
+  if (!root || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  root.querySelectorAll('[data-target]').forEach(function(b){
+    var target = parseInt(b.dataset.target, 10);
+    if (!target || target < 10) return;
+    var dur = 900, t0 = performance.now();
+    function step(now){
+      var p = Math.min(1, (now - t0) / dur);
+      var eased = 1 - Math.pow(1 - p, 3);
+      b.textContent = Math.round(target * eased).toLocaleString();
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  });
+}
+</script>
+<script>
 (function () {
   "use strict";
   var el = function (id) { return document.getElementById(id); };
@@ -279,13 +298,14 @@
     if (typeof op === "number" && typeof ob === "number") { h = (op === 0 && ob === 0) ? "HEALTHY" : "ATTENTION"; }
     el("statstrip").innerHTML =
       '<div class="stats">' +
-        '<div class="stat"><div class="k">COMMITS</div><div class="v">' + c + '</div>' +
+        '<div class="stat"><div class="k">COMMITS</div><div class="v" data-target="' + (d.commits||0) + '">' + c + '</div>' +
           '<div class="s">Total commits in the working repository</div></div>' +
-        '<div class="stat"><div class="k">MERGED PRS</div><div class="v">' + m + '</div>' +
+        '<div class="stat"><div class="k">MERGED PRS</div><div class="v" data-target="' + (d.merged_prs||0) + '">' + m + '</div>' +
           '<div class="s">Pull requests merged to date</div></div>' +
         '<div class="stat"><div class="k">OPEN PR / BRANCH</div><div class="v' + (h === "HEALTHY" ? " g" : "") + '">' + op + ' / ' + ob + '</div>' +
           '<div class="s">' + (h === "HEALTHY" ? "Zero open PRs and branches — the tree is clean" : "Open items need attention") + '</div></div>' +
       '</div>';
+    countUp(el("statstrip"));
   };
 
   var pipelineCard = function (cfg) {
@@ -294,7 +314,7 @@
     var chtml = "";
     if (counts) {
       chtml = '<div class="counts">' +
-        '<div class="count"><div class="n">' + counts.done + '</div><div class="l">DONE</div></div>' +
+        '<div class="count"><div class="n" data-target="' + counts.done + '">' + counts.done + '</div><div class="l">DONE</div></div>' +
         '<div class="count"><div class="n">' + counts.failed + '</div><div class="l">FAILED</div></div>' +
         '<div class="count"><div class="n">' + counts.running + '</div><div class="l">RUNNING</div></div>' +
         '<div class="count"><div class="n">' + counts.ready + '</div><div class="l">READY</div></div>' +
@@ -348,6 +368,7 @@
     });
 
     el("pipelinegrid").innerHTML = cards;
+    countUp(el("pipelinegrid"));
 
     var t = (d && Array.isArray(d.sync_tooling)) ? d.sync_tooling : [];
     var chips = "";
