@@ -117,20 +117,20 @@
       "date": "2026-08-04"
     },
     {
-      "commits": 30,
+      "commits": 31,
       "date": "2026-08-05"
     }
   ],
-  "commits": 11146,
+  "commits": 11147,
   "date": "2026-08-04",
   "gate": {
-    "checked_at": "2026-08-04T21:30:20.454805+00:00",
-    "duration_s": 63.93,
+    "checked_at": "2026-08-04T22:01:04.727548+00:00",
+    "duration_s": 65.85,
     "evidence_count": 3,
     "reliability_score": 100.0,
     "status": "PASS"
   },
-  "generated_at": "2026-08-04T22:00:01.410296+00:00",
+  "generated_at": "2026-08-04T22:30:01.313499+00:00",
   "governance": {
     "capabilities": 546,
     "classified_entities": 2577,
@@ -163,7 +163,7 @@
     }
   },
   "repo_health": {
-    "open_branches": 1,
+    "open_branches": 0,
     "open_prs": 0
   },
   "repo_scale": {
@@ -209,7 +209,7 @@
   "velocity": {
     "active_days": 62,
     "commits_per_day": 169,
-    "conventional_commits": 8624,
+    "conventional_commits": 8625,
     "conventional_pct": 77,
     "first_commit": "2026-06-01",
     "prs_per_day": 39,
