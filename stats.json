@@ -1,7 +1,7 @@
 {
   "commits": 11098,
   "date": "2026-08-04",
-  "generated_at": "2026-08-04T16:49:41.026905+00:00",
+  "generated_at": "2026-08-04T17:00:01.157777+00:00",
   "merged_prs": 2574,
   "pipelines": {
     "normal_build": {
@@ -28,7 +28,7 @@
     "open_prs": 0
   },
   "repo_scale": {
-    "lines_of_code": 110559,
+    "lines_of_code": 110585,
     "python_modules": 951,
     "test_files": 532
   },
@@ -49,12 +49,12 @@
       "role": "merge / branch cleanup"
     },
     {
-      "available": true,
+      "available": false,
       "name": "commandcode",
       "role": "shell / system ops"
     },
     {
-      "available": true,
+      "available": false,
       "name": "opencode",
       "role": "policy read surface"
     }
