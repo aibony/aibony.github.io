@@ -84,17 +84,17 @@
     </div>
   </div>
 
-  <div class="panel glass" id="panelAscii" style="top:150px;left:14px">
-    <div class="panel-head" data-drag><span>summary</span><button class="panel-collapse" data-collapse>–</button></div>
+  <div class="panel glass collapsed" id="panelAscii" style="bottom:150px;left:14px">
+    <div class="panel-head" data-drag><span>summary</span><button class="panel-collapse" data-collapse>+</button></div>
     <div class="panel-body"><pre id="asciiSummary" class="ascii">loading…</pre></div>
   </div>
 
-  <div class="panel glass legend" id="panelLegend" style="top:14px;right:14px">
+  <div class="panel glass legend" id="panelLegend" style="bottom:44px;right:14px">
     <div class="panel-head" data-drag><span>planes</span><button class="panel-collapse" data-collapse>–</button></div>
     <div class="panel-body legend-body" id="legend"></div>
   </div>
 
-  <div class="panel glass" id="panelHud" style="top:14px;right:200px">
+  <div class="panel glass" id="panelHud" style="top:14px;right:14px">
     <div class="panel-head" data-drag><span>stats</span><button class="panel-collapse" data-collapse>–</button></div>
     <div class="panel-body hud-body" id="hud"></div>
   </div>
@@ -166,6 +166,25 @@
     head.addEventListener('touchend', () => dragOn = false);
   }
   document.querySelectorAll('.panel').forEach(makeDraggable);
+
+  // Mobile: 4 corners only hold if panels are compact — collapse to header chips,
+  // tap to expand. Desktop keeps them open. Re-evaluated on orientation change.
+  function fitPanelsToViewport(){
+    const small = window.innerWidth <= 640;
+    document.querySelectorAll('.panel').forEach(p => {
+      const btn = p.querySelector('[data-collapse]');
+      if (p.id === 'panelAscii') return;            // summary stays collapsed by default everywhere
+      if (small && !p.dataset.userToggled){
+        p.classList.add('collapsed'); btn.textContent = '+';
+      } else if (!small && !p.dataset.userToggled){
+        p.classList.remove('collapsed'); btn.textContent = '–';
+      }
+    });
+  }
+  document.querySelectorAll('[data-collapse]').forEach(b =>
+    b.addEventListener('click', () => { b.closest('.panel').dataset.userToggled = '1'; }));
+  fitPanelsToViewport();
+  window.addEventListener('resize', fitPanelsToViewport);
 
   let nodes = [], edges = [], hiddenPlanes = new Set();
   let W = 0, H = 0, dpr = Math.min(window.devicePixelRatio || 1, 2);
