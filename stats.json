@@ -1,26 +1,31 @@
 {
-  "commits": 0,
+  "commits": 11037,
   "date": "2026-08-04",
-  "generated_at": "2026-08-04T08:30:01.098202+00:00",
-  "merged_prs": 0,
+  "generated_at": "2026-08-04T08:35:36.958768+00:00",
+  "merged_prs": 2563,
   "pipelines": {
     "normal_build": {
-      "status": "active"
+      "resume_after": "2026-07-20T04:30:27.485657+00:00",
+      "status": "paused"
     },
     "overhaul": {
-      "done": 858,
+      "done": 859,
       "failed": 1033,
       "ready": 0,
-      "running": 32,
+      "running": 31,
       "status": "active"
     },
     "overhaul_enrichment": {
-      "status": "unknown"
+      "done": 0,
+      "failed": 5,
+      "ready": 0,
+      "running": 0,
+      "status": "idle"
     }
   },
   "repo_health": {
-    "open_branches": 1,
-    "open_prs": 0
+    "open_branches": 42,
+    "open_prs": 2
   },
   "sync_tooling": [
     {
@@ -39,12 +44,12 @@
       "role": "merge / branch cleanup"
     },
     {
-      "available": false,
+      "available": true,
       "name": "commandcode",
       "role": "shell / system ops"
     },
     {
-      "available": false,
+      "available": true,
       "name": "opencode",
       "role": "policy read surface"
     }
