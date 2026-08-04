@@ -113,35 +113,35 @@
       "date": "2026-08-03"
     },
     {
-      "commits": 124,
+      "commits": 128,
       "date": "2026-08-04"
     },
     {
-      "commits": 6,
+      "commits": 12,
       "date": "2026-08-05"
     }
   ],
-  "commits": 11107,
+  "commits": 11117,
   "date": "2026-08-04",
   "gate": {
-    "checked_at": "2026-08-04T19:29:40.137122+00:00",
-    "duration_s": 52.71,
+    "checked_at": "2026-08-04T19:31:01.039351+00:00",
+    "duration_s": 47.12,
     "evidence_count": 3,
     "reliability_score": 100.0,
     "status": "PASS"
   },
-  "generated_at": "2026-08-04T19:30:01.451459+00:00",
-  "merged_prs": 2575,
+  "generated_at": "2026-08-04T20:00:01.182627+00:00",
+  "merged_prs": 2580,
   "pipelines": {
     "normal_build": {
       "resume_after": "2026-07-20T04:30:27.485657+00:00",
       "status": "paused"
     },
     "overhaul": {
-      "done": 921,
-      "failed": 1052,
-      "ready": 3,
-      "running": 30,
+      "done": 931,
+      "failed": 1053,
+      "ready": 0,
+      "running": 22,
       "status": "active"
     },
     "overhaul_enrichment": {
@@ -153,11 +153,11 @@
     }
   },
   "repo_health": {
-    "open_branches": 1,
+    "open_branches": 2,
     "open_prs": 0
   },
   "repo_scale": {
-    "lines_of_code": 111202,
+    "lines_of_code": 111367,
     "python_modules": 955,
     "test_files": 534
   },
