@@ -1,7 +1,7 @@
 {
   "commits": 11071,
   "date": "2026-08-04",
-  "generated_at": "2026-08-04T11:00:01.468632+00:00",
+  "generated_at": "2026-08-04T11:30:01.009218+00:00",
   "merged_prs": 2574,
   "pipelines": {
     "normal_build": {
@@ -9,10 +9,10 @@
       "status": "paused"
     },
     "overhaul": {
-      "done": 915,
+      "done": 916,
       "failed": 1052,
       "ready": 0,
-      "running": 4,
+      "running": 3,
       "status": "active"
     },
     "overhaul_enrichment": {
@@ -24,7 +24,7 @@
     }
   },
   "repo_health": {
-    "open_branches": 1,
+    "open_branches": 0,
     "open_prs": 0
   },
   "sync_tooling": [
