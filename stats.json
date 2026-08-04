@@ -8,7 +8,7 @@
     "reliability_score": 100.0,
     "status": "PASS"
   },
-  "generated_at": "2026-08-04T18:58:26.805306+00:00",
+  "generated_at": "2026-08-04T19:00:00.962872+00:00",
   "merged_prs": 2574,
   "pipelines": {
     "normal_build": {
@@ -56,12 +56,12 @@
       "role": "merge / branch cleanup"
     },
     {
-      "available": true,
+      "available": false,
       "name": "commandcode",
       "role": "shell / system ops"
     },
     {
-      "available": true,
+      "available": false,
       "name": "opencode",
       "role": "policy read surface"
     }
