@@ -130,7 +130,7 @@
     "reliability_score": 60.0,
     "status": "FAIL"
   },
-  "generated_at": "2026-08-05T16:48:45.592051+00:00",
+  "generated_at": "2026-08-05T17:00:01.122180+00:00",
   "governance": {
     "capabilities": 546,
     "classified_entities": 2577,
@@ -173,12 +173,7 @@
       "total": 16
     },
     "sync": {
-      "done": 2,
-      "failed": 0,
-      "ready": 0,
-      "remaining": 0,
-      "running": 0,
-      "status": "idle"
+      "status": "unknown"
     }
   },
   "repo_health": {
@@ -215,12 +210,12 @@
       "role": "merge / branch cleanup"
     },
     {
-      "available": true,
+      "available": false,
       "name": "commandcode",
       "role": "shell / system ops"
     },
     {
-      "available": true,
+      "available": false,
       "name": "opencode",
       "role": "policy read surface"
     }
