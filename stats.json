@@ -124,13 +124,13 @@
   "commits": 11332,
   "date": "2026-08-05",
   "gate": {
-    "checked_at": "2026-08-05T16:00:50.088872+00:00",
-    "duration_s": 55.71,
+    "checked_at": "2026-08-05T17:19:45.843543+00:00",
+    "duration_s": 41.11,
     "evidence_count": 3,
     "reliability_score": 60.0,
     "status": "FAIL"
   },
-  "generated_at": "2026-08-05T17:00:01.122180+00:00",
+  "generated_at": "2026-08-05T17:30:00.787433+00:00",
   "governance": {
     "capabilities": 546,
     "classified_entities": 2577,
@@ -155,13 +155,13 @@
       "status": "paused"
     },
     "overhaul": {
-      "done": 1289,
-      "failed": 28,
-      "ready": 1451,
-      "remaining": 1451,
+      "done": 781,
+      "failed": 13,
+      "ready": 797,
+      "remaining": 797,
       "running": 0,
       "status": "active",
-      "total": 2768
+      "total": 1591
     },
     "overhaul_enrichment": {
       "done": 8,
@@ -182,9 +182,9 @@
   },
   "repo_scale": {
     "adrs": 31,
-    "git_history_mb": 743.1,
+    "git_history_mb": 743.2,
     "json_registries": 1651,
-    "lines_of_code": 114978,
+    "lines_of_code": 115120,
     "markdown_docs": 474,
     "non_python_files": 2329,
     "python_modules": 975,
