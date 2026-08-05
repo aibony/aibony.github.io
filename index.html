@@ -308,6 +308,7 @@
     <span class="lr-badge"><span class="lr-pulse"></span>LIVE SYSTEM STATUS</span>
     <span class="lr-item" id="lrDeploy">reading deployment…</span>
     <span class="lr-item" id="lrSync"></span>
+    <span class="lr-item" id="lrStreak"></span>
     <span class="lr-item" id="lrElements"></span>
     <span class="lr-raw">not a static page &mdash; <a href="stats.json" target="_blank" rel="noopener">read the raw feed &#8599;</a></span>
   </div>
@@ -727,11 +728,15 @@ function countUp(root){
     if (h < 48) return h + 'h ago';
     return Math.floor(h/24) + 'd ago';
   };
-  let deployAt = null, syncAt = null;
+  let deployAt = null, syncAt = null, inceptionAt = null;
 
   function tick(){
     if (deployAt) el('lrDeploy').innerHTML = 'site deployed <b>' + rel(Date.now()-deployAt) + '</b>';
     if (syncAt)   el('lrSync').innerHTML   = 'metrics synced <b>' + rel(Date.now()-syncAt) + '</b>';
+    if (inceptionAt) {
+      const days = Math.floor((Date.now()-inceptionAt) / 86400000);
+      el('lrStreak').innerHTML = '<b>' + days + '</b> days and counting';
+    }
   }
   setInterval(tick, 1000);
 
@@ -748,6 +753,8 @@ function countUp(root){
     try {
       const d = await (await fetch('stats.json', {cache:'no-store'})).json();
       if (d.generated_at) { syncAt = new Date(d.generated_at).getTime(); tick(); }
+      const span = (d.velocity || {}).span_days;
+      if (span && syncAt) { inceptionAt = syncAt - (span * 86400000); tick(); }
       const g = d.governance || {};
       if (g.governed_elements)
         el('lrElements').innerHTML = '<b>' + g.governed_elements.toLocaleString() + '</b> governed elements under continuous audit';
