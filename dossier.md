@@ -69,6 +69,6 @@ Most organisations have people who understand one side. The translation between 
 
 My own bank employs an entire IT department. None of them built this. A trade finance AGM built it alone, in the evenings, on a 2 GB laptop.
 
-**Services:** AI Security & Governed Agent Architecture — auditable, policy-enforced autonomous systems for regulated finance (prompt-injection defense, approval gates, agentic-ops); AI infrastructure design; local-first deployment for data-residency-constrained organisations; SWIFT / ISO 20022 / trade finance consulting.
+**Services:** Custody-grade governance discipline applied to autonomous AI systems — architecture, oversight, and enforceable operating rules for organisations that cannot afford an ungoverned agent; AI infrastructure design; local-first deployment for data-residency-constrained organisations; SWIFT / ISO 20022 / trade finance consulting.
 
 **Hire:** https://www.upwork.com/freelancers/~01a168174960b876b3 · https://www.fiverr.com/s/NN7o0la
