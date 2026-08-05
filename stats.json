@@ -117,20 +117,20 @@
       "date": "2026-08-04"
     },
     {
-      "commits": 68,
+      "commits": 83,
       "date": "2026-08-05"
     }
   ],
-  "commits": 11185,
+  "commits": 11200,
   "date": "2026-08-05",
   "gate": {
-    "checked_at": "2026-08-05T06:54:19.180920+00:00",
-    "duration_s": 48.44,
+    "checked_at": "2026-08-05T07:26:02.945874+00:00",
+    "duration_s": 49.25,
     "evidence_count": 3,
-    "reliability_score": 100.0,
-    "status": "PASS"
+    "reliability_score": 60.0,
+    "status": "FAIL"
   },
-  "generated_at": "2026-08-05T07:00:00.998387+00:00",
+  "generated_at": "2026-08-05T07:30:01.436323+00:00",
   "governance": {
     "capabilities": 546,
     "classified_entities": 2577,
@@ -141,7 +141,7 @@
     "kernel_directives": 205,
     "ops_holders": 62
   },
-  "merged_prs": 2603,
+  "merged_prs": 2610,
   "pipelines": {
     "normal_build": {
       "resume_after": "2026-07-20T04:30:27.485657+00:00",
@@ -150,8 +150,8 @@
     "overhaul": {
       "done": 1122,
       "failed": 1173,
-      "ready": 0,
-      "running": 4,
+      "ready": 71,
+      "running": 24,
       "status": "active"
     },
     "overhaul_enrichment": {
@@ -163,17 +163,17 @@
     }
   },
   "repo_health": {
-    "open_branches": 1,
-    "open_prs": 0
+    "open_branches": 21,
+    "open_prs": 11
   },
   "repo_scale": {
     "adrs": 31,
-    "git_history_mb": 715.3,
+    "git_history_mb": 721.1,
     "json_registries": 1651,
-    "lines_of_code": 112835,
-    "markdown_docs": 471,
-    "non_python_files": 2317,
-    "python_modules": 959,
+    "lines_of_code": 113157,
+    "markdown_docs": 472,
+    "non_python_files": 2318,
+    "python_modules": 958,
     "shell_scripts": 63,
     "test_files": 534,
     "tracked_files": 3276,
@@ -208,11 +208,11 @@
   ],
   "velocity": {
     "active_days": 62,
-    "commits_per_day": 169,
-    "conventional_commits": 8637,
+    "commits_per_day": 170,
+    "conventional_commits": 8648,
     "conventional_pct": 77,
     "first_commit": "2026-06-01",
-    "prs_per_day": 39,
+    "prs_per_day": 40,
     "span_days": 66
   }
 }
