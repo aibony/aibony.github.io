@@ -117,11 +117,11 @@
       "date": "2026-08-04"
     },
     {
-      "commits": 114,
+      "commits": 187,
       "date": "2026-08-05"
     }
   ],
-  "commits": 11231,
+  "commits": 11304,
   "date": "2026-08-05",
   "gate": {
     "checked_at": "2026-08-05T08:42:45.546298+00:00",
@@ -130,7 +130,7 @@
     "reliability_score": 60.0,
     "status": "FAIL"
   },
-  "generated_at": "2026-08-05T11:30:00.820876+00:00",
+  "generated_at": "2026-08-05T12:00:00.912178+00:00",
   "governance": {
     "capabilities": 546,
     "classified_entities": 2577,
@@ -141,43 +141,43 @@
     "kernel_directives": 205,
     "ops_holders": 62
   },
-  "merged_prs": 2640,
+  "merged_prs": 2674,
   "pipelines": {
     "normal_build": {
       "resume_after": "2026-07-20T04:30:27.485657+00:00",
       "status": "paused"
     },
     "overhaul": {
-      "done": 1240,
-      "failed": 1351,
-      "ready": 77,
-      "running": 27,
+      "done": 1257,
+      "failed": 1401,
+      "ready": 17,
+      "running": 20,
       "status": "active"
     },
     "overhaul_enrichment": {
-      "done": 9,
-      "failed": 8,
+      "done": 8,
+      "failed": 5,
       "ready": 0,
       "running": 0,
       "status": "idle"
     }
   },
   "repo_health": {
-    "open_branches": 137,
+    "open_branches": 113,
     "open_prs": 30
   },
   "repo_scale": {
     "adrs": 31,
-    "git_history_mb": 730.8,
+    "git_history_mb": 735.6,
     "json_registries": 1651,
-    "lines_of_code": 114471,
+    "lines_of_code": 115677,
     "markdown_docs": 473,
     "non_python_files": 2319,
-    "python_modules": 963,
+    "python_modules": 923,
     "shell_scripts": 63,
     "test_files": 534,
-    "tracked_files": 3282,
-    "tracked_size_mb": 68.1
+    "tracked_files": 3242,
+    "tracked_size_mb": 68.2
   },
   "sync_tooling": [
     {
@@ -208,11 +208,11 @@
   ],
   "velocity": {
     "active_days": 62,
-    "commits_per_day": 170,
-    "conventional_commits": 8664,
+    "commits_per_day": 171,
+    "conventional_commits": 8683,
     "conventional_pct": 77,
     "first_commit": "2026-06-01",
-    "prs_per_day": 40,
+    "prs_per_day": 41,
     "span_days": 66
   }
 }
