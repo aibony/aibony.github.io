@@ -117,20 +117,20 @@
       "date": "2026-08-04"
     },
     {
-      "commits": 53,
+      "commits": 54,
       "date": "2026-08-05"
     }
   ],
-  "commits": 11170,
+  "commits": 11171,
   "date": "2026-08-05",
   "gate": {
-    "checked_at": "2026-08-05T00:53:17.190225+00:00",
-    "duration_s": 74.54,
+    "checked_at": "2026-08-05T04:19:51.704616+00:00",
+    "duration_s": 57.84,
     "evidence_count": 3,
-    "reliability_score": 60.0,
-    "status": "FAIL"
+    "reliability_score": 100.0,
+    "status": "PASS"
   },
-  "generated_at": "2026-08-05T04:00:01.399062+00:00",
+  "generated_at": "2026-08-05T04:30:00.885043+00:00",
   "governance": {
     "capabilities": 546,
     "classified_entities": 2577,
@@ -163,14 +163,14 @@
     }
   },
   "repo_health": {
-    "open_branches": 92,
+    "open_branches": 90,
     "open_prs": 30
   },
   "repo_scale": {
     "adrs": 30,
-    "git_history_mb": 694.3,
+    "git_history_mb": 696.0,
     "json_registries": 1651,
-    "lines_of_code": 112385,
+    "lines_of_code": 112398,
     "markdown_docs": 469,
     "non_python_files": 2315,
     "python_modules": 959,
