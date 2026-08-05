@@ -117,41 +117,41 @@
       "date": "2026-08-04"
     },
     {
-      "commits": 57,
+      "commits": 64,
       "date": "2026-08-05"
     }
   ],
-  "commits": 11174,
+  "commits": 11181,
   "date": "2026-08-05",
   "gate": {
-    "checked_at": "2026-08-05T04:30:28.932899+00:00",
-    "duration_s": 62.32,
+    "checked_at": "2026-08-05T05:17:03.721146+00:00",
+    "duration_s": 59.13,
     "evidence_count": 3,
     "reliability_score": 100.0,
     "status": "PASS"
   },
-  "generated_at": "2026-08-05T05:00:01.038509+00:00",
+  "generated_at": "2026-08-05T05:30:01.570849+00:00",
   "governance": {
     "capabilities": 546,
     "classified_entities": 2577,
     "collisions": 71,
     "collisions_actionable": 8,
-    "dependency_edges": 854,
+    "dependency_edges": 856,
     "governed_elements": 38436,
     "kernel_directives": 205,
     "ops_holders": 62
   },
-  "merged_prs": 2600,
+  "merged_prs": 2602,
   "pipelines": {
     "normal_build": {
       "resume_after": "2026-07-20T04:30:27.485657+00:00",
       "status": "paused"
     },
     "overhaul": {
-      "done": 1084,
+      "done": 1107,
       "failed": 1173,
       "ready": 0,
-      "running": 42,
+      "running": 19,
       "status": "active"
     },
     "overhaul_enrichment": {
@@ -163,14 +163,14 @@
     }
   },
   "repo_health": {
-    "open_branches": 83,
-    "open_prs": 30
+    "open_branches": 35,
+    "open_prs": 0
   },
   "repo_scale": {
     "adrs": 30,
-    "git_history_mb": 701.2,
+    "git_history_mb": 707.6,
     "json_registries": 1651,
-    "lines_of_code": 112403,
+    "lines_of_code": 112655,
     "markdown_docs": 469,
     "non_python_files": 2315,
     "python_modules": 959,
@@ -209,7 +209,7 @@
   "velocity": {
     "active_days": 62,
     "commits_per_day": 169,
-    "conventional_commits": 8631,
+    "conventional_commits": 8633,
     "conventional_pct": 77,
     "first_commit": "2026-06-01",
     "prs_per_day": 39,
