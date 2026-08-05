@@ -364,6 +364,7 @@ function countUp(root){
     cards += pipelineCard({
       idx: "PIPELINE 03", title: "Normal Build",
       status: nbs,
+      counts: (typeof nb.done === "number") ? { done: nb.done, failed: nb.failed, running: nb.running, ready: nb.ready } : null,
       note: nbNote
     });
 
