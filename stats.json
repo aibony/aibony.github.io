@@ -130,7 +130,7 @@
     "reliability_score": 60.0,
     "status": "FAIL"
   },
-  "generated_at": "2026-08-05T18:30:00.812876+00:00",
+  "generated_at": "2026-08-05T18:30:12.063805+00:00",
   "governance": {
     "capabilities": 546,
     "classified_entities": 2577,
@@ -215,12 +215,12 @@
       "role": "merge / branch cleanup"
     },
     {
-      "available": false,
+      "available": true,
       "name": "commandcode",
       "role": "shell / system ops"
     },
     {
-      "available": false,
+      "available": true,
       "name": "opencode",
       "role": "policy read surface"
     }
