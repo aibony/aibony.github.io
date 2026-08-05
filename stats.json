@@ -124,13 +124,13 @@
   "commits": 11147,
   "date": "2026-08-05",
   "gate": {
-    "checked_at": "2026-08-04T22:01:04.727548+00:00",
-    "duration_s": 65.85,
-    "evidence_count": 3,
+    "checked_at": "2026-08-05T00:23:10.420710+00:00",
+    "duration_s": 42.92,
+    "evidence_count": 2,
     "reliability_score": 100.0,
     "status": "PASS"
   },
-  "generated_at": "2026-08-05T00:00:01.190624+00:00",
+  "generated_at": "2026-08-05T00:30:00.867952+00:00",
   "governance": {
     "capabilities": 546,
     "classified_entities": 2577,
@@ -141,7 +141,7 @@
     "kernel_directives": 205,
     "ops_holders": 62
   },
-  "merged_prs": 2589,
+  "merged_prs": 2593,
   "pipelines": {
     "normal_build": {
       "resume_after": "2026-07-20T04:30:27.485657+00:00",
@@ -149,10 +149,10 @@
     },
     "overhaul": {
       "done": 951,
-      "failed": 1055,
-      "ready": 0,
-      "running": 0,
-      "status": "idle"
+      "failed": 1080,
+      "ready": 181,
+      "running": 48,
+      "status": "active"
     },
     "overhaul_enrichment": {
       "done": 0,
@@ -163,12 +163,12 @@
     }
   },
   "repo_health": {
-    "open_branches": 1,
-    "open_prs": 0
+    "open_branches": 7,
+    "open_prs": 2
   },
   "repo_scale": {
     "adrs": 30,
-    "git_history_mb": 669.3,
+    "git_history_mb": 673.4,
     "json_registries": 1651,
     "lines_of_code": 112218,
     "markdown_docs": 467,
