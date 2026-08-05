@@ -130,7 +130,7 @@
     "reliability_score": 60.0,
     "status": "FAIL"
   },
-  "generated_at": "2026-08-05T12:48:58.555027+00:00",
+  "generated_at": "2026-08-05T13:00:00.803902+00:00",
   "governance": {
     "capabilities": 546,
     "classified_entities": 2577,
@@ -144,42 +144,31 @@
   "merged_prs": 2679,
   "pipelines": {
     "normal_build": {
-      "done": 859,
-      "failed": 62,
-      "paused_since": "2026-07-25T19:02:43+00:00",
-      "ready": 8,
-      "reason": "manual pause \u2014 file reduction/fix session",
-      "remaining": 63,
       "resume_after": "2026-07-20T04:30:27.485657+00:00",
-      "running": 30,
       "status": "paused"
     },
     "overhaul": {
-      "done": 1271,
-      "failed": 1448,
-      "ready": 36,
-      "remaining": 36,
+      "done": 1273,
+      "failed": 1463,
+      "ready": 19,
       "running": 13,
-      "status": "active",
-      "total": 2768
+      "status": "active"
     },
     "overhaul_enrichment": {
       "done": 8,
       "failed": 7,
-      "ready": 1,
-      "remaining": 5,
+      "ready": 0,
       "running": 0,
-      "status": "active",
-      "total": 20
+      "status": "idle"
     }
   },
   "repo_health": {
-    "open_branches": 9,
-    "open_prs": 9
+    "open_branches": 10,
+    "open_prs": 10
   },
   "repo_scale": {
     "adrs": 31,
-    "git_history_mb": 736.0,
+    "git_history_mb": 736.1,
     "json_registries": 1652,
     "lines_of_code": 115946,
     "markdown_docs": 473,
@@ -207,12 +196,12 @@
       "role": "merge / branch cleanup"
     },
     {
-      "available": true,
+      "available": false,
       "name": "commandcode",
       "role": "shell / system ops"
     },
     {
-      "available": true,
+      "available": false,
       "name": "opencode",
       "role": "policy read surface"
     }
