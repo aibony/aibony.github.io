@@ -130,7 +130,7 @@
     "reliability_score": 60.0,
     "status": "FAIL"
   },
-  "generated_at": "2026-08-05T18:00:00.992148+00:00",
+  "generated_at": "2026-08-05T18:26:08.054524+00:00",
   "governance": {
     "capabilities": 546,
     "classified_entities": 2577,
@@ -173,18 +173,23 @@
       "total": 16
     },
     "sync": {
-      "status": "unknown"
+      "done": 12,
+      "failed": 0,
+      "ready": 0,
+      "remaining": 0,
+      "running": 0,
+      "status": "idle"
     }
   },
   "repo_health": {
-    "open_branches": 0,
-    "open_prs": 0
+    "open_branches": 1,
+    "open_prs": 1
   },
   "repo_scale": {
     "adrs": 31,
-    "git_history_mb": 745.1,
+    "git_history_mb": 746.8,
     "json_registries": 1652,
-    "lines_of_code": 115658,
+    "lines_of_code": 115683,
     "markdown_docs": 474,
     "non_python_files": 2330,
     "python_modules": 975,
@@ -210,12 +215,12 @@
       "role": "merge / branch cleanup"
     },
     {
-      "available": false,
+      "available": true,
       "name": "commandcode",
       "role": "shell / system ops"
     },
     {
-      "available": false,
+      "available": true,
       "name": "opencode",
       "role": "policy read surface"
     }
