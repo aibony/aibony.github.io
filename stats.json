@@ -117,66 +117,77 @@
       "date": "2026-08-04"
     },
     {
-      "commits": 193,
+      "commits": 215,
       "date": "2026-08-05"
     }
   ],
-  "commits": 11310,
+  "commits": 11332,
   "date": "2026-08-05",
   "gate": {
-    "checked_at": "2026-08-05T15:21:40.549159+00:00",
-    "duration_s": 99.59,
-    "evidence_count": 6,
-    "reliability_score": 70.0,
+    "checked_at": "2026-08-05T15:48:33.157013+00:00",
+    "duration_s": 35.46,
+    "evidence_count": 3,
+    "reliability_score": 60.0,
     "status": "FAIL"
   },
-  "generated_at": "2026-08-05T15:30:00.799708+00:00",
+  "generated_at": "2026-08-05T15:48:47.015614+00:00",
   "governance": {
     "capabilities": 546,
     "classified_entities": 2577,
     "collisions": 71,
     "collisions_actionable": 8,
-    "dependency_edges": 876,
+    "dependency_edges": 875,
     "governed_elements": 38436,
     "kernel_directives": 205,
-    "ops_holders": 59
+    "ops_holders": 62
   },
-  "merged_prs": 2679,
+  "merged_prs": 2699,
   "pipelines": {
     "normal_build": {
+      "done": 859,
+      "failed": 62,
+      "paused_since": "2026-07-25T19:02:43+00:00",
+      "ready": 8,
+      "reason": "manual pause \u2014 file reduction/fix session",
+      "remaining": 63,
       "resume_after": "2026-07-20T04:30:27.485657+00:00",
+      "running": 30,
       "status": "paused"
     },
     "overhaul": {
       "done": 1289,
       "failed": 28,
       "ready": 1450,
+      "remaining": 1450,
       "running": 1,
-      "status": "active"
+      "status": "active",
+      "total": 2768
     },
     "overhaul_enrichment": {
       "done": 8,
-      "failed": 7,
+      "failed": 5,
       "ready": 0,
+      "remaining": 3,
       "running": 0,
-      "status": "idle"
+      "status": "idle",
+      "total": 16
     }
   },
   "repo_health": {
-    "open_branches": 25,
-    "open_prs": 25
+    "open_branches": 0,
+    "open_prs": 0
   },
   "repo_scale": {
     "adrs": 31,
-    "git_history_mb": 740.2,
-    "json_registries": 1652,
-    "lines_of_code": 116179,
-    "markdown_docs": 473,
-    "non_python_files": 2320,
-    "python_modules": 923,
-    "shell_scripts": 63,
-    "test_files": 542,
-    "tracked_files": 3243,
+    "git_history_mb": 740.8,
+    "json_registries": 1651,
+    "lines_of_code": 114900,
+    "markdown_docs": 474,
+    "non_python_files": 2329,
+    "python_modules": 975,
+    "shell_scripts": 64,
+    "test_files": 535,
+    "tracked_files": 3304,
     "tracked_size_mb": 68.2
   },
   "sync_tooling": [
@@ -196,20 +207,20 @@
       "role": "merge / branch cleanup"
     },
     {
-      "available": false,
+      "available": true,
       "name": "commandcode",
       "role": "shell / system ops"
     },
     {
-      "available": false,
+      "available": true,
       "name": "opencode",
       "role": "policy read surface"
     }
   ],
   "velocity": {
     "active_days": 62,
-    "commits_per_day": 171,
-    "conventional_commits": 8685,
+    "commits_per_day": 172,
+    "conventional_commits": 8697,
     "conventional_pct": 77,
     "first_commit": "2026-06-01",
     "prs_per_day": 41,
