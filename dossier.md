@@ -16,7 +16,7 @@ Then I did something that looked like leaving engineering behind: an MBA at Nort
 ## 02 — Then a larger machine
 I entered BASIC Bank PLC in October 2009 as an Assistant Manager at a branch in Chittagong. I expected a job. What I found was a bigger machine.
 
-A bank is a mechanism: inputs, tolerances, interlocks, failure modes, and rules that either hold under load or don't. Over sixteen years I was posted through most of its subsystems:
+A bank is a mechanism: inputs, tolerances, interlocks, failure modes, and rules that either hold under load or don't. Over nearly seventeen years I was posted through most of its subsystems:
 
 - The branch taught me where operational risk actually hides — in everyday transactions performed under pressure.
 - Credit taught me how a bank decides whom to trust, and what it costs when that judgment is wrong.
@@ -51,9 +51,9 @@ I did not learn to code my way into AI. I mechanised DevOps. The substrate chang
 That is why NINA has interlocks (mechanisms that act need places where they must stop), an audit engine (a machine you cannot inspect is a machine you cannot trust), and thermal and resource guards (every real mechanism operates inside physical limits).
 
 ## 05 — What it proves, and what it doesn't
-Computed from the repository: 11,181+ commits, 959 Python modules, ~112,655 lines of code, 534 test files — all under a 2 GB VRAM ceiling.
+Computed from the repository: 11,180+ commits, 959 Python modules, ~112,646 lines of code, 534 test files — all under a 2 GB VRAM ceiling.
 
-I hand-wrote almost none of it. I specified it, governed it, dispatched it to agents, reviewed what came back, rejected what drifted, and enforced the architectural rules with no team to enforce them for me. That is the same skill I have used for sixteen years in a bank: write instructions precise enough that someone else can execute them without ambiguity and an auditor can verify them afterwards.
+I hand-wrote almost none of it. I specified it, governed it, dispatched it to agents, reviewed what came back, rejected what drifted, and enforced the architectural rules with no team to enforce them for me. That is the same skill I have used for nearly seventeen years in a bank: write instructions precise enough that someone else can execute them without ambiguity and an auditor can verify them afterwards.
 
 NINA is not a product, not for sale, and not production-grade. She is a personal capability project under active development. Honest scoping is the first skill of anyone who sells governance.
 
@@ -63,7 +63,7 @@ Three frontier models, in separate sessions, were asked to assess the system and
 Measured numbers live in the updates log at https://github.com/aibony/aibony. Opinions belong in one place and instrument readings in another.
 
 ## 07 — Where this goes
-The combination is the value: custody-grade compliance experience — SWIFT administration, ISO 27001 audit, ISO 20022 migration, sanctions screening, sixteen years inside a regulated institution — in the same person as demonstrated ability to design, build and govern autonomous AI systems on hardware that has no right to run them.
+The combination is the value: custody-grade compliance experience — SWIFT administration, ISO 27001 audit, ISO 20022 migration, sanctions screening, nearly seventeen years inside a regulated institution — in the same person as demonstrated ability to design, build and govern autonomous AI systems on hardware that has no right to run them.
 
 Most organisations have people who understand one side. The translation between them is where projects fail and governance becomes a document nobody enforces. That translation is what I do.
 
