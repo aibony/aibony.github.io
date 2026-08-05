@@ -122,7 +122,7 @@
     }
   ],
   "commits": 11147,
-  "date": "2026-08-04",
+  "date": "2026-08-05",
   "gate": {
     "checked_at": "2026-08-04T22:01:04.727548+00:00",
     "duration_s": 65.85,
@@ -130,7 +130,7 @@
     "reliability_score": 100.0,
     "status": "PASS"
   },
-  "generated_at": "2026-08-04T23:30:01.202728+00:00",
+  "generated_at": "2026-08-05T00:00:01.190624+00:00",
   "governance": {
     "capabilities": 546,
     "classified_entities": 2577,
@@ -141,7 +141,7 @@
     "kernel_directives": 205,
     "ops_holders": 62
   },
-  "merged_prs": 2588,
+  "merged_prs": 2589,
   "pipelines": {
     "normal_build": {
       "resume_after": "2026-07-20T04:30:27.485657+00:00",
@@ -163,7 +163,7 @@
     }
   },
   "repo_health": {
-    "open_branches": 0,
+    "open_branches": 1,
     "open_prs": 0
   },
   "repo_scale": {
