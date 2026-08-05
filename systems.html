@@ -318,6 +318,7 @@ function countUp(root){
         '<div class="count"><div class="n">' + counts.failed + '</div><div class="l">FAILED</div></div>' +
         '<div class="count"><div class="n">' + counts.running + '</div><div class="l">RUNNING</div></div>' +
         '<div class="count"><div class="n">' + counts.ready + '</div><div class="l">READY</div></div>' +
+        (typeof counts.remaining === "number" ? '<div class="count"><div class="n">' + counts.remaining + '</div><div class="l">REMAINING</div></div>' : '') +
       '</div>';
     }
     return '<div class="pcard">' +
@@ -341,7 +342,7 @@ function countUp(root){
     cards += pipelineCard({
       idx: "PIPELINE 01", title: "Overhaul",
       status: ohs,
-      counts: (typeof oh.done === "number") ? { done: oh.done, failed: oh.failed, running: oh.running, ready: oh.ready } : null
+      counts: (typeof oh.done === "number") ? { done: oh.done, failed: oh.failed, running: oh.running, ready: oh.ready, remaining: oh.remaining } : null
     });
 
     var oe = p.overhaul_enrichment || {};
@@ -349,7 +350,7 @@ function countUp(root){
     cards += pipelineCard({
       idx: "PIPELINE 02", title: "Overhaul Enrichment",
       status: oes,
-      counts: (typeof oe.done === "number") ? { done: oe.done, failed: oe.failed, running: oe.running, ready: oe.ready } : null
+      counts: (typeof oe.done === "number") ? { done: oe.done, failed: oe.failed, running: oe.running, ready: oe.ready, remaining: oe.remaining } : null
     });
 
     var nb = p.normal_build || {};
@@ -357,14 +358,17 @@ function countUp(root){
     var nbNote = "";
     if (nbs === "paused") {
       var pausedAt = fmtDate(nb.resume_after);
-      nbNote = pausedAt ? 'Paused. Auto-resume scheduled for <b>' + pausedAt + '</b>.' : "Paused. No auto-resume time has been set.";
+      var pausedSince = fmtDate(nb.paused_since);
+      nbNote = pausedSince ? 'Paused since <b>' + pausedSince + '</b>' : "Paused";
+      nbNote += pausedAt ? '. Auto-resume scheduled for <b>' + pausedAt + '</b>.' : ". No auto-resume time has been set.";
+      if (nb.reason) nbNote += '<br>Reason: ' + esc(nb.reason);
     } else if (nbs === "active") {
       nbNote = "Build pipeline is running normally.";
     }
     cards += pipelineCard({
       idx: "PIPELINE 03", title: "Normal Build",
       status: nbs,
-      counts: (typeof nb.done === "number") ? { done: nb.done, failed: nb.failed, running: nb.running, ready: nb.ready } : null,
+      counts: (typeof nb.done === "number") ? { done: nb.done, failed: nb.failed, running: nb.running, ready: nb.ready, remaining: nb.remaining } : null,
       note: nbNote
     });
 
