@@ -8,7 +8,7 @@
 
 ## Core documents
 - [Home / digital card](https://aibony.github.io/): Opens as a one-screen contact card (photo, titles, six disciplines, tappable contacts, vCard download), with the full site below it.
-- [Long-form profile](https://aibony.github.io/profile.html): How a mechanical engineer and 16-year banking executive came to build his own autonomous AI infrastructure. Contains the "mechanised DevOps" thesis.
+- [Long-form profile](https://aibony.github.io/profile.html): How a mechanical engineer and nearly-17-year banking executive came to build his own autonomous AI infrastructure. Contains the "mechanised DevOps" thesis.
 - [Evidence / case file](https://aibony.github.io/evidence.html): Architecture diagram, independent technical due diligence, competency analysis, career record, and business-value mapping.
 - [Profile, machine-readable](https://aibony.github.io/profile.md): The same profile as plain markdown.
 - [Portfolio dossier (PDF)](https://aibony.github.io/portfolio.pdf): 10-page designed dossier with independent reviews and business-value analysis.
