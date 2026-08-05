@@ -113,24 +113,24 @@
       "date": "2026-08-03"
     },
     {
-      "commits": 139,
+      "commits": 140,
       "date": "2026-08-04"
     },
     {
-      "commits": 31,
+      "commits": 47,
       "date": "2026-08-05"
     }
   ],
-  "commits": 11147,
+  "commits": 11164,
   "date": "2026-08-05",
   "gate": {
-    "checked_at": "2026-08-05T00:23:10.420710+00:00",
-    "duration_s": 42.92,
-    "evidence_count": 2,
-    "reliability_score": 100.0,
-    "status": "PASS"
+    "checked_at": "2026-08-05T00:53:17.190225+00:00",
+    "duration_s": 74.54,
+    "evidence_count": 3,
+    "reliability_score": 60.0,
+    "status": "FAIL"
   },
-  "generated_at": "2026-08-05T00:30:00.867952+00:00",
+  "generated_at": "2026-08-05T01:00:01.078340+00:00",
   "governance": {
     "capabilities": 546,
     "classified_entities": 2577,
@@ -141,17 +141,17 @@
     "kernel_directives": 205,
     "ops_holders": 62
   },
-  "merged_prs": 2593,
+  "merged_prs": 2599,
   "pipelines": {
     "normal_build": {
       "resume_after": "2026-07-20T04:30:27.485657+00:00",
       "status": "paused"
     },
     "overhaul": {
-      "done": 951,
-      "failed": 1080,
-      "ready": 181,
-      "running": 48,
+      "done": 976,
+      "failed": 1102,
+      "ready": 143,
+      "running": 39,
       "status": "active"
     },
     "overhaul_enrichment": {
@@ -163,21 +163,21 @@
     }
   },
   "repo_health": {
-    "open_branches": 7,
-    "open_prs": 2
+    "open_branches": 17,
+    "open_prs": 6
   },
   "repo_scale": {
     "adrs": 30,
-    "git_history_mb": 673.4,
+    "git_history_mb": 679.5,
     "json_registries": 1651,
-    "lines_of_code": 112218,
-    "markdown_docs": 467,
-    "non_python_files": 2312,
-    "python_modules": 961,
-    "shell_scripts": 62,
+    "lines_of_code": 112329,
+    "markdown_docs": 469,
+    "non_python_files": 2315,
+    "python_modules": 959,
+    "shell_scripts": 63,
     "test_files": 534,
-    "tracked_files": 3273,
-    "tracked_size_mb": 67.6
+    "tracked_files": 3274,
+    "tracked_size_mb": 67.7
   },
   "sync_tooling": [
     {
@@ -209,7 +209,7 @@
   "velocity": {
     "active_days": 62,
     "commits_per_day": 169,
-    "conventional_commits": 8625,
+    "conventional_commits": 8630,
     "conventional_pct": 77,
     "first_commit": "2026-06-01",
     "prs_per_day": 39,
