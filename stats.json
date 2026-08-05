@@ -130,7 +130,7 @@
     "reliability_score": 60.0,
     "status": "FAIL"
   },
-  "generated_at": "2026-08-05T19:00:01.036689+00:00",
+  "generated_at": "2026-08-05T20:30:01.987173+00:00",
   "governance": {
     "capabilities": 546,
     "classified_entities": 2577,
@@ -182,8 +182,8 @@
     }
   },
   "repo_health": {
-    "open_branches": 4,
-    "open_prs": 4
+    "open_branches": 5,
+    "open_prs": 5
   },
   "repo_scale": {
     "adrs": 31,
