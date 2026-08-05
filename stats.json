@@ -130,7 +130,7 @@
     "reliability_score": 60.0,
     "status": "FAIL"
   },
-  "generated_at": "2026-08-05T20:30:01.987173+00:00",
+  "generated_at": "2026-08-05T21:00:01.332745+00:00",
   "governance": {
     "capabilities": 546,
     "classified_entities": 2577,
@@ -187,7 +187,7 @@
   },
   "repo_scale": {
     "adrs": 31,
-    "git_history_mb": 746.9,
+    "git_history_mb": 747.0,
     "json_registries": 1652,
     "lines_of_code": 115689,
     "markdown_docs": 474,
