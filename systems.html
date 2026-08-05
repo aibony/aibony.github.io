@@ -372,6 +372,14 @@ function countUp(root){
       note: nbNote
     });
 
+    var sy = p.sync || {};
+    var sys_ = (typeof sy.status === "string") ? sy.status : "idle";
+    cards += pipelineCard({
+      idx: "PIPELINE 04", title: "Sync (AGY / CommandCode / Codex)",
+      status: sys_,
+      counts: (typeof sy.done === "number") ? { done: sy.done, failed: sy.failed, running: sy.running, ready: sy.ready, remaining: sy.remaining } : null
+    });
+
     el("pipelinegrid").innerHTML = cards;
     countUp(el("pipelinegrid"));
 
