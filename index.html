@@ -663,13 +663,24 @@
         const cc = document.getElementById('proofCommitCount');
         if (cc) cc.textContent = d.commits.toLocaleString();
       }
+      // Rates barely move visit to visit — a raw commit delta against this
+      // visitor's own last visit is the one number that visibly changes.
+      let visitDelta = '';
+      if (d.commits) {
+        const lastSeen = localStorage.getItem('nina_last_commits');
+        if (lastSeen != null) {
+          const gained = d.commits - parseInt(lastSeen, 10);
+          if (gained > 0) visitDelta = `<br><b style="color:var(--cyan)">+${gained} commit${gained === 1 ? '' : 's'}</b> since your last visit.`;
+        }
+        localStorage.setItem('nina_last_commits', String(d.commits));
+      }
       const prev = window.__lastStats || {};
       el.innerHTML = items.map(i => {
         const isNum = typeof i.v === 'number';
         const moved = prev[i.l] != null && prev[i.l] !== i.v;
         return `<div class="ls-item"><b class="${moved ? 'changed' : ''}" data-target="${isNum ? i.v : ''}">${isNum ? i.v.toLocaleString() : i.v}</b><span>${i.l}</span></div>`;
       }).join('')
-        + (v.commits_per_day ? `<span class="ls-asof"><b style="color:var(--cyan-soft)">${v.commits_per_day} commits and ${v.prs_per_day} merged pull requests a day, every day, for ${v.span_days} days.</b> Not a person typing.<br><br>Every figure above is read from a generated file at page load — none are typed into this page. Last sync <b class="ls-synctime" data-generated-at="${d.generated_at || ''}">${d.generated_at ? relativeTime(d.generated_at) : (d.date || '?')}</b> · <a href="stats.json" target="_blank" rel="noopener" style="color:var(--cyan)">read the raw feed &#8599;</a></span>` : '');
+        + (v.commits_per_day ? `<span class="ls-asof"><b style="color:var(--cyan-soft)">${v.commits_per_day} commits and ${v.prs_per_day} merged pull requests a day, every day, for ${v.span_days} days and counting.</b> Not a person typing.${visitDelta}<br><br>Every figure above is read from a generated file at page load — none are typed into this page. Last sync <b class="ls-synctime" data-generated-at="${d.generated_at || ''}">${d.generated_at ? relativeTime(d.generated_at) : (d.date || '?')}</b> · <a href="stats.json" target="_blank" rel="noopener" style="color:var(--cyan)">read the raw feed &#8599;</a></span>` : '');
       window.__lastStats = {}; items.forEach(i => window.__lastStats[i.l] = i.v);
       countUp(el);
       startSyncClock();
