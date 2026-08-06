@@ -122,7 +122,7 @@
     }
   ],
   "commits": 11333,
-  "date": "2026-08-05",
+  "date": "2026-08-06",
   "gate": {
     "checked_at": "2026-08-05T17:40:15.393646+00:00",
     "duration_s": 52.92,
@@ -130,7 +130,7 @@
     "reliability_score": 60.0,
     "status": "FAIL"
   },
-  "generated_at": "2026-08-05T21:00:01.332745+00:00",
+  "generated_at": "2026-08-06T00:00:00.781030+00:00",
   "governance": {
     "capabilities": 546,
     "classified_entities": 2577,
@@ -182,12 +182,12 @@
     }
   },
   "repo_health": {
-    "open_branches": 5,
-    "open_prs": 5
+    "open_branches": 6,
+    "open_prs": 6
   },
   "repo_scale": {
     "adrs": 31,
-    "git_history_mb": 747.0,
+    "git_history_mb": 747.1,
     "json_registries": 1652,
     "lines_of_code": 115689,
     "markdown_docs": 474,
