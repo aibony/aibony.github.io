@@ -130,7 +130,7 @@
     "reliability_score": 100.0,
     "status": "PASS"
   },
-  "generated_at": "2026-08-06T12:00:01.345461+00:00",
+  "generated_at": "2026-08-06T13:00:01.417841+00:00",
   "governance": {
     "capabilities": 546,
     "classified_entities": 2577,
@@ -177,8 +177,8 @@
     }
   },
   "repo_health": {
-    "open_branches": 1,
-    "open_prs": 1
+    "open_branches": 2,
+    "open_prs": 2
   },
   "repo_scale": {
     "adrs": 31,
