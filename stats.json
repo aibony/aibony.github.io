@@ -1,10 +1,6 @@
 {
   "commit_activity": [
     {
-      "commits": 154,
-      "date": "2026-07-07"
-    },
-    {
       "commits": 190,
       "date": "2026-07-08"
     },
@@ -117,31 +113,35 @@
       "date": "2026-08-04"
     },
     {
-      "commits": 216,
+      "commits": 220,
       "date": "2026-08-05"
+    },
+    {
+      "commits": 6,
+      "date": "2026-08-06"
     }
   ],
-  "commits": 11333,
+  "commits": 11343,
   "date": "2026-08-06",
   "gate": {
-    "checked_at": "2026-08-05T17:40:15.393646+00:00",
-    "duration_s": 52.92,
+    "checked_at": "2026-08-06T09:57:55.018488+00:00",
+    "duration_s": 32.85,
     "evidence_count": 3,
     "reliability_score": 60.0,
     "status": "FAIL"
   },
-  "generated_at": "2026-08-06T01:00:01.053467+00:00",
+  "generated_at": "2026-08-06T10:00:00.921221+00:00",
   "governance": {
     "capabilities": 546,
     "classified_entities": 2577,
     "collisions": 71,
     "collisions_actionable": 8,
-    "dependency_edges": 875,
+    "dependency_edges": 871,
     "governed_elements": 38436,
     "kernel_directives": 205,
     "ops_holders": 62
   },
-  "merged_prs": 2699,
+  "merged_prs": 2708,
   "pipelines": {
     "normal_build": {
       "done": 859,
@@ -173,30 +173,25 @@
       "total": 20
     },
     "sync": {
-      "done": 12,
-      "failed": 1,
-      "ready": 0,
-      "remaining": 0,
-      "running": 0,
-      "status": "idle"
+      "status": "unknown"
     }
   },
   "repo_health": {
-    "open_branches": 11,
-    "open_prs": 11
+    "open_branches": 0,
+    "open_prs": 0
   },
   "repo_scale": {
     "adrs": 31,
-    "git_history_mb": 747.3,
-    "json_registries": 1652,
-    "lines_of_code": 115689,
-    "markdown_docs": 474,
-    "non_python_files": 2330,
-    "python_modules": 975,
+    "git_history_mb": 747.7,
+    "json_registries": 1651,
+    "lines_of_code": 115077,
+    "markdown_docs": 486,
+    "non_python_files": 2341,
+    "python_modules": 980,
     "shell_scripts": 64,
-    "test_files": 535,
-    "tracked_files": 3305,
-    "tracked_size_mb": 68.3
+    "test_files": 538,
+    "tracked_files": 3321,
+    "tracked_size_mb": 68.2
   },
   "sync_tooling": [
     {
@@ -226,9 +221,9 @@
     }
   ],
   "velocity": {
-    "active_days": 62,
+    "active_days": 63,
     "commits_per_day": 172,
-    "conventional_commits": 8697,
+    "conventional_commits": 8706,
     "conventional_pct": 77,
     "first_commit": "2026-06-01",
     "prs_per_day": 41,
