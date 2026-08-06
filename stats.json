@@ -130,7 +130,7 @@
     "reliability_score": 100.0,
     "status": "PASS"
   },
-  "generated_at": "2026-08-06T15:30:00.908557+00:00",
+  "generated_at": "2026-08-06T16:00:02.228253+00:00",
   "governance": {
     "capabilities": 546,
     "classified_entities": 2577,
@@ -184,13 +184,13 @@
     "adrs": 33,
     "git_history_mb": 750.3,
     "json_registries": 1652,
-    "lines_of_code": 115152,
+    "lines_of_code": 115323,
     "markdown_docs": 491,
     "non_python_files": 2347,
-    "python_modules": 981,
+    "python_modules": 983,
     "shell_scripts": 64,
-    "test_files": 538,
-    "tracked_files": 3328,
+    "test_files": 539,
+    "tracked_files": 3330,
     "tracked_size_mb": 68.3
   },
   "sync_tooling": [
