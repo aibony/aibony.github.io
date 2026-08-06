@@ -380,6 +380,14 @@ function countUp(root){
       counts: (typeof sy.done === "number") ? { done: sy.done, failed: sy.failed, running: sy.running, ready: sy.ready, remaining: sy.remaining } : null
     });
 
+    var pd = p.priority_direct || {};
+    var pds = (typeof pd.status === "string") ? pd.status : "idle";
+    cards += pipelineCard({
+      idx: "PIPELINE 05", title: "Priority Direct Dispatch",
+      status: pds,
+      counts: (typeof pd.done === "number") ? { done: pd.done, failed: pd.failed, running: pd.running, ready: pd.ready, remaining: pd.remaining } : null
+    });
+
     el("pipelinegrid").innerHTML = cards;
     countUp(el("pipelinegrid"));
 
