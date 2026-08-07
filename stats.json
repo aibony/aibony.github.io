@@ -122,7 +122,7 @@
     }
   ],
   "commits": 11368,
-  "date": "2026-08-06",
+  "date": "2026-08-07",
   "gate": {
     "checked_at": "2026-08-06T19:12:03.148416+00:00",
     "duration_s": 41.55,
@@ -130,7 +130,7 @@
     "reliability_score": 100.0,
     "status": "PASS"
   },
-  "generated_at": "2026-08-06T19:30:01.094597+00:00",
+  "generated_at": "2026-08-07T00:00:01.261774+00:00",
   "governance": {
     "capabilities": 546,
     "classified_entities": 2577,
@@ -166,19 +166,19 @@
     "overhaul_enrichment": {
       "done": 8,
       "failed": 5,
-      "ready": 0,
-      "remaining": 7,
+      "ready": 4,
+      "remaining": 11,
       "running": 0,
-      "status": "idle",
-      "total": 20
+      "status": "active",
+      "total": 24
     },
     "sync": {
       "status": "unknown"
     }
   },
   "repo_health": {
-    "open_branches": 1,
-    "open_prs": 1
+    "open_branches": 3,
+    "open_prs": 3
   },
   "repo_scale": {
     "adrs": 34,
