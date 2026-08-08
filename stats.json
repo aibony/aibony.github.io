@@ -117,20 +117,20 @@
       "date": "2026-08-07"
     },
     {
-      "commits": 19,
+      "commits": 20,
       "date": "2026-08-08"
     }
   ],
-  "commits": 11427,
+  "commits": 11428,
   "date": "2026-08-08",
   "gate": {
-    "checked_at": "2026-08-08T05:08:51.528011+00:00",
-    "duration_s": 49.22,
+    "checked_at": "2026-08-08T06:44:31.641571+00:00",
+    "duration_s": 42.04,
     "evidence_count": 5,
     "reliability_score": 100.0,
     "status": "PASS"
   },
-  "generated_at": "2026-08-08T06:30:01.238799+00:00",
+  "generated_at": "2026-08-08T07:00:01.067379+00:00",
   "governance": {
     "capabilities": 546,
     "classified_entities": 2577,
@@ -155,11 +155,11 @@
       "status": "paused"
     },
     "overhaul": {
-      "done": 939,
+      "done": 971,
       "failed": 16,
-      "ready": 854,
-      "remaining": 854,
-      "running": 54,
+      "ready": 839,
+      "remaining": 839,
+      "running": 37,
       "status": "active",
       "total": 1863
     },
@@ -177,12 +177,12 @@
     }
   },
   "repo_health": {
-    "open_branches": 163,
+    "open_branches": 187,
     "open_prs": 30
   },
   "repo_scale": {
     "adrs": 39,
-    "git_history_mb": 783.2,
+    "git_history_mb": 783.9,
     "json_registries": 1929,
     "lines_of_code": 116843,
     "markdown_docs": 512,
@@ -223,7 +223,7 @@
   "velocity": {
     "active_days": 65,
     "commits_per_day": 166,
-    "conventional_commits": 8787,
+    "conventional_commits": 8788,
     "conventional_pct": 77,
     "first_commit": "2026-06-01",
     "prs_per_day": 39,
