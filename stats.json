@@ -130,7 +130,7 @@
     "reliability_score": 70.0,
     "status": "FAIL"
   },
-  "generated_at": "2026-08-08T19:30:01.542923+00:00",
+  "generated_at": "2026-08-08T21:30:00.831411+00:00",
   "governance": {
     "capabilities": 546,
     "classified_entities": 2577,
@@ -155,10 +155,10 @@
       "status": "paused"
     },
     "overhaul": {
-      "done": 1236,
+      "done": 1237,
       "failed": 19,
-      "ready": 835,
-      "remaining": 835,
+      "ready": 834,
+      "remaining": 834,
       "running": 1,
       "status": "active",
       "total": 2091
@@ -177,8 +177,8 @@
     }
   },
   "repo_health": {
-    "open_branches": 1,
-    "open_prs": 1
+    "open_branches": 2,
+    "open_prs": 2
   },
   "repo_scale": {
     "adrs": 39,
