@@ -117,20 +117,20 @@
       "date": "2026-08-09"
     },
     {
-      "commits": 316,
+      "commits": 324,
       "date": "2026-08-10"
     }
   ],
-  "commits": 12337,
+  "commits": 12345,
   "date": "2026-08-10",
   "gate": {
-    "checked_at": "2026-08-10T10:30:32.748988+00:00",
-    "duration_s": 35.96,
+    "checked_at": "2026-08-10T14:29:45.387905+00:00",
+    "duration_s": 29.75,
     "evidence_count": 5,
     "reliability_score": 64.0,
     "status": "FAIL"
   },
-  "generated_at": "2026-08-10T12:30:01.518351+00:00",
+  "generated_at": "2026-08-10T18:30:01.733821+00:00",
   "governance": {
     "capabilities": 546,
     "classified_entities": 2577,
@@ -176,16 +176,16 @@
   },
   "repo_scale": {
     "adrs": 39,
-    "git_history_mb": 800.8,
-    "json_registries": 4074,
-    "lines_of_code": 124284,
+    "git_history_mb": 637.2,
+    "json_registries": 4094,
+    "lines_of_code": 124344,
     "markdown_docs": 542,
-    "non_python_files": 4849,
+    "non_python_files": 4874,
     "python_modules": 928,
-    "shell_scripts": 76,
+    "shell_scripts": 77,
     "test_files": 558,
-    "tracked_files": 5777,
-    "tracked_size_mb": 73.7
+    "tracked_files": 5802,
+    "tracked_size_mb": 74.5
   },
   "sync_tooling": [
     {
