@@ -1,10 +1,6 @@
 {
   "commit_activity": [
     {
-      "commits": 382,
-      "date": "2026-07-14"
-    },
-    {
       "commits": 200,
       "date": "2026-07-15"
     },
@@ -119,29 +115,33 @@
     {
       "commits": 321,
       "date": "2026-08-12"
+    },
+    {
+      "commits": 1,
+      "date": "2026-08-13"
     }
   ],
-  "commits": 13201,
+  "commits": 13202,
   "date": "2026-08-12",
   "gate": {
-    "checked_at": "2026-08-12T17:50:41.802381+00:00",
-    "duration_s": 103.73,
+    "checked_at": "2026-08-12T18:05:09.713027+00:00",
+    "duration_s": 75.69,
     "evidence_count": 5,
-    "reliability_score": 100.0,
-    "status": "PASS"
+    "reliability_score": 76.0,
+    "status": "FAIL"
   },
-  "generated_at": "2026-08-12T18:00:09.649670+00:00",
+  "generated_at": "2026-08-12T18:30:11.071688+00:00",
   "governance": {
     "capabilities": 784,
     "classified_entities": 2577,
     "collisions": 71,
     "collisions_actionable": 8,
-    "dependency_edges": 913,
+    "dependency_edges": 907,
     "governed_elements": 38436,
     "kernel_directives": 205,
-    "ops_holders": 69
+    "ops_holders": 68
   },
-  "merged_prs": 3386,
+  "merged_prs": 3389,
   "pipelines": {
     "normal_build": {
       "done": 859,
@@ -171,20 +171,20 @@
     }
   },
   "repo_health": {
-    "open_branches": 5,
-    "open_prs": 5
+    "open_branches": 0,
+    "open_prs": 0
   },
   "repo_scale": {
     "adrs": 39,
     "git_history_mb": 679.8,
     "json_registries": 4095,
-    "lines_of_code": 137082,
+    "lines_of_code": 136182,
     "markdown_docs": 551,
     "non_python_files": 4903,
-    "python_modules": 949,
+    "python_modules": 913,
     "shell_scripts": 76,
     "test_files": 566,
-    "tracked_files": 5852,
+    "tracked_files": 5816,
     "tracked_size_mb": 61.5
   },
   "sync_tooling": [
@@ -215,12 +215,12 @@
     }
   ],
   "velocity": {
-    "active_days": 69,
-    "commits_per_day": 181,
-    "conventional_commits": 9369,
+    "active_days": 70,
+    "commits_per_day": 178,
+    "conventional_commits": 9370,
     "conventional_pct": 71,
     "first_commit": "2026-06-01",
     "prs_per_day": 46,
-    "span_days": 73
+    "span_days": 74
   }
 }
