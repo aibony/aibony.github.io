@@ -1,10 +1,6 @@
 {
   "commit_activity": [
     {
-      "commits": 435,
-      "date": "2026-07-13"
-    },
-    {
       "commits": 382,
       "date": "2026-07-14"
     },
@@ -113,35 +109,39 @@
       "date": "2026-08-09"
     },
     {
-      "commits": 324,
+      "commits": 435,
       "date": "2026-08-10"
     },
     {
-      "commits": 179,
+      "commits": 424,
       "date": "2026-08-11"
+    },
+    {
+      "commits": 316,
+      "date": "2026-08-12"
     }
   ],
-  "commits": 12524,
-  "date": "2026-08-11",
+  "commits": 13196,
+  "date": "2026-08-12",
   "gate": {
-    "checked_at": "2026-08-11T06:55:53.447849+00:00",
-    "duration_s": 31.21,
+    "checked_at": "2026-08-12T16:03:37.906269+00:00",
+    "duration_s": 76.9,
     "evidence_count": 5,
-    "reliability_score": 64.0,
-    "status": "FAIL"
+    "reliability_score": 100.0,
+    "status": "PASS"
   },
-  "generated_at": "2026-08-11T08:30:01.449627+00:00",
+  "generated_at": "2026-08-12T16:20:56.121097+00:00",
   "governance": {
-    "capabilities": 546,
+    "capabilities": 784,
     "classified_entities": 2577,
     "collisions": 71,
     "collisions_actionable": 8,
-    "dependency_edges": 897,
+    "dependency_edges": 911,
     "governed_elements": 38436,
     "kernel_directives": 205,
-    "ops_holders": 72
+    "ops_holders": 69
   },
-  "merged_prs": 2957,
+  "merged_prs": 3385,
   "pipelines": {
     "normal_build": {
       "done": 859,
@@ -155,43 +155,37 @@
       "status": "paused"
     },
     "overhaul": {
-      "done": 2115,
-      "failed": 25,
-      "ready": 1018,
-      "remaining": 1018,
-      "running": 11,
-      "status": "active",
-      "total": 3169
+      "status": "unknown"
     },
     "overhaul_enrichment": {
       "done": 8,
-      "failed": 9,
+      "failed": 10,
       "ready": 0,
-      "remaining": 11,
+      "remaining": 18,
       "running": 0,
       "status": "idle",
-      "total": 28
+      "total": 36
     },
     "sync": {
       "status": "unknown"
     }
   },
   "repo_health": {
-    "open_branches": 177,
-    "open_prs": 30
+    "open_branches": 1,
+    "open_prs": 1
   },
   "repo_scale": {
     "adrs": 39,
-    "git_history_mb": 656.1,
-    "json_registries": 4094,
-    "lines_of_code": 127542,
-    "markdown_docs": 547,
-    "non_python_files": 4879,
-    "python_modules": 962,
-    "shell_scripts": 77,
-    "test_files": 562,
-    "tracked_files": 5841,
-    "tracked_size_mb": 74.7
+    "git_history_mb": 679.3,
+    "json_registries": 4095,
+    "lines_of_code": 136969,
+    "markdown_docs": 551,
+    "non_python_files": 4903,
+    "python_modules": 948,
+    "shell_scripts": 76,
+    "test_files": 566,
+    "tracked_files": 5851,
+    "tracked_size_mb": 61.5
   },
   "sync_tooling": [
     {
@@ -210,23 +204,23 @@
       "role": "merge / branch cleanup"
     },
     {
-      "available": false,
+      "available": true,
       "name": "commandcode",
       "role": "shell / system ops"
     },
     {
-      "available": false,
+      "available": true,
       "name": "opencode",
       "role": "policy read surface"
     }
   ],
   "velocity": {
-    "active_days": 68,
-    "commits_per_day": 174,
-    "conventional_commits": 9193,
-    "conventional_pct": 73,
+    "active_days": 69,
+    "commits_per_day": 181,
+    "conventional_commits": 9366,
+    "conventional_pct": 71,
     "first_commit": "2026-06-01",
-    "prs_per_day": 41,
-    "span_days": 72
+    "prs_per_day": 46,
+    "span_days": 73
   }
 }
