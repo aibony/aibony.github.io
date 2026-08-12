@@ -1,170 +1,20 @@
 {
-  "commit_activity": [
-    {
-      "commits": 382,
-      "date": "2026-07-14"
-    },
-    {
-      "commits": 200,
-      "date": "2026-07-15"
-    },
-    {
-      "commits": 239,
-      "date": "2026-07-16"
-    },
-    {
-      "commits": 537,
-      "date": "2026-07-17"
-    },
-    {
-      "commits": 641,
-      "date": "2026-07-18"
-    },
-    {
-      "commits": 197,
-      "date": "2026-07-19"
-    },
-    {
-      "commits": 110,
-      "date": "2026-07-20"
-    },
-    {
-      "commits": 185,
-      "date": "2026-07-21"
-    },
-    {
-      "commits": 255,
-      "date": "2026-07-22"
-    },
-    {
-      "commits": 198,
-      "date": "2026-07-23"
-    },
-    {
-      "commits": 364,
-      "date": "2026-07-24"
-    },
-    {
-      "commits": 142,
-      "date": "2026-07-25"
-    },
-    {
-      "commits": 35,
-      "date": "2026-07-26"
-    },
-    {
-      "commits": 4,
-      "date": "2026-07-27"
-    },
-    {
-      "commits": 22,
-      "date": "2026-07-28"
-    },
-    {
-      "commits": 53,
-      "date": "2026-07-29"
-    },
-    {
-      "commits": 66,
-      "date": "2026-07-30"
-    },
-    {
-      "commits": 412,
-      "date": "2026-07-31"
-    },
-    {
-      "commits": 252,
-      "date": "2026-08-01"
-    },
-    {
-      "commits": 463,
-      "date": "2026-08-02"
-    },
-    {
-      "commits": 211,
-      "date": "2026-08-03"
-    },
-    {
-      "commits": 140,
-      "date": "2026-08-04"
-    },
-    {
-      "commits": 220,
-      "date": "2026-08-05"
-    },
-    {
-      "commits": 26,
-      "date": "2026-08-06"
-    },
-    {
-      "commits": 45,
-      "date": "2026-08-07"
-    },
-    {
-      "commits": 252,
-      "date": "2026-08-08"
-    },
-    {
-      "commits": 361,
-      "date": "2026-08-09"
-    },
-    {
-      "commits": 435,
-      "date": "2026-08-10"
-    },
-    {
-      "commits": 424,
-      "date": "2026-08-11"
-    },
-    {
-      "commits": 316,
-      "date": "2026-08-12"
-    }
-  ],
-  "commits": 13196,
+  "commit_activity": [],
+  "commits": 0,
   "date": "2026-08-12",
-  "gate": {
-    "checked_at": "2026-08-12T16:03:37.906269+00:00",
-    "duration_s": 76.9,
-    "evidence_count": 5,
-    "reliability_score": 100.0,
-    "status": "PASS"
-  },
-  "generated_at": "2026-08-12T16:20:56.121097+00:00",
-  "governance": {
-    "capabilities": 784,
-    "classified_entities": 2577,
-    "collisions": 71,
-    "collisions_actionable": 8,
-    "dependency_edges": 911,
-    "governed_elements": 38436,
-    "kernel_directives": 205,
-    "ops_holders": 69
-  },
-  "merged_prs": 3385,
+  "gate": {},
+  "generated_at": "2026-08-12T16:21:52.372101+00:00",
+  "governance": {},
+  "merged_prs": 0,
   "pipelines": {
     "normal_build": {
-      "done": 859,
-      "failed": 0,
-      "paused_since": "2026-07-25T19:02:43+00:00",
-      "ready": 8,
-      "reason": "manual pause \u2014 file reduction/fix session",
-      "remaining": 63,
-      "resume_after": "2026-07-20T04:30:27.485657+00:00",
-      "running": 30,
-      "status": "paused"
+      "status": "active"
     },
     "overhaul": {
       "status": "unknown"
     },
     "overhaul_enrichment": {
-      "done": 8,
-      "failed": 10,
-      "ready": 0,
-      "remaining": 18,
-      "running": 0,
-      "status": "idle",
-      "total": 36
+      "status": "unknown"
     },
     "sync": {
       "status": "unknown"
@@ -172,20 +22,20 @@
   },
   "repo_health": {
     "open_branches": 1,
-    "open_prs": 1
+    "open_prs": 0
   },
   "repo_scale": {
-    "adrs": 39,
-    "git_history_mb": 679.3,
-    "json_registries": 4095,
-    "lines_of_code": 136969,
-    "markdown_docs": 551,
-    "non_python_files": 4903,
-    "python_modules": 948,
-    "shell_scripts": 76,
-    "test_files": 566,
-    "tracked_files": 5851,
-    "tracked_size_mb": 61.5
+    "adrs": 0,
+    "git_history_mb": 0.0,
+    "json_registries": 0,
+    "lines_of_code": 0,
+    "markdown_docs": 0,
+    "non_python_files": 0,
+    "python_modules": 0,
+    "shell_scripts": 0,
+    "test_files": 0,
+    "tracked_files": 0,
+    "tracked_size_mb": 0.0
   },
   "sync_tooling": [
     {
@@ -214,13 +64,5 @@
       "role": "policy read surface"
     }
   ],
-  "velocity": {
-    "active_days": 69,
-    "commits_per_day": 181,
-    "conventional_commits": 9366,
-    "conventional_pct": 71,
-    "first_commit": "2026-06-01",
-    "prs_per_day": 46,
-    "span_days": 73
-  }
+  "velocity": {}
 }
