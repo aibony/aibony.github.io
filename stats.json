@@ -130,7 +130,7 @@
     "reliability_score": 76.0,
     "status": "FAIL"
   },
-  "generated_at": "2026-08-13T16:00:38.845450+00:00",
+  "generated_at": "2026-08-13T16:30:05.702913+00:00",
   "governance": {
     "capabilities": 784,
     "classified_entities": 2577,
@@ -152,11 +152,11 @@
       "status": "active"
     },
     "overhaul": {
-      "done": 91,
+      "done": 94,
       "failed": 1,
-      "ready": 4417,
-      "remaining": 4418,
-      "running": 66,
+      "ready": 4413,
+      "remaining": 4414,
+      "running": 67,
       "status": "active",
       "total": 4576
     },
@@ -174,12 +174,12 @@
     }
   },
   "repo_health": {
-    "open_branches": 2,
-    "open_prs": 2
+    "open_branches": 5,
+    "open_prs": 5
   },
   "repo_scale": {
     "adrs": 40,
-    "git_history_mb": 697.7,
+    "git_history_mb": 697.8,
     "json_registries": 4096,
     "lines_of_code": 146009,
     "markdown_docs": 556,
