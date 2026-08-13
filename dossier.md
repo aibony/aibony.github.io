@@ -51,7 +51,7 @@ I did not learn to code my way into AI. I mechanised DevOps. The substrate chang
 That is why NINA has interlocks (mechanisms that act need places where they must stop), an audit engine (a machine you cannot inspect is a machine you cannot trust), and thermal and resource guards (every real mechanism operates inside physical limits).
 
 ## 05 — What it proves, and what it doesn't
-Computed from the repository: 13,564+ commits, 931 Python modules, ~144,211 lines of code, 565 test files — all under a 2 GB VRAM ceiling.
+Computed from the repository: 13,567+ commits, 931 Python modules, ~144,496 lines of code, 565 test files — all under a 2 GB VRAM ceiling.
 
 I hand-wrote almost none of it. I specified it, governed it, dispatched it to agents, reviewed what came back, rejected what drifted, and enforced the architectural rules with no team to enforce them for me. That is the same skill I have used for nearly seventeen years in a bank: write instructions precise enough that someone else can execute them without ambiguity and an auditor can verify them afterwards.
 
