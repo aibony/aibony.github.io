@@ -130,7 +130,7 @@
     "reliability_score": 76.0,
     "status": "FAIL"
   },
-  "generated_at": "2026-08-13T19:00:38.739513+00:00",
+  "generated_at": "2026-08-13T19:30:38.987158+00:00",
   "governance": {
     "capabilities": 784,
     "classified_entities": 2577,
@@ -141,7 +141,7 @@
     "kernel_directives": 205,
     "ops_holders": 72
   },
-  "merged_prs": 3609,
+  "merged_prs": 3614,
   "pipelines": {
     "normal_build": {
       "done": 859,
@@ -152,10 +152,10 @@
       "status": "active"
     },
     "overhaul": {
-      "done": 105,
+      "done": 108,
       "failed": 1,
-      "ready": 4395,
-      "remaining": 4396,
+      "ready": 4392,
+      "remaining": 4393,
       "running": 74,
       "status": "active",
       "total": 4576
@@ -168,21 +168,21 @@
     }
   },
   "repo_health": {
-    "open_branches": 3,
-    "open_prs": 3
+    "open_branches": 0,
+    "open_prs": 0
   },
   "repo_scale": {
     "adrs": 40,
-    "git_history_mb": 707.4,
+    "git_history_mb": 707.6,
     "json_registries": 4096,
-    "lines_of_code": 144472,
+    "lines_of_code": 139495,
     "markdown_docs": 556,
     "non_python_files": 4908,
     "python_modules": 961,
     "shell_scripts": 73,
     "test_files": 563,
     "tracked_files": 5869,
-    "tracked_size_mb": 75.6
+    "tracked_size_mb": 75.3
   },
   "sync_tooling": [
     {
