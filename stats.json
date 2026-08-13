@@ -117,31 +117,31 @@
       "date": "2026-08-12"
     },
     {
-      "commits": 285,
+      "commits": 291,
       "date": "2026-08-13"
     }
   ],
-  "commits": 13586,
+  "commits": 13592,
   "date": "2026-08-13",
   "gate": {
-    "checked_at": "2026-08-13T13:13:41.946129+00:00",
-    "duration_s": 128.5,
+    "checked_at": "2026-08-13T17:00:03.302553+00:00",
+    "duration_s": 85.11,
     "evidence_count": 5,
-    "reliability_score": 76.0,
-    "status": "FAIL"
+    "reliability_score": 100.0,
+    "status": "PASS"
   },
-  "generated_at": "2026-08-13T16:30:05.702913+00:00",
+  "generated_at": "2026-08-13T17:00:38.804680+00:00",
   "governance": {
     "capabilities": 784,
     "classified_entities": 2577,
     "collisions": 71,
     "collisions_actionable": 8,
-    "dependency_edges": 942,
+    "dependency_edges": 943,
     "governed_elements": 38436,
     "kernel_directives": 205,
     "ops_holders": 72
   },
-  "merged_prs": 3604,
+  "merged_prs": 3607,
   "pipelines": {
     "normal_build": {
       "done": 859,
@@ -152,11 +152,11 @@
       "status": "active"
     },
     "overhaul": {
-      "done": 94,
+      "done": 96,
       "failed": 1,
-      "ready": 4413,
-      "remaining": 4414,
-      "running": 67,
+      "ready": 4410,
+      "remaining": 4411,
+      "running": 68,
       "status": "active",
       "total": 4576
     },
@@ -174,21 +174,21 @@
     }
   },
   "repo_health": {
-    "open_branches": 5,
-    "open_prs": 5
+    "open_branches": 0,
+    "open_prs": 0
   },
   "repo_scale": {
     "adrs": 40,
-    "git_history_mb": 697.8,
+    "git_history_mb": 698.5,
     "json_registries": 4096,
-    "lines_of_code": 146009,
+    "lines_of_code": 146201,
     "markdown_docs": 556,
     "non_python_files": 4908,
     "python_modules": 962,
     "shell_scripts": 73,
     "test_files": 563,
     "tracked_files": 5870,
-    "tracked_size_mb": 62.3
+    "tracked_size_mb": 62.4
   },
   "sync_tooling": [
     {
@@ -220,7 +220,7 @@
   "velocity": {
     "active_days": 70,
     "commits_per_day": 184,
-    "conventional_commits": 9471,
+    "conventional_commits": 9475,
     "conventional_pct": 70,
     "first_commit": "2026-06-01",
     "prs_per_day": 49,
