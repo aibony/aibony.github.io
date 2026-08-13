@@ -117,20 +117,20 @@
       "date": "2026-08-12"
     },
     {
-      "commits": 118,
+      "commits": 119,
       "date": "2026-08-13"
     }
   ],
-  "commits": 13419,
+  "commits": 13420,
   "date": "2026-08-13",
   "gate": {
-    "checked_at": "2026-08-13T03:25:13.321221+00:00",
-    "duration_s": 143.38,
+    "checked_at": "2026-08-13T03:54:34.721535+00:00",
+    "duration_s": 119.74,
     "evidence_count": 5,
     "reliability_score": 100.0,
     "status": "PASS"
   },
-  "generated_at": "2026-08-13T03:30:05.701356+00:00",
+  "generated_at": "2026-08-13T04:00:11.295538+00:00",
   "governance": {
     "capabilities": 784,
     "classified_entities": 2577,
@@ -176,16 +176,16 @@
   },
   "repo_scale": {
     "adrs": 39,
-    "git_history_mb": 689.4,
+    "git_history_mb": 689.6,
     "json_registries": 4095,
-    "lines_of_code": 140419,
+    "lines_of_code": 140421,
     "markdown_docs": 553,
     "non_python_files": 4904,
     "python_modules": 914,
     "shell_scripts": 76,
     "test_files": 565,
     "tracked_files": 5818,
-    "tracked_size_mb": 61.7
+    "tracked_size_mb": 61.8
   },
   "sync_tooling": [
     {
@@ -217,7 +217,7 @@
   "velocity": {
     "active_days": 70,
     "commits_per_day": 181,
-    "conventional_commits": 9421,
+    "conventional_commits": 9422,
     "conventional_pct": 70,
     "first_commit": "2026-06-01",
     "prs_per_day": 47,
