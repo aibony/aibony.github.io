@@ -117,31 +117,31 @@
       "date": "2026-08-12"
     },
     {
-      "commits": 171,
+      "commits": 192,
       "date": "2026-08-13"
     }
   ],
-  "commits": 13472,
+  "commits": 13493,
   "date": "2026-08-13",
   "gate": {
-    "checked_at": "2026-08-13T06:41:23.868177+00:00",
-    "duration_s": 158.21,
+    "checked_at": "2026-08-13T08:25:15.985573+00:00",
+    "duration_s": 7.27,
     "evidence_count": 5,
-    "reliability_score": 100.0,
-    "status": "PASS"
+    "reliability_score": 76.0,
+    "status": "FAIL"
   },
-  "generated_at": "2026-08-13T08:00:35.350074+00:00",
+  "generated_at": "2026-08-13T08:30:13.341066+00:00",
   "governance": {
     "capabilities": 784,
     "classified_entities": 2577,
     "collisions": 71,
     "collisions_actionable": 8,
-    "dependency_edges": 912,
+    "dependency_edges": 922,
     "governed_elements": 38436,
     "kernel_directives": 205,
     "ops_holders": 68
   },
-  "merged_prs": 3513,
+  "merged_prs": 3515,
   "pipelines": {
     "normal_build": {
       "done": 859,
@@ -171,20 +171,20 @@
     }
   },
   "repo_health": {
-    "open_branches": 1,
-    "open_prs": 1
+    "open_branches": 2,
+    "open_prs": 2
   },
   "repo_scale": {
     "adrs": 39,
-    "git_history_mb": 687.2,
+    "git_history_mb": 688.2,
     "json_registries": 4096,
-    "lines_of_code": 142263,
+    "lines_of_code": 141800,
     "markdown_docs": 553,
     "non_python_files": 4905,
-    "python_modules": 927,
+    "python_modules": 915,
     "shell_scripts": 76,
     "test_files": 565,
-    "tracked_files": 5832,
+    "tracked_files": 5820,
     "tracked_size_mb": 61.8
   },
   "sync_tooling": [
@@ -217,10 +217,10 @@
   "velocity": {
     "active_days": 70,
     "commits_per_day": 182,
-    "conventional_commits": 9435,
+    "conventional_commits": 9440,
     "conventional_pct": 70,
     "first_commit": "2026-06-01",
-    "prs_per_day": 47,
+    "prs_per_day": 48,
     "span_days": 74
   }
 }
